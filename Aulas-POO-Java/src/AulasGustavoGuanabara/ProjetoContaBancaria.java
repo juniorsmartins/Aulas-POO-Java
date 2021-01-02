@@ -9,14 +9,15 @@ package AulasGustavoGuanabara;
  */
 public class ProjetoContaBancaria 
 {
-    static int totalContas; // Variável de Classe
+    public static int totalContas; // Variável de Classe
 
-    int numConta; // Variável de Instância
-    String tipoConta = new String(); // Variável de Instância
-    String nomeConta = new String(); // Variável de Instância
-    float saldoConta; // Variável de Instância
-    boolean statusConta; // Variável de Instância
-    
+    private int numConta; // Variável de Instância
+    private String tipoConta = new String(); // Variável de Instância
+    private String nomeConta = new String(); // Variável de Instância
+    private float saldoConta; // Variável de Instância
+    private boolean statusConta; // Variável de Instância
+
+    // Método Construtor
     public void ProjetoContaBancaria(String tipo, String nome) 
     {
         if (tipo.equalsIgnoreCase("CC"))
@@ -40,10 +41,11 @@ public class ProjetoContaBancaria
         else
         {
             System.out.format("Tipo de conta inválido!");
-            this.statusConta = false;
+            this.setStatusConta();
         }
     }
     
+    // Getters and Setters    
     int getNumConta()
     {
        return this.numConta; 
@@ -66,5 +68,14 @@ public class ProjetoContaBancaria
     void setSaldoConta(float valor)
     {
         this.saldoConta = valor;
+    }
+    
+    boolean getStatusConta()
+    {
+        return this.statusConta;
+    }
+    void setStatusConta()
+    {
+        this.statusConta = false;
     }
 }
