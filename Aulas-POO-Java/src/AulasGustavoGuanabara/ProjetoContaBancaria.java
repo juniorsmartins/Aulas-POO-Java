@@ -18,7 +18,7 @@ public class ProjetoContaBancaria
     private boolean statusConta; // Variável de Instância
 
     // Método Construtor
-    public void ProjetoContaBancaria(String tipo, String nome) 
+    public ProjetoContaBancaria(String tipo, String nome) 
     {
         if (tipo.equalsIgnoreCase("CC"))
         {
@@ -46,7 +46,7 @@ public class ProjetoContaBancaria
     }
     
     // Getters and Setters    
-    int getNumConta()
+    public int getNumConta()
     {
         if (this.statusConta == true)
         {
@@ -59,7 +59,7 @@ public class ProjetoContaBancaria
         }
     }
 
-    String getTipoConta()
+    public String getTipoConta()
     {
         if (this.statusConta == true)
         {
@@ -72,7 +72,7 @@ public class ProjetoContaBancaria
         }
     }
     
-    String getNomeConta()
+    public String getNomeConta()
     {
         if (this.statusConta == true)
         {
@@ -85,7 +85,7 @@ public class ProjetoContaBancaria
         }
     }
 
-    float getSaldoConta()
+    public float getSaldoConta()
     {
         if (this.statusConta == true)
         {
@@ -97,7 +97,7 @@ public class ProjetoContaBancaria
             return (0);
         }
     }
-    void setSaldoContaDepositar(float valor)
+    public void setSaldoContaDepositar(float valor)
     {
         if (this.statusConta == true)
         {
@@ -109,7 +109,7 @@ public class ProjetoContaBancaria
         }
 
     }
-    void setSaldoContaSacar(float valor)
+    public void setSaldoContaSacar(float valor)
     {
         if (this.statusConta == true)
         {
@@ -121,22 +121,34 @@ public class ProjetoContaBancaria
         }
     }
     
-    boolean getStatusConta()
+    public boolean getStatusConta()
     {
-        return this.statusConta;
+        if (this.statusConta == true)
+        {
+            System.out.print("Conta Aberta! ");
+           return this.statusConta;            
+        }
+        else
+        {
+            System.out.println("Conta Fechada!");
+            return this.statusConta;
+        }             
     }
-    void setStatusContaFechar()
+    public void setStatusContaFechar()
     {
         this.statusConta = false;
+        System.out.println("Conta Fechada!");
     }
-    void setStatusContaAbrir()
+    public void setStatusContaAbrir()
     {
         this.statusConta = true;
+        System.out.println("Conta Aberta!");
     }
     
-    void setPagarTaxa()
+    public void setPagarTaxa()
     {
         this.saldoConta -= 15;
+        System.out.println("Taxa Paga!");
     }
     
 }
