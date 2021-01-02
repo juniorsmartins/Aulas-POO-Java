@@ -41,41 +41,102 @@ public class ProjetoContaBancaria
         else
         {
             System.out.format("Tipo de conta inválido!");
-            this.setStatusConta();
+            this.setStatusContaFechar();
         }
     }
     
     // Getters and Setters    
     int getNumConta()
     {
-       return this.numConta; 
+        if (this.statusConta == true)
+        {
+            return this.numConta;
+        }
+        else
+        {
+            System.out.println("Conta Inválida!");
+            return (0);
+        }
     }
 
     String getTipoConta()
     {
-        return this.tipoConta;
+        if (this.statusConta == true)
+        {
+            return this.tipoConta;
+        }
+        else
+        {
+            System.out.println("Conta Inválida!");
+            return (" ");
+        }
     }
     
     String getNomeConta()
     {
-        return this.nomeConta;
+        if (this.statusConta == true)
+        {
+            return this.nomeConta;
+        }
+        else
+        {
+            System.out.println("Conta Inválida!");
+            return (" ");
+        }
     }
 
     float getSaldoConta()
     {
-        return this.saldoConta;
+        if (this.statusConta == true)
+        {
+            return this.saldoConta;
+        }
+        else
+        {
+            System.out.println("Conta Inválida! Não há saldo.");
+            return (0);
+        }
     }
-    void setSaldoConta(float valor)
+    void setSaldoContaDepositar(float valor)
     {
-        this.saldoConta = valor;
+        if (this.statusConta == true)
+        {
+            this.saldoConta += valor;
+        }
+        else
+        {
+            System.out.format("Conta Inválida! Não pode depositar.");
+        }
+
+    }
+    void setSaldoContaSacar(float valor)
+    {
+        if (this.statusConta == true)
+        {
+            this.saldoConta -= valor;            
+        }
+        else
+        {
+            System.out.println("Conta Inválida! Não pode retirar.");
+        }
     }
     
     boolean getStatusConta()
     {
         return this.statusConta;
     }
-    void setStatusConta()
+    void setStatusContaFechar()
     {
         this.statusConta = false;
     }
+    void setStatusContaAbrir()
+    {
+        this.statusConta = true;
+    }
+    
+    void setPagarTaxa()
+    {
+        this.saldoConta -= 15;
+    }
+    
 }
