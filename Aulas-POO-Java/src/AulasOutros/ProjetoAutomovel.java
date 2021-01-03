@@ -9,7 +9,7 @@ package AulasOutros;
  */
 public class ProjetoAutomovel {
 
-    public static long totalAutomovel;
+    public static long totalAutomoveis;
     private String origemAuto = new String();
     private String fabricaAuto = new String();
     private int anoAuto;
@@ -17,10 +17,10 @@ public class ProjetoAutomovel {
     
     public ProjetoAutomovel() // Método Construtor
     {
-        ProjetoAutomovel.totalAutomovel += 1;
-        this.origemAuto = "Made In Brazil";
-        this.fabricaAuto = "Volkswagen";
-        this.anoAuto = 2021;
+        ProjetoAutomovel.totalAutomoveis += 1;
+        this.setOrigemAuto("Made In Brazil");
+        this.setFabricaAuto("Volkswagen");
+        this.setAnoAuto(2021);
     }
 
     protected void setOrigemAuto(String origem) // Métodos Setters e Getters
