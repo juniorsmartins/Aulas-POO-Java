@@ -1,6 +1,6 @@
 package AulasOutros;
 
-public class ProjetoControleRemoto 
+public class ProjetoControleRemoto implements InterfaceControleRemoto
 {
 
     // Atributo de Classe
@@ -19,16 +19,19 @@ public class ProjetoControleRemoto
         this.tocandoCR = false;
     }
     
-    // Métodos Personalizados
+    // Métodos Abstratos
+    @Override
     public void ligar()
     {
         this.setLigadoCR(true);
     }
+    @Override
     public void desligar()
     {
         this.setLigadoCR(false);
     }
     
+    @Override
     public void maisVolume()
     {
         if (this.getLigadoCR() == true)
@@ -39,6 +42,7 @@ public class ProjetoControleRemoto
             }
         }
     }
+    @Override
     public void menosVolume()
     {
         if (this.getLigadoCR() == true)
@@ -50,13 +54,35 @@ public class ProjetoControleRemoto
         }
     }
 
+    @Override
     public void play()
     {
-        
+        if (this.getLigadoCR() == true)
+        {
+            this.setTocandoCR(true);
+        }
     }
+    @Override
     public void pause()
     {
-        
+        if (this.getLigadoCR() == true)
+        {
+            this.setTocandoCR(false);
+        }
+    }
+    
+    // Método Personalizado
+    public void statusCR()
+    {
+        System.out.println("----------------------");
+        System.out.println("Marca: " + getMarcaCR());
+        System.out.println("Ligado: " + this.getLigadoCR());
+        System.out.print("Volume: " + this.getVolumeCR() + " ");
+        for (byte contador = 0; contador <= this.getVolumeCR(); contador++)
+        {
+            System.out.print("|");
+        }
+        System.out.println("\nTocando: " + this.getTocandoCR());
     }
 
     // Métodos Setters e Getters
@@ -85,5 +111,10 @@ public class ProjetoControleRemoto
     protected boolean getTocandoCR()
     {
         return this.tocandoCR;
-    }    
+    }
+    
+    protected String getMarcaCR()
+    {
+        return ProjetoControleRemoto.marcaCR;
+    }
 }
