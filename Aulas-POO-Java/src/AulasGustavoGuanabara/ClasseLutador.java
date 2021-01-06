@@ -37,6 +37,8 @@ public class ClasseLutador {
     public void apresentarLutador()
     {
         System.out.println("----------------------");
+        System.out.println("---- Apresentação ----");
+        System.out.println("----------------------");        
         System.out.println("nacionalidade: " + this.getNacionalidadeLutador());
         System.out.println("Nome: " + this.getNomeLutador());
         System.out.println("Idade: " + this.getIdadeLutador());
@@ -46,7 +48,7 @@ public class ClasseLutador {
     }
     public void statusLutador()
     {
-        System.out.println("----------------------");
+        System.out.println("------- Status -------");
         System.out.println("Vitórias: " + this.getVitoriasLutador());
         System.out.println("Derrotas: " + this.getDerrotasLutador());
         System.out.println("Empates: " + this.getEmpatesLutador());        
@@ -122,34 +124,34 @@ public class ClasseLutador {
     protected void setPesoLutador(float peso)
     {
         this.pesoLutador = peso;
-        setCategoriaLutador(peso);
+        this.setCategoriaLutador();
     }
     protected float getPesoLutador()
     {
         return this.pesoLutador;
     }
     
-    protected void setCategoriaLutador(float peso)
+    protected void setCategoriaLutador()
     {
-        if (peso < 52.2)
+        if (this.getPesoLutador() < 52.2)
         {
-            System.out.println("Peso Inválido!");
+            this.categoriaLutador = "Inválido!";
         }
-        else if (peso <= 70.3)
+        else if (this.getPesoLutador() <= 70.3)
         {
             this.categoriaLutador = "Leve";
         }
-        else if (peso <= 83.9)
+        else if (this.getPesoLutador() <= 83.9)
         {
             this.categoriaLutador = "Médio";
         }
-        else if (peso <= 120.2)
+        else if (this.getPesoLutador() <= 120.2)
         {
             this.categoriaLutador = "Pesado";
         }
         else
         {
-            System.out.println("Inválido!");
+            this.categoriaLutador = "Inválido!";
         }
     }
     protected String getCategoriaLutador()
