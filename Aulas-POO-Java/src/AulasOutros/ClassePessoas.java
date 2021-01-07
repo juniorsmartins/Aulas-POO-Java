@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class ClassePessoas 
 {
-
     /* ----- ÁREA DE ATRIBUTOS ----- */
     // Atributos de Classe
     private static int totalPessoas;
@@ -13,8 +12,8 @@ public class ClassePessoas
     // Atributos de Instância
     private double id;
     private String dataCadastro;
-
-    
+    private String horaCadastro;
+    private String paisOrigem;
 
 
     /* ----- ÁREA DE MÉTODOS ----- */    
@@ -24,11 +23,17 @@ public class ClassePessoas
         setTotalPessoas();
         setID();
         setDataCadastro();
-        // Data pega pelo construtor
-        
+        setHoraCadastro();
     }
-
+    
     // Métodos Especiais
+    public void status()
+    {
+        System.out.println("Total Pessoas: " + getTotalPessoas());
+        System.out.println("ID: " + this.getID());
+        System.out.println("Data: " + this.getDataCadastro());
+        System.out.println("Hora: " + this.getHoraCadastro());
+    }
 
     // Métodos Setters e Getters
     private void setTotalPessoas()
@@ -52,13 +57,31 @@ public class ClassePessoas
     private void setDataCadastro()
     {
         Date data = new Date();
-        SimpleDateFormat formatar = new SimpleDateFormat("d/M/y");
-        String dataFormatada = formatar.format(data);
-        this.dataCadastro = dataFormatada;
+        SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
+        this.dataCadastro = formatarData.format(data);
     }
     public String getDataCadastro()
     {
         return this.dataCadastro;
-    }    
-
+    }
+    
+    private void setHoraCadastro()
+    {
+        Date hora = new Date();
+        SimpleDateFormat formatarHora = new SimpleDateFormat("HH:mm:ss");
+        this.horaCadastro = formatarHora.format(hora);
+    }
+    public String getHoraCadastro()
+    {
+        return this.horaCadastro;
+    }
+    
+    protected void setPaisOrigem(String pais)
+    {
+        this.paisOrigem = pais;
+    }
+    public String getPaisOrigem()
+    {
+        return this.paisOrigem;
+    }
 }
