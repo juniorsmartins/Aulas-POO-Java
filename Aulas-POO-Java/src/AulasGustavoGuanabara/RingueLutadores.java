@@ -14,14 +14,12 @@ public class RingueLutadores {
         lutadores[4] = new ClasseLutador("Ufocobol", "Brasil", 37, 1.70f, 119.3f, 5, 4, 3);
         lutadores[5] = new ClasseLutador("Nerdaart", "EUA", 30, 1.81f, 105.7f, 12, 2, 4);
         
-
-
         Luta UEC01 = new Luta();
-        UEC01.marcarLuta(lutadores[0], lutadores[1]);
+        UEC01.marcarLuta(lutadores[4], lutadores[5]);
         UEC01.lutar();
-        lutadores[0].statusLutador();
-        lutadores[1].statusLutador();
         
+        lutadores[4].statusLutador();
+        lutadores[5].statusLutador();
         
     }
     
