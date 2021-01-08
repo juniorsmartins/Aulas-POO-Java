@@ -12,9 +12,10 @@ public class ProjetoLampada {
     private String anoLampada;
     private String idLampada;
     private String marcaLampada;
-    private int voltagemLampada;
+    private float voltagemLampada;
     private String tipoLampada;
     private float precoLampada;
+    private boolean statusLampada;
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Método Construtor
@@ -23,12 +24,14 @@ public class ProjetoLampada {
         ProjetoLampada.setTotalLampadas();
         this.setAnoLampada();
         this.setIdLampada();
-        this.marcaLampada = " ";
-        this.tipoLampada = " ";
+        this.setMarcaLampada(" ");
+        this.setTipoLampada(" ");
+        this.desligarLampada();
     }
     // Métodos Especiais
     public void statusLampada()
     {
+        System.out.println("\n--------- STATUS ---------");
         System.out.println("Total: " + getTotalLampadas());
         System.out.println("Ano: " + this.getAnoLampada());
         System.out.println("ID: " + this.getIdLampada());
@@ -36,6 +39,23 @@ public class ProjetoLampada {
         System.out.println("Voltagem: " + this.getVoltagemLampada());
         System.out.println("Tipo: " + this.getTipoLampada());
         System.out.println("Preço: " + this.getPrecoLampada());
+        if (this.getStatusLampada())
+        {
+            System.out.println("Lampada Ligada!");            
+        }
+        else 
+        {
+            System.out.println("Lampada Desligada!");
+        }
+
+    }
+    public void ligarLampada()
+    {
+        this.setStatusLampada(true);
+    }
+    public void desligarLampada()
+    {
+        this.setStatusLampada(false);
     }
 
     // Métodos de Classe
@@ -78,11 +98,11 @@ public class ProjetoLampada {
         return this.marcaLampada;
     }
 
-    protected void setVoltagemLampada(int voltagem)
+    protected void setVoltagemLampada(float voltagem)
     {
         this.voltagemLampada = voltagem;
     }
-    public int getVoltagemLampada()
+    public float getVoltagemLampada()
     {
         return this.voltagemLampada;
     }
@@ -103,5 +123,14 @@ public class ProjetoLampada {
     public float getPrecoLampada()
     {
         return this.precoLampada;
+    }
+    
+    private void setStatusLampada(boolean status)
+    {
+        this.statusLampada = status;
+    }
+    public boolean getStatusLampada()
+    {
+        return this.statusLampada;
     }
 }
