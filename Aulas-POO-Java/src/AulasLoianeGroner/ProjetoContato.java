@@ -17,7 +17,7 @@ public class ProjetoContato {
     private String cpfContato;
     private String dataNascimentoContato;
     private ProjetoEndereco enderecoContato;
-    private String telefoneContato;
+    private ProjetoTelefone telefoneContato;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Método Construtor
@@ -110,5 +110,14 @@ public class ProjetoContato {
     public String getDataNascimentoContato()
     {
         return this.dataNascimentoContato;
+    }
+
+    protected void setEnderecoRua(String endereco)
+    {
+        this.enderecoContato.setRuaEndereco(endereco);
+    }
+    public String getEnderecoRua()
+    {
+        this.enderecoContato.getRuaEndereco();
     }
 }
