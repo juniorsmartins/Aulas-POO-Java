@@ -52,10 +52,6 @@ public class ProjetoContato {
         System.out.println("Nome: " + this.getNomeContato() + " " + this.getSobrenomeContato());
         System.out.println("CPF: " + this.getCpfContato());
         System.out.println("Data de Nascimento: " + this.getDataNascimentoContato());
-        System.out.println("---------- Contato ----------");
-        System.out.println("Telefone fixo: ");
-        System.out.println("Telefone Celular: ");
-        System.out.println("E-mail: ");
     }
 
     // Métodos Setters e Getters
