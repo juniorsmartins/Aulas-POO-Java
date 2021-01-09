@@ -56,12 +56,6 @@ public class ProjetoContato {
         System.out.println("Telefone fixo: ");
         System.out.println("Telefone Celular: ");
         System.out.println("E-mail: ");
-        System.out.println("--------- Endereço ----------");
-        System.out.println("Rua: ");
-        System.out.println("Número: ");
-        System.out.println("Bairro: ");
-        System.out.println("Cidade: ");
-        System.out.println("Estado: ");
     }
 
     // Métodos Setters e Getters
