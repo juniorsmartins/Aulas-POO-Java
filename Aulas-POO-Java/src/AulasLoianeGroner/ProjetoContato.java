@@ -112,12 +112,12 @@ public class ProjetoContato {
         return this.dataNascimentoContato;
     }
 
-    protected void setEnderecoRua(String endereco)
+    protected void setEnderecoContato(ProjetoEndereco endereco)
     {
-        this.enderecoContato.setRuaEndereco(endereco);
+        this.enderecoContato = endereco;
     }
-    public String getEnderecoRua()
+    public ProjetoEndereco getEnderecoRua()
     {
-        this.enderecoContato.getRuaEndereco();
+        return this.enderecoContato;
     }
 }
