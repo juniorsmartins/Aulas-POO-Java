@@ -16,7 +16,7 @@ public class ProjetoContato {
     private String sobrenomeContato;
     private String cpfContato;
     private String dataNascimentoContato;
-    private String enderecoContato;
+    private ProjetoEndereco enderecoContato;
     private String telefoneContato;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
