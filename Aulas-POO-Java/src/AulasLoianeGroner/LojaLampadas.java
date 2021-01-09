@@ -16,8 +16,8 @@ public class LojaLampadas
         lamp02.setTipoLampada("Fluorescente");
         
         
-        lamp01.statusLampada();
-        lamp02.statusLampada();
+        lamp01.apresentaLampada();
+        lamp02.apresentaLampada();
     }
     
 }

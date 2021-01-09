@@ -29,7 +29,7 @@ public class ProjetoLampada {
         this.desligarLampada();
     }
     // Métodos Especiais
-    public void statusLampada()
+    public void apresentaLampada()
     {
         System.out.println("\n--------- STATUS ---------");
         System.out.println("Total: " + getTotalLampadas());
@@ -39,7 +39,7 @@ public class ProjetoLampada {
         System.out.println("Voltagem: " + this.getVoltagemLampada());
         System.out.println("Tipo: " + this.getTipoLampada());
         System.out.println("Preço: " + this.getPrecoLampada());
-        if (this.getStatusLampada())
+        if (this.isStatusLampada())
         {
             System.out.println("Lampada Ligada!");            
         }
@@ -47,8 +47,8 @@ public class ProjetoLampada {
         {
             System.out.println("Lampada Desligada!");
         }
-
     }
+    
     public void ligarLampada()
     {
         this.setStatusLampada(true);
@@ -129,7 +129,7 @@ public class ProjetoLampada {
     {
         this.statusLampada = status;
     }
-    public boolean getStatusLampada()
+    public boolean isStatusLampada()
     {
         return this.statusLampada;
     }
