@@ -14,8 +14,8 @@ public class ProjetoContato {
     private String idContato;
     private String nomeContato;
     private String sobrenomeContato;
-    private String dataNascimentoContato;
     private String cpfContato;
+    private String dataNascimentoContato;
     private String enderecoContato;
     private String telefoneContato;
 
@@ -26,7 +26,10 @@ public class ProjetoContato {
         ProjetoContato.setTotalContatos();
         this.setDataContato();
         this.setIdContato();
-        
+        this.setNomeContato(" ");
+        this.setSobrenomeContato(" ");
+        this.setCpfContato(" ");
+        this.setDataNascimentoContato(" ");
     }
 
     // Métodos de Classe
@@ -42,10 +45,23 @@ public class ProjetoContato {
     // Métodos Especiais de Instância
     public void statusContato()
     {
-        System.out.println("Total: ");
-        System.out.println("Ano: ");
-        System.out.println("ID: ");
-        System.out.println("Nome: " + xxxx + " Sobrenome: " + xxxx);
+        System.out.println("----------- Ficha -----------");
+        System.out.println("Total: " + ProjetoContato.getTotalContatos());
+        System.out.println("Data: " + this.getDataContato());
+        System.out.println("ID: " + this.getIdContato());
+        System.out.println("Nome: " + this.getNomeContato() + " " + this.getSobrenomeContato());
+        System.out.println("CPF: " + this.getCpfContato());
+        System.out.println("Data de Nascimento: " + this.getDataNascimentoContato());
+        System.out.println("---------- Contato ----------");
+        System.out.println("Telefone fixo: ");
+        System.out.println("Telefone Celular: ");
+        System.out.println("E-mail: ");
+        System.out.println("--------- Endereço ----------");
+        System.out.println("Rua: ");
+        System.out.println("Número: ");
+        System.out.println("Bairro: ");
+        System.out.println("Cidade: ");
+        System.out.println("Estado: ");
     }
 
     // Métodos Setters e Getters
@@ -70,4 +86,39 @@ public class ProjetoContato {
         return this.idContato;
     }
     
+    protected void setNomeContato(String nome)
+    {
+        this.nomeContato = nome;
+    }
+    public String getNomeContato()
+    {
+        return this.nomeContato;
+    }
+    
+    protected void setSobrenomeContato(String sobrenome)
+    {
+        this.sobrenomeContato = sobrenome;
+    }
+    public String getSobrenomeContato()
+    {
+        return sobrenomeContato;
+    }
+
+    protected void setCpfContato(String cpf)
+    {
+        this.cpfContato = cpf;
+    }
+    public String getCpfContato()
+    {
+        return this.cpfContato;
+    }
+
+    protected void setDataNascimentoContato(String dataNascimento)
+    {
+        this.dataNascimentoContato = dataNascimento;
+    }
+    public String getDataNascimentoContato()
+    {
+        return this.dataNascimentoContato;
+    }
 }
