@@ -55,9 +55,6 @@ public class TesteContato
         ProjetoTelefone telefone1 = new ProjetoTelefone();   
 
 
-       
-
-        
         
         pessoa1.statusContato();
         endereco1.statusEndereco();
