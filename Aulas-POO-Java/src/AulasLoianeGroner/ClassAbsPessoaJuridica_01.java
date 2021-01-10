@@ -25,7 +25,4 @@ public abstract class ClassAbsPessoaJuridica_01
     // Métodos Especiais de Classe
     // Métodos Especiais de Instância
     // Métodos Setters e Getters  
-    
-    
-    
 }
