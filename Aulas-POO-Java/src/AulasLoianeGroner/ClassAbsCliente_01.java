@@ -12,21 +12,11 @@ public abstract class ClassAbsCliente_01
     private String paisOrigemCliente;
     private String estadoOrigemCliente;
     private String cidadeOrigemCliente;
-    private String tipoCliente;
+    private EnumTipoCliente tipoCliente;
 
     /* -------------- ÁREA DE MÉTODOS --------------- */
     // Métodos Construtores
-    public ClassAbsCliente_01()
-    {
-        ClassAbsCliente_01.setTotalClientes();
-    }
-    
     // Métodos Especiais de Classe
-    private static void setTotalClientes()
-    {
-        ClassAbsCliente_01.totalClientes += 1;
-    }
-
     // Métodos Especiais de Instância
     // Métodos Setters e Getters
 }
