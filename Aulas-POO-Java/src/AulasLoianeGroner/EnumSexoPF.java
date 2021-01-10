@@ -1,6 +1,6 @@
 package AulasLoianeGroner;
 
-public class EnumSexoPF 
+public enum EnumSexoPF 
 {
     M("Masculino"),
     F("Feminino");
