@@ -24,4 +24,16 @@ public abstract class ClassAbsCliente_01
     // Métodos Especiais de Classe
     // Métodos Especiais de Instância
     // Métodos Setters e Getters
+    public abstract void setDataCliente();
+    public abstract void setIdCliente();
+    public abstract void setPaisOrigemCliente(String pais);
+    public abstract void setEstadoOrigemCliente(String estado);
+    public abstract void setCidadeOrigemCliente(String cidade);
+    public abstract void setTipoCliente(EnumTipoCliente tipo);
+    public abstract String getDataCliente();
+    public abstract String getIdCliente();
+    public abstract String getPaisOrigemCliente();
+    public abstract String getEstadoOrigemCliente();
+    public abstract String getCidadeOrigemCliente();
+    public abstract EnumTipoCliente getTipoCliente();
 }
