@@ -1,6 +1,6 @@
 package AulasLoianeGroner;
 
-public abstract class ClassAbsPessoaFisica_01 
+public abstract class ClassAbsPessoaFisica_01 extends ClassAbsCliente_01
 {
     /* -------------- ÁREA DE ATRIBUTOS --------------- */
     // Atributos de Classe

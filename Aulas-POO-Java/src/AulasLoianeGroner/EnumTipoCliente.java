@@ -2,7 +2,6 @@ package AulasLoianeGroner;
 
 public enum EnumTipoCliente 
 {
-
     PF("Pessoa Física"),
     PJ("Pessoa Jurídica");
 
