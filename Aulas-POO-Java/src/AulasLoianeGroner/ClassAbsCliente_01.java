@@ -16,6 +16,11 @@ public abstract class ClassAbsCliente_01
 
     /* -------------- ÁREA DE MÉTODOS --------------- */
     // Métodos Construtores
+    protected ClassAbsCliente_01()
+    {
+        ClassAbsCliente_01.totalClientes += 1;
+    }
+    
     // Métodos Especiais de Classe
     // Métodos Especiais de Instância
     // Métodos Setters e Getters
