@@ -31,7 +31,7 @@ public abstract class ClassAbsPessoaFisica_01 extends ClassAbsCliente_01
     }
 
     // Métodos Especiais de Classe
-    public static void setTotalPF()
+    protected static void setTotalPF()
     {
         ClassAbsPessoaFisica_01.totalPF += 1;
     }
@@ -50,7 +50,7 @@ public abstract class ClassAbsPessoaFisica_01 extends ClassAbsCliente_01
     }
     protected void setIdPF()
     {
-        this.idPF = (this.getDataPF() + "-" + ClassAbsPessoaFisica_01.getTotalPF());
+        this.idPF = (this.getDataPF() + "-" + ClassAbsCliente_01.getTotalClientes() + "." + ClassAbsPessoaFisica_01.getTotalPF());
     }
     public void setCpfPF(String cpf)
     {
