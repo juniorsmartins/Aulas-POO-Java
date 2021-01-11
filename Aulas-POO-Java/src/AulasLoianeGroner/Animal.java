@@ -6,7 +6,7 @@ public abstract class Animal
     // Constantes
     public static final String TIPO = "Animal";
     // Atributos de Classe
-    public static int totalAnimais;
+    private static int totalAnimais;
     // Atributos de Instância
     private String nome;
 
@@ -27,7 +27,7 @@ public abstract class Animal
         return Animal.totalAnimais;
     }
     // Métodos Especiais de Instância
-    public abstract String emitirSom();
+    public abstract void emitirSom();
     // Métodos Setters e Getters
     public void setNome(String nome)
     {
