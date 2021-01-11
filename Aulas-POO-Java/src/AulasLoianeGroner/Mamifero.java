@@ -6,6 +6,7 @@ public abstract class Mamifero extends Animal
     // CONSTANTES
     // Atributos de Classe
     public static int totalMamiferos;
+    
     // Atributos de Instância
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
@@ -14,6 +15,7 @@ public abstract class Mamifero extends Animal
     {
         Mamifero.setTotalMamiferos();
     }            
+    
     // Métodos Especiais de Classe
     private static void setTotalMamiferos()
     {
@@ -26,5 +28,6 @@ public abstract class Mamifero extends Animal
 
     // Métodos Especiais de Instância
     public abstract void amamentar();
+    
     // Métodos Getters e Setters
 }

@@ -6,6 +6,7 @@ public class Papagaio extends Ave
     // CONSTANTES
     // Atributos de Classe
     private static int totalPapagaios;
+    
     // Atributos de Instância
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
@@ -37,6 +38,7 @@ public class Papagaio extends Ave
     {
         System.out.println("Papagaio voa");
     }
+    
     // Métodos Getters e Setters
     
 }

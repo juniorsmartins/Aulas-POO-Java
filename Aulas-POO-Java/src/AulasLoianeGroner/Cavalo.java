@@ -1,11 +1,12 @@
 package AulasLoianeGroner;
 
-public class Cavalo extends Mamifero
+public class Cavalo extends Mamifero implements AnimalDomesticado
 {
     /* ---------- ÁREA DE ATRIBUTOS --------- */
     // CONSTANTES
     // Atributos de Classe
     private static int totalCavalos;
+    
     // Atributos de Instância
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
@@ -14,6 +15,7 @@ public class Cavalo extends Mamifero
     {
         Cavalo.setTotalCavalos();
     }
+    
     // Métodos Especiais de Classe
     private static void setTotalCavalos()
     {
@@ -23,6 +25,7 @@ public class Cavalo extends Mamifero
     {
         return Cavalo.totalCavalos;
     }
+    
     // Métodos Especiais de Instância
     @Override
     public void amamentar()
@@ -49,5 +52,6 @@ public class Cavalo extends Mamifero
     {
         System.out.println("Cavalo chamar veterinário");
     }
+    
     // Métodos Getters e Setters
 }

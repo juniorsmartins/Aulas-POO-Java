@@ -6,6 +6,7 @@ public abstract class Ave extends Animal
     // Constantes
     // Atributos de Classe
     private static int totalAves;
+    
     // Atributos de Instância
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
@@ -14,6 +15,7 @@ public abstract class Ave extends Animal
     {
         Ave.setTotalAves();
     }
+    
     // Métodos Especiais de Classe
     private static void setTotalAves()
     {
@@ -23,7 +25,9 @@ public abstract class Ave extends Animal
     {
         return Ave.totalAves;
     }
+    
     // Métodos Especiais de Instância
     public abstract void voar();
+    
     // Métodos Setters e Getters
 }

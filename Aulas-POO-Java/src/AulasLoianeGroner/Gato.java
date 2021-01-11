@@ -1,19 +1,22 @@
 package AulasLoianeGroner;
 
-public class Gato extends Mamifero
+public class Gato extends Mamifero implements AnimalDomesticado, AnimalEstimacao
 {
     /* ---------- ÁREA DE ATRIBUTOS --------- */
     // CONSTANTES
     // Atributos de Classe
     private static int totalGatos;
+    
     // Atributos de Instância
+    private String racaGato;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Método Construtor
     public Gato()
     {
-        
+        Gato.setTotalGatos();
     }
+
     // Métodos Especiais de Classe
     private static void setTotalGatos()
     {
@@ -60,5 +63,14 @@ public class Gato extends Mamifero
     {
         System.out.println("Gato levar passear");
     }
+
     // Métodos Getters e Setters    
+    public void setRacaGato(String raca)
+    {
+        this.racaGato = raca;
+    }
+    public String getRacaGato()
+    {
+        return this.racaGato;
+    }
 }
