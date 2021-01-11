@@ -10,7 +10,7 @@ public abstract class Ave extends Animal
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Método Construtor
-    private static void Ave()
+    public Ave()
     {
         Ave.setTotalAves();
     }
