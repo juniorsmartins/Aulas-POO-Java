@@ -11,9 +11,9 @@ public abstract class ClassAbsPessoaJuridica_01 extends ClassAbsCliente_01
     private String razaoSocialPJ;
     private String nomeFantasiaPJ;
     private String dataAberturaPJ;
-    private EnumSetorEconomicoPJ setorEconomicoPJ;
-    private EnumPortePJ portePJ;
-    private EnumTipoPJ tipoPJ;
+    private String setorEconomicoPJ;
+    private String portePJ;
+    private String tipoPJ;
 
     /* -------------- ÁREA DE MÉTODOS --------------- */
     // Métodos Construtores
