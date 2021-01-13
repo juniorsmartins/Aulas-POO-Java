@@ -14,6 +14,7 @@ public class TesteAnimais
         gato.alimentar();
         cachorro.amamentar();
         papagaio.emitirSom();
+        cachorro.brincar();
         
     }
     
