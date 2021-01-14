@@ -6,6 +6,7 @@ public class TiposPrimitivosII
     {
         char letra = 'A';
         String palavra = "palavra";
+        boolean valor;
         
         System.out.println("Char A: " + Character.SIZE + " bits");
         System.out.println("String " + palavra + ": " + (Character.SIZE * palavra.length()) + " bits");
