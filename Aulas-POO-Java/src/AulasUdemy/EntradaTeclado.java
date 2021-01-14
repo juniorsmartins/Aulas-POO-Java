@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class EntradaTeclado 
 {
-
     public static void main(String[] args) 
     {
         String nome = new String();
