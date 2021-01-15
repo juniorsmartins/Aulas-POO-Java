@@ -19,6 +19,10 @@ public class AulaMatriz
         // Declaração, definição de tamanho e inicialização de valores
         int mxtrix[][] = { {1, 3, 5}, {4, 8, 6}, {2, 7, 9} };
         
+        // Declaração e definição do tamanho de linhas e indefinição do tamanho de colunas
+        int novaMatriz[][] = new int[2][];
+        
+        
         for (byte linha = 0; linha < mxtrix.length; linha++)
         {
             for (byte coluna = 0; coluna < mxtrix.length; coluna++)
