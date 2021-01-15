@@ -13,49 +13,47 @@ import java.util.Scanner;
 
 public class EntradaSaida 
 {
-    public static String perguntar[]; 
-
+    static Scanner teclado = new Scanner(System.in);
+    static String nomeFrutas[]; // Declarar array de frutas
+    
     public static void main(String[] args)
     {
-        int respostaNumRepeticoes;
-        respostaNumRepeticoes = perguntarNumRepeticoes();
+        int totalFrutas = quantiaFrutas(); // Chamada da função para perguntará quantas frutas
+        
+        nomeFrutas = new String[totalFrutas]; // Definir tamanho do array de frutas
         pulaLinha();
-        perguntarFrutas(respostaNumRepeticoes);
-        imprimirFrutasInvertidas();
+        perguntaFrutas(totalFrutas); // Chamar função para receber nomes de frutas
+        pulaLinha();        
+        imprimirFrutasInvertidas(totalFrutas); // Chamar função para imprimir os nomes invertidos
+        pulaLinha();
     }
-
-    protected static int perguntarNumRepeticoes()
+    
+    public static int quantiaFrutas()
     {
-        int perguntar;
-        Scanner teclado = new Scanner(System.in);
-        
-        System.out.print("Quer incluir quantas frutas? ");
-        perguntar = teclado.nextInt();
-        
-        return perguntar;
+        System.out.print("Quantas frutas: ");
+        int quantiaFrutas = Integer.parseInt(teclado.nextLine());        
+        return quantiaFrutas;
     }
-
-    private static void pulaLinha()
+    
+    public static void perguntaFrutas(int totalFrutas)
     {
-        System.out.println("\n");
-    }
-
-    protected static void perguntarFrutas(int numRepeticoes)
-    {
-        Scanner teclado = new Scanner(System.in);
-        
-        for (int contador = 0; contador < numRepeticoes; contador++)
+        for (int contador = 0; contador < totalFrutas; contador++)
         {
-            System.out.print("Digite o nome da fruta: ");
-            perguntar[contador] =  teclado.nextLine();
+            System.out.print("Fruta " + contador + ": ");
+            nomeFrutas[contador] = teclado.nextLine();
+        }
+    }
+    
+    public static void imprimirFrutasInvertidas(int totalFrutas)
+    {
+        for (int cont = (totalFrutas - 1); cont >= 0; cont--)
+        {
+            System.out.println("Fruta " + cont + ": " + nomeFrutas[cont]);
         }
     }
 
-    protected static void imprimirFrutasInvertidas()
+    public static void pulaLinha()
     {
-        for (int contador = perguntar.length; contador > 0; contador--)
-        {
-            System.out.println("Fruta " + contador + ": " + perguntar[contador]);
-        }    
+        System.out.println("\n");
     }
 }
