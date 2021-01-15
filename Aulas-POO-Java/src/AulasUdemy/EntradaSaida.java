@@ -26,6 +26,7 @@ public class EntradaSaida
         pulaLinha();        
         imprimirFrutasInvertidas(totalFrutas); // Chamar função para imprimir os nomes invertidos
         pulaLinha();
+        teclado.close();
     }
     
     public static int quantiaFrutas()
