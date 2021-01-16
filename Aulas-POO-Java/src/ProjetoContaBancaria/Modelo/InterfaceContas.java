@@ -1,7 +1,7 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package ProjetoContaBancaria.Controller;
+package ProjetoContaBancaria.Modelo;
 
 /**
  * @author Junior Martins
@@ -9,5 +9,6 @@ package ProjetoContaBancaria.Controller;
  */
 public interface InterfaceContas 
 {
-    
+    public void depositarConta(double valor);
+    public void sacarConta(double valor);
 }

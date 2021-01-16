@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
  * @author Junior Martins
  * @since 16/01/21 - 09h00
  */
-public class Conta 
+public class ContaCorrente implements InterfaceContas
 {
     /* --------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
@@ -19,14 +19,14 @@ public class Conta
     // Atributos de Instância
     private String dataConta;
     private String idConta;
-    private Cliente donoConta;
+    private PessoaFisica donoConta;
     private double saldoConta;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    Conta(Cliente dono)
+    ContaCorrente(PessoaFisica dono)
     {
-        Conta.setTotalConta();
+        ContaCorrente.setTotalConta();
         this.setDataConta();
         this.setIdConta();
         this.donoConta = dono;
@@ -36,17 +36,31 @@ public class Conta
     // Métodos Especiais de Classe
     private static void setTotalConta()
     {
-        Conta.totalConta += 1;
+        ContaCorrente.totalConta += 1;
     }
     public static int getTotalConta()
     {
-        return Conta.totalConta;
+        return ContaCorrente.totalConta;
     }
 
     // Métodos Especiais de Instância
+    @Override
     public void depositarConta(double valor)
     {
         this.setSaldoConta(valor);
+        System.out.println("Depósito efetuado com sucesso!");
+    }
+    @Override
+    public void sacarConta(double valor)
+    {
+        if (valor > this.getSaldoConta())
+        {
+            this.saldoConta -= valor;
+        }
+        else
+        {
+            System.out.println("Saldo Insuficiente!");
+        }
     }
 
     // Métodos Setters e Getters
@@ -63,18 +77,18 @@ public class Conta
     
     private void setIdConta()
     {
-        this.idConta = (this.getDataConta() + "-" + Conta.getTotalConta());
+        this.idConta = (this.getDataConta() + "-" + ContaCorrente.getTotalConta());
     }
     public String getIdConta()
     {
         return this.idConta;
     }
     
-    public void setDonoConta(Cliente dono)
+    public void setDonoConta(PessoaFisica dono)
     {
         this.donoConta = dono;
     }
-    public Cliente getDonoConta()
+    public PessoaFisica getDonoConta()
     {
         return this.donoConta;
     }

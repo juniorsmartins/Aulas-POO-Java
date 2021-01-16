@@ -3,73 +3,28 @@
  */
 package ProjetoContaBancaria.Modelo;
 
-import java.util.Date;
-import java.text.SimpleDateFormat;
-
 /**
  * @author Junior Martins
- * @since 16/01/21 - 08h34
+ * @since 16/01/21 - 10h33
  */
-public class Cliente 
+public abstract class Cliente 
 {
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
-    private static int totalCliente;
-    
     // Atributos de Instância
-    private String dataCliente;
-    private String idCliente;
-    private String nomeCliente;
+    protected String nomeCliente;
+    protected boolean statusCliente;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
-    // Métodos Construtor
-    Cliente(String nome)
-    {
-        Cliente.setTotalCliente();
-        this.setDataCliente();
-        this.setIdCliente();
-        this.nomeCliente = nome;
-    }
-
+    // Métodos Construtores
     // Métodos Especiais de Classe
-    public static int getTotalCliente()
-    {
-        return Cliente.totalCliente;
-    }
-    private static void setTotalCliente()
-    {
-        Cliente.totalCliente += 1;
-    }
-
     // Métodos Especiais de Instância
 
-    // Métodos Getters e Setters
-    public String getDataCliente()
-    {
-        return this.dataCliente;
-    }
-    private void setDataCliente()
-    {
-        Date data = new Date();
-        SimpleDateFormat formatar = new SimpleDateFormat("ddMMyyyy");
-        this.dataCliente = formatar.format(data);
-    }
-
-    public String getIdCliente()
-    {
-        return this.idCliente;
-    }
-    private void setIdCliente()
-    {
-        this.idCliente = (this.getDataCliente() + "-" + Cliente.getTotalCliente());
-    }
-
-    public String getNomeCliente()
-    {
-        return this.nomeCliente;
-    }
-    public void setNomeCliente(String nome)
-    {
-        this.nomeCliente = nome;
-    }
+    // Métodos Setters e Getters
+    public abstract String getNomeCliente();
+    public abstract void setNomeCliente(String nome);
+    public abstract boolean getStatusCliente();
+    protected abstract void setStatusCliente(boolean status);
+    public abstract void ativarCliente();
+    public abstract void desativarCliente();
 }
