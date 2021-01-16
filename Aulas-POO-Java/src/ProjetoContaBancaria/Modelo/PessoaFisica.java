@@ -14,88 +14,64 @@ public class PessoaFisica extends Cliente
 {
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
-    private static int totalCliente;
-    
+    private static int totalPessoaFisica;
+
     // Atributos de Instância
-    private String dataCliente;
-    private String idCliente;
+    private String dataPessoaFisica;
+    private String idPessoaFisica;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtor
-    public PessoaFisica() {}
     public PessoaFisica(String nome)
     {
-        PessoaFisica.setTotalCliente();
-        this.setDataCliente();
-        this.setIdCliente();
-        super.nomeCliente = nome;
+        PessoaFisica.setTotalPessoaFisica();
+        this.setDataPessoaFisica();
+        this.setIdPessoaFisica();
+        this.nomeCliente = nome;
     }
 
     // Métodos Especiais de Classe
-    public static int getTotalCliente()
+    public static int getTotalPessoaFisica()
     {
-        return PessoaFisica.totalCliente;
+        return PessoaFisica.totalPessoaFisica;
     }
-    private static void setTotalCliente()
+    private static void setTotalPessoaFisica()
     {
-        PessoaFisica.totalCliente += 1;
+        PessoaFisica.totalPessoaFisica += 1;
     }
 
     // Métodos Especiais de Instância
 
     // Métodos Getters e Setters
-    public String getDataCliente()
+    public String getDataPessoaFisica()
     {
-        return this.dataCliente;
+        return this.dataPessoaFisica;
     }
-    private void setDataCliente()
+    private void setDataPessoaFisica()
     {
         Date data = new Date();
         SimpleDateFormat formatar = new SimpleDateFormat("ddMMyyyy");
-        this.dataCliente = formatar.format(data);
+        this.dataPessoaFisica = formatar.format(data);
     }
 
-    public String getIdCliente()
+    public String getIdPessoaFisica()
     {
-        return this.idCliente;
+        return this.idPessoaFisica;
     }
-    private void setIdCliente()
+    private void setIdPessoaFisica()
     {
-        this.idCliente = (this.getDataCliente() + "-" + PessoaFisica.getTotalCliente());
+        this.idPessoaFisica = (this.getDataPessoaFisica() + "-" + PessoaFisica.getTotalPessoaFisica());
     }
 
     // Métodos de SuperClasse
-    @Override
-    public String getNomeCliente()
-    {
-        return super.nomeCliente;
-    }
-    @Override
-    public void setNomeCliente(String nome)
-    {
-        super.nomeCliente = nome;
-    }
-
-    @Override
-    public boolean getStatusCliente()
-    {
-        return super.statusCliente;
-    }
-    @Override
-    protected void setStatusCliente(boolean status)
-    {
-        super.statusCliente = status;
-    }
-
     @Override 
     public void ativarCliente()
     {
-        this.setStatusCliente(true);
-        
+        super.setStatusCliente(true);
     }
     @Override
     public void desativarCliente()
     {
-        this.setStatusCliente(false);
+        super.setStatusCliente(false);
     }
 }

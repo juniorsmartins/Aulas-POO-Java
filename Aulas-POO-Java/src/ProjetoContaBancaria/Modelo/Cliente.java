@@ -19,12 +19,26 @@ public abstract class Cliente
     // Métodos Construtores
     // Métodos Especiais de Classe
     // Métodos Especiais de Instância
-
-    // Métodos Setters e Getters
-    public abstract String getNomeCliente();
-    public abstract void setNomeCliente(String nome);
-    public abstract boolean getStatusCliente();
-    protected abstract void setStatusCliente(boolean status);
+    // Métodos Abstratos
     public abstract void ativarCliente();
     public abstract void desativarCliente();
+
+    // Métodos Setters e Getters
+    public String getNomeCliente()
+    {
+        return this.nomeCliente;
+    }
+    public void setNomeCliente(String nome)
+    {
+        this.nomeCliente = nome;
+    }
+
+    public boolean getStatusCliente()
+    {
+        return this.statusCliente;        
+    }
+    protected void setStatusCliente(boolean status)
+    {
+        this.statusCliente = status;        
+    }
 }
