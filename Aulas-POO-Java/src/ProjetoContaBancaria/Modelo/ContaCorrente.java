@@ -3,6 +3,7 @@
  */
 package ProjetoContaBancaria.Modelo;
 
+import ProjetoContaBancaria.Controller.InterfaceContas;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 

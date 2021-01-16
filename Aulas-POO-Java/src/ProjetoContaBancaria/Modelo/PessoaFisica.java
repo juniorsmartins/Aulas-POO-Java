@@ -22,7 +22,8 @@ public class PessoaFisica extends Cliente
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtor
-    PessoaFisica(String nome)
+    public PessoaFisica() {}
+    public PessoaFisica(String nome)
     {
         PessoaFisica.setTotalCliente();
         this.setDataCliente();

@@ -1,7 +1,7 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package ProjetoContaBancaria.Modelo;
+package ProjetoContaBancaria.Controller;
 
 /**
  * @author Junior Martins
