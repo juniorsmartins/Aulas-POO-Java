@@ -20,18 +20,27 @@ public class ContaCorrente implements InterfaceContas
     // Atributos de Instância
     private String dataConta;
     private String idConta;
-    private PessoaFisica donoConta;
     private double saldoConta;
+    private PessoaFisica cidadao;
+    private PessoaJuridica empresa;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    ContaCorrente(PessoaFisica dono)
+    public ContaCorrente(PessoaFisica dono)
     {
         ContaCorrente.setTotalConta();
         this.setDataConta();
         this.setIdConta();
-        this.donoConta = dono;
-        this.saldoConta = 0;
+        this.setSaldoConta(0);
+        this.setCidadao(dono);
+    }
+    public ContaCorrente(PessoaJuridica dono)
+    {
+        ContaCorrente.setTotalConta();
+        this.setDataConta();
+        this.setIdConta();
+        this.setSaldoConta(0);
+        this.setEmpresa(dono);
     }
 
     // Métodos Especiais de Classe
@@ -85,15 +94,6 @@ public class ContaCorrente implements InterfaceContas
         return this.idConta;
     }
     
-    public void setDonoConta(PessoaFisica dono)
-    {
-        this.donoConta = dono;
-    }
-    public PessoaFisica getDonoConta()
-    {
-        return this.donoConta;
-    }
-
     private void setSaldoConta(double valor)
     {
         this.saldoConta += valor;
@@ -101,5 +101,23 @@ public class ContaCorrente implements InterfaceContas
     public double getSaldoConta()
     {
         return this.saldoConta;
+    }
+    
+    public void setCidadao(PessoaFisica pf)
+    {
+        this.cidadao = pf;
+    }
+    public PessoaFisica getCidadao()
+    {
+        return this.cidadao;
+    }
+
+    public void setEmpresa(PessoaJuridica pj)
+    {
+        this.empresa = pj;
+    }
+    public PessoaJuridica getEmpresa()
+    {
+        return this.empresa;
     }
 }
