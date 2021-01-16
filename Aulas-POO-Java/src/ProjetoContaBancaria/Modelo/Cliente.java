@@ -30,10 +30,8 @@ public class Cliente
         this.setIdCliente();
         this.nomeCliente = nome;
     }
-    // Métodos Especiais de Classe
-    // Métodos Especiais de Instância
 
-    // Métodos Getters e Setters
+    // Métodos Especiais de Classe
     public static int getTotalCliente()
     {
         return Cliente.totalCliente;
@@ -43,6 +41,9 @@ public class Cliente
         Cliente.totalCliente += 1;
     }
 
+    // Métodos Especiais de Instância
+
+    // Métodos Getters e Setters
     public String getDataCliente()
     {
         return this.dataCliente;
@@ -60,7 +61,7 @@ public class Cliente
     }
     private void setIdCliente()
     {
-        this.idCliente = (getDataCliente() + "-" + getTotalCliente());
+        this.idCliente = (this.getDataCliente() + "-" + Cliente.getTotalCliente());
     }
 
     public String getNomeCliente()

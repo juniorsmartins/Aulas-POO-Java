@@ -1,13 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Exercício para aprendizagem de Java
  */
 package ProjetoContaBancaria.View;
 
 /**
- *
- * @author junio
+ * @author Junior Martins
+ * @since 16/01/21 - 09h00
  */
 public class ViewBanco extends javax.swing.JFrame {
 
