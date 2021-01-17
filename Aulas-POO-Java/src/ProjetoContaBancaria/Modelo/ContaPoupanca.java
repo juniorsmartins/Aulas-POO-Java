@@ -9,6 +9,8 @@ package ProjetoContaBancaria.Modelo;
  *
  * @author junio
  */
-public class ContaPoupanca {
-    
+public class ContaPoupanca 
+{
+
+        
 }
