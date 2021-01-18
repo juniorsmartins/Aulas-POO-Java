@@ -19,6 +19,7 @@ public class PessoaFisica extends Cliente
     // Atributos de Instância
     private String dataPessoaFisica;
     private String idPessoaFisica;
+    private String cpf;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtor
@@ -27,7 +28,8 @@ public class PessoaFisica extends Cliente
         PessoaFisica.setTotalPessoaFisica();
         this.setDataPessoaFisica();
         this.setIdPessoaFisica();
-        this.nomeCliente = nome;
+        this.setDenominacao(nome);
+        
     }
 
     // Métodos Especiais de Classe
@@ -62,16 +64,16 @@ public class PessoaFisica extends Cliente
     {
         this.idPessoaFisica = (this.getDataPessoaFisica() + "-" + PessoaFisica.getTotalPessoaFisica());
     }
-
+    
     // Métodos de SuperClasse
-    @Override 
-    public void ativarCliente()
+    @Override
+    public String getDenominacao()
     {
-        super.setStatusCliente(true);
+        return super.denominacao;
     }
     @Override
-    public void desativarCliente()
+    public void setDenominacao(String nome)
     {
-        super.setStatusCliente(false);
+        super.denominacao = nome;
     }
 }

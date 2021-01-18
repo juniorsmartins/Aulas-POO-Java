@@ -12,33 +12,43 @@ public abstract class Cliente
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
     // Atributos de Instância
-    protected String nomeCliente;
-    protected boolean statusCliente;
+    private String cidade;
+    protected String denominacao;
+    private boolean statusCadastro;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
     // Métodos Especiais de Classe
     // Métodos Especiais de Instância
+    public void ativarCadastro()
+    {
+        this.setStatusCadastro(true);
+    }
+    public void desativarCadastro()
+    {
+        this.setStatusCadastro(false);
+    }
+
     // Métodos Abstratos
-    public abstract void ativarCliente();
-    public abstract void desativarCliente();
+    public abstract String getDenominacao();
+    public abstract void setDenominacao(String nome);
 
     // Métodos Setters e Getters
-    public String getNomeCliente()
+    public String getCidade()
     {
-        return this.nomeCliente;
+        return this.cidade;
     }
-    public void setNomeCliente(String nome)
+    public void setCidade(String cidade)
     {
-        this.nomeCliente = nome;
+        this.cidade = cidade;
     }
 
-    public boolean getStatusCliente()
+    public boolean getStatusCadastro()
     {
-        return this.statusCliente;        
+        return this.statusCadastro;        
     }
-    protected void setStatusCliente(boolean status)
+    private void setStatusCadastro(boolean status)
     {
-        this.statusCliente = status;        
+        this.statusCadastro = status;        
     }
 }

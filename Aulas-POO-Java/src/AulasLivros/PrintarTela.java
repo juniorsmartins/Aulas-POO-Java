@@ -12,5 +12,10 @@ public class PrintarTela
         
         System.out.println("Imprime e o cursos é conduzido para o início da próxima linha");
         System.out.print("Imprime e o cursor fica ao fim da linha");
+        
+        System.out.println("\n");
+
+        // %s recebe a String e %n gera quebra de linha
+        System.out.printf("%s%n%s%n", "Welcome to", "Java Programming!");
     }
 }

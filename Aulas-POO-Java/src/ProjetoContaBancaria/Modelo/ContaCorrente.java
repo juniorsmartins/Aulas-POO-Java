@@ -3,7 +3,6 @@
  */
 package ProjetoContaBancaria.Modelo;
 
-import ProjetoContaBancaria.Controller.InterfaceContas;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
@@ -11,7 +10,7 @@ import java.text.SimpleDateFormat;
  * @author Junior Martins
  * @since 16/01/21 - 09h00
  */
-public class ContaCorrente implements InterfaceContas
+public class ContaCorrente extends Conta
 {
     /* --------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
