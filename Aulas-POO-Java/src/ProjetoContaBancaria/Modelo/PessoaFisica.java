@@ -23,13 +23,15 @@ public class PessoaFisica extends Cliente
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtor
-    public PessoaFisica(String nome)
+    public PessoaFisica(String nome, String cpf, String cidade)
     {
         PessoaFisica.setTotalPessoaFisica();
         this.setDataPessoaFisica();
         this.setIdPessoaFisica();
         this.setDenominacao(nome);
-        
+        this.setCpf(cpf);
+        this.setCidade(cidade);
+        this.ativarCadastro();
     }
 
     // Métodos Especiais de Classe
@@ -65,6 +67,15 @@ public class PessoaFisica extends Cliente
         this.idPessoaFisica = (this.getDataPessoaFisica() + "-" + PessoaFisica.getTotalPessoaFisica());
     }
     
+    public String getCpf()
+    {
+        return this.cpf;
+    }
+    public void setCpf(String cpf)
+    {
+        this.cpf = cpf;
+    }
+
     // Métodos de SuperClasse
     @Override
     public String getDenominacao()

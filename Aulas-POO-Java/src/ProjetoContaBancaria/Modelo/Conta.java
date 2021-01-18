@@ -9,6 +9,8 @@ package ProjetoContaBancaria.Modelo;
  */
 public abstract class Conta 
 {
+    public abstract void abreConta();
     public abstract void depositarConta(double valor);
     public abstract void sacarConta(double valor);
+    public abstract void fimConta();
 }

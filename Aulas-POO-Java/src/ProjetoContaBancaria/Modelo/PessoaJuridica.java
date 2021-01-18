@@ -19,15 +19,19 @@ public class PessoaJuridica extends Cliente
     // Atributos de Instância
     private String dataPessoaJuridica;
     private String idPessoaJuridica;
+    private String cnpj;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public PessoaJuridica(String nome)
+    public PessoaJuridica(String nome, String cnpj, String cidade)
     {
         PessoaJuridica.setTotalPessoaJuridica();
         this.setDataPessoaJuridica();
         this.setIdPessoaJuridica();
-        this.nomeCliente = nome;
+        this.setDenominacao(nome);
+        this.setCnpj(cnpj);
+        this.setCidade(cidade);
+        this.ativarCadastro();
     }
     
     // Métodos Especiais de Classe
@@ -62,16 +66,25 @@ public class PessoaJuridica extends Cliente
     {
         return this.idPessoaJuridica;
     }
+    
+    public String getCnpj()
+    {
+        return this.cnpj;
+    }
+    public void setCnpj(String cnpj)
+    {
+        this.cnpj = cnpj;
+    }
 
     // Métodos de SuperClasse
     @Override
-    public void ativarCliente()
+    public String getDenominacao()
     {
-        this.setStatusCliente(true);
+        return super.denominacao;
     }
     @Override
-    public void desativarCliente()
+    public void setDenominacao(String nome)
     {
-        this.setStatusCliente(false);
+        super.denominacao = nome;
     }
 }

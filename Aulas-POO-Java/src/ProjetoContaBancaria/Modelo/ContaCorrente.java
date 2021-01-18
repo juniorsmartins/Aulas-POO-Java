@@ -14,64 +14,113 @@ public class ContaCorrente extends Conta
 {
     /* --------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
-    private static int totalConta;
+    private static int numContas;
     
     // Atributos de Instância
     private String dataConta;
     private String idConta;
     private double saldoConta;
-    private PessoaFisica cidadao;
-    private PessoaJuridica empresa;
+    private Cliente donoConta;
+    private boolean statusConta;
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public ContaCorrente(PessoaFisica dono)
+    public ContaCorrente(Cliente pessoa)
     {
-        ContaCorrente.setTotalConta();
+        /**
+         * Trilogia para geração de ID de Conta
+         */
+        ContaCorrente.setNumContas();
         this.setDataConta();
         this.setIdConta();
         this.setSaldoConta(0);
-        this.setCidadao(dono);
+        this.setDonoConta(pessoa);
+        this.abreConta();
     }
-    public ContaCorrente(PessoaJuridica dono)
+    public ContaCorrente(Cliente empresa, double valorInicial)
     {
-        ContaCorrente.setTotalConta();
+        /**
+         * Trilogia para geração de ID de Conta
+         */
+        ContaCorrente.setNumContas();
         this.setDataConta();
         this.setIdConta();
-        this.setSaldoConta(0);
-        this.setEmpresa(dono);
+        this.setSaldoConta(valorInicial);
+        this.setDonoConta(empresa);
+        this.abreConta();
     }
 
     // Métodos Especiais de Classe
-    private static void setTotalConta()
+    private static void setNumContas()
     {
-        ContaCorrente.totalConta += 1;
+        ContaCorrente.numContas += 1;
     }
-    public static int getTotalConta()
+    public static int getNumContas()
     {
-        return ContaCorrente.totalConta;
+        return ContaCorrente.numContas;
     }
 
-    // Métodos Especiais de Instância
+    @Override
+    public void abreConta()
+    {
+        if (this.getDonoConta().getStatusCadastro() == true)
+        {
+            this.ativarConta();
+        }
+        else
+        {
+            System.out.format("Cadastro Inativo! Não pode abrir conta!");
+            this.desativarConta();
+        }
+    }
+    @Override
+    public void fimConta()
+    {
+        
+    }
+
     @Override
     public void depositarConta(double valor)
     {
-        this.setSaldoConta(valor);
-        System.out.println("Depósito efetuado com sucesso!");
+        if (this.getStatusConta() == true)
+        {
+            this.setSaldoConta(valor);
+            System.out.println("Depósito efetuado com sucesso!");
+        }
+        else
+        {
+            System.out.println("Conta Inexistente! Depósito Impossibilitado!");
+        }
     }
     @Override
     public void sacarConta(double valor)
     {
-        if (valor > this.getSaldoConta())
+        if (this.getStatusConta() == true)
         {
-            this.saldoConta -= valor;
+            if (valor > this.getSaldoConta())
+            {
+                this.saldoConta -= valor;
+            }
+            else
+            {
+                System.out.println("Saldo Insuficiente!");
+            }
         }
         else
-        {
-            System.out.println("Saldo Insuficiente!");
-        }
+            System.out.println("Conta Inexistente! Saque Impossibilitado!");
+
     }
 
+    // Métodos Especiais de Instância
+    public void ativarConta()
+    {
+        this.setStatusConta(true);
+    }
+    public void desativarConta()
+    {
+        this.setStatusConta(false);
+    }
+    
     // Métodos Setters e Getters
     private void setDataConta()
     {
@@ -86,7 +135,7 @@ public class ContaCorrente extends Conta
     
     private void setIdConta()
     {
-        this.idConta = (this.getDataConta() + "-" + ContaCorrente.getTotalConta());
+        this.idConta = (this.getDataConta() + "-" + ContaCorrente.getNumContas());
     }
     public String getIdConta()
     {
@@ -102,21 +151,21 @@ public class ContaCorrente extends Conta
         return this.saldoConta;
     }
     
-    public void setCidadao(PessoaFisica pf)
+    public void setDonoConta(Cliente dono)
     {
-        this.cidadao = pf;
+        this.donoConta = dono;
     }
-    public PessoaFisica getCidadao()
+    public Cliente getDonoConta()
     {
-        return this.cidadao;
+        return this.donoConta;
     }
 
-    public void setEmpresa(PessoaJuridica pj)
+    public boolean getStatusConta()
     {
-        this.empresa = pj;
+        return this.statusConta;
     }
-    public PessoaJuridica getEmpresa()
+    private void setStatusConta(boolean status)
     {
-        return this.empresa;
+        this.statusConta = status;
     }
 }
