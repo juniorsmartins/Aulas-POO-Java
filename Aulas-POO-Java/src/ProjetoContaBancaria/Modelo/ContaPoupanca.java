@@ -25,7 +25,7 @@ public class ContaPoupanca extends Conta
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public ContaPoupanca(Cliente pessoa)
+    public ContaPoupanca(PessoaFisica pessoa)
     {
         /**
          * Trilogia para geração de ID de Conta
@@ -37,7 +37,7 @@ public class ContaPoupanca extends Conta
         this.setDonoConta(pessoa);
         this.abreConta();
     }
-    public ContaPoupanca(Cliente empresa, double valorInicial)
+    public ContaPoupanca(PessoaJuridica empresa, double valorInicial)
     {
         /**
          * Trilogia para geração de ID de Conta
