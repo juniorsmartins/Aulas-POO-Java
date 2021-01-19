@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 
 public class AulaLeituraEmArquivo 
 {
+    // Programa para ler arquivo de texto
     public static void main(String[] args) 
     {
         try

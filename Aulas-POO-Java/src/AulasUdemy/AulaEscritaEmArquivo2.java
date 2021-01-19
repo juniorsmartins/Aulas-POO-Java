@@ -1,19 +1,20 @@
 package AulasUdemy;
 
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
-public class AulaEscritaEmArquivo 
+public class AulaEscritaEmArquivo2 
 {
-    // Programa para escrever texto num arquivo de txt - Escreve em cima do conteúdo pré-existente - sobreescreve
+    // Programa para escrever texto num arquivo de txt - escreve após conteúdo pré-existente - não sobreescreve
     public static void main(String[] args) 
     {
         Scanner teclado = new Scanner(System.in);
 
         try
         {
-            PrintStream escrever = new PrintStream("saida.txt");
+            PrintStream escrever = new PrintStream(new FileOutputStream("saida.txt", true));
             
             System.out.print("Escreva algo: ");
             String mensagem = teclado.nextLine();
@@ -25,5 +26,5 @@ public class AulaEscritaEmArquivo
             System.out.println("Não foi possível criar o arquivo");
         }
         teclado.close();
-    }
+    }    
 }
