@@ -4,8 +4,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.PrintStream;
 
-public class AulaLeituraEscrita 
+public class AulaEscritaEmArquivo 
 {
+    // Programa para escrever texto num arquivo txt
     public static void main(String[] args) 
     {
         Scanner teclado = new Scanner(System.in);
