@@ -25,5 +25,6 @@ public class AulaConjuntos2
         contas.put("Pessoa física", conta2); 
         
         System.out.println(contas.size());
+        
     }
 }
