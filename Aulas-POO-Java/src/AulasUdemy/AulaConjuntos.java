@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Scanner;
 
+/**
+ * Conjunto Set
+ */
 public class AulaConjuntos 
 {
     public static void main(String[] args) 
