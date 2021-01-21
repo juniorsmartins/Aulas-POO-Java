@@ -37,13 +37,21 @@ public class Conta
     }
 
     // Métodos de Instância
-    public void depositar(double valor) 
+        // Forma um de fazer sincronização
+    public synchronized void depositar (double valor)
+    {
+        this.saldoConta += valor;
+    }
+
+        // Forma dois de fazer a sincronização
+/*    public void depositar(double valor) 
     {
         synchronized (this) 
         {
             this.saldoConta += valor;
         }
     }
+*/
 
     // Métodos de Polimorfismo
 
