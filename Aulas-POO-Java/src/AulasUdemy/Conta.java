@@ -37,6 +37,14 @@ public class Conta
     }
 
     // Métodos de Instância
+    public void depositar(double valor) 
+    {
+        synchronized (this) 
+        {
+            this.saldoConta += valor;
+        }
+    }
+
     // Métodos de Polimorfismo
 
     // Métodos Getters e Setters    
