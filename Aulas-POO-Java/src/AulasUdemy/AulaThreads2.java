@@ -2,7 +2,7 @@ package AulasUdemy;
 
 public class AulaThreads2 
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws InterruptedException 
     {
         Cliente cliente = new Cliente("Roberta Zanini");
         Conta conta1 = new Conta(100);
