@@ -1,5 +1,6 @@
 package AulasUdemy;
 
+@SuppressWarnings("EqualsAndHashcode")
 public class AulaArmazenamentoSequencial_Aluno 
 {
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
@@ -19,6 +20,7 @@ public class AulaArmazenamentoSequencial_Aluno
 
     // Métodos de Polimorfismo
     @Override
+    @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
     public boolean equals(Object obj)
     {
         AulaArmazenamentoSequencial_Aluno outro = (AulaArmazenamentoSequencial_Aluno) obj;
