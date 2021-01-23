@@ -1,4 +1,4 @@
-package CrudMVC.Controller;
+package SocioTorcedor.Controller;
 
 public class MainCrud 
 {
