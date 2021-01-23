@@ -16,7 +16,14 @@ public class AulaArmazenamentoSequencial_Vetor
     // Métodos Especiais de Instância
     public void adiciona(AulaArmazenamentoSequencial_Aluno aluno)
     {
-        //Todo
+        for (int i = 0; i < alunos.length; i++)
+        {
+            if (alunos[i] == null) 
+            {
+                alunos[i] = aluno;
+                break;
+            }
+        }
     }
     public AulaArmazenamentoSequencial_Aluno pegaPosicao (int posicao)
     {

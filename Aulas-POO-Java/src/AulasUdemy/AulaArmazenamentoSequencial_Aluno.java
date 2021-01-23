@@ -24,11 +24,11 @@ public class AulaArmazenamentoSequencial_Aluno
         AulaArmazenamentoSequencial_Aluno outro = (AulaArmazenamentoSequencial_Aluno) obj;
         return outro.getNome().equals(this.nome);
     }
-//    @Override 
-//    public String toString()
-//    {
-//        return this.nome;
-//    }
+    @Override 
+    public String toString()
+    {
+        return this.nome;
+    }
 
     // Métodos Getters e Setters
     public String getNome()
