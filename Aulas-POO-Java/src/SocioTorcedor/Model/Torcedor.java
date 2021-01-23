@@ -12,21 +12,35 @@ public class Torcedor
     // Atributos de Instância
     private String dataCadastroTorcedor;
     private String idTorcedor;
+    private String nomeTorcedor;
+    private byte idadeTorcedor;
+    private boolean statusTorcedor;
+    private Plano sociedade;
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public Torcedor()
+    public Torcedor(String nome, byte idade)
     {
         Torcedor.setTotalTorcedor();
         this.setDataCadastroTorcedor();
         this.setIdTorcedor();
-
+        this.setNomeTorcedor(nome);
+        this.setIdadeTorcedor(idade);
+        this.ativaStatusTorcedor();
     }
 
     // Métodos Abstratos
     // Métodos Especiais de Classe
 
     // Métodos Especiais de Instância
+    public void ativaStatusTorcedor()
+    {
+        this.setStatusTorcedor(true);
+    }
+    public void desativaStatusTorcedor()
+    {
+        this.setStatusTorcedor(false);
+    }
 
     // Métodos Setters e Getters
     private static void setTotalTorcedor()
@@ -56,5 +70,41 @@ public class Torcedor
     public String getIdTorcedor()
     {
         return this.idTorcedor;
+    }
+    
+    private void setNomeTorcedor(String nome)
+    {
+        this.nomeTorcedor = nome;
+    }
+    public String getNomeTorcedor()
+    {
+        return this.nomeTorcedor;
+    }
+
+    private void setIdadeTorcedor(byte idade)
+    {
+        this.idadeTorcedor = idade;
+    }
+    public byte getIdadeTorcedor()
+    {
+        return this.idadeTorcedor;
+    }
+
+    private void setStatusTorcedor(boolean status)
+    {
+        this.statusTorcedor = status;
+    }
+    public boolean getStatusTorcedor()
+    {
+        return this.statusTorcedor;
+    }
+    
+    private void setSociedade(Plano plan)
+    {
+        this.sociedade = plan;
+    }
+    public Plano getSociedade()
+    {
+        return this.sociedade;
     }
 }

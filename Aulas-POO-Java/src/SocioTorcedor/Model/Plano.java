@@ -1,16 +1,41 @@
 package SocioTorcedor.Model;
 
-public abstract class Plano 
+public class Plano 
 {
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
     // Atributos de Instância
+    private String nomePlano;
+    private float valorPlano;
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
+    public Plano(String nome, float valor)
+    {
+        this.setNomePlano(nome);
+        this.setValorPlano(valor);
+    }
+
     // Métodos Abstratos
     // Métodos Especiais de Classe
     // Métodos Especiais de Instância
-    // Métodos Getters e Setters
-    
+
+    // Métodos Setters e Getters
+    private void setNomePlano(String nome)
+    {
+        this.nomePlano = nome;
+    }
+    public String getNomePlano()
+    {
+        return this.nomePlano;
+    }
+
+    private void setValorPlano(float valor)
+    {
+        this.valorPlano = valor;
+    }
+    public float getValorPlano()
+    {
+        return this.valorPlano;
+    }
 }
