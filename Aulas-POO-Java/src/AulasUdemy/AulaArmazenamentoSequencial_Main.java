@@ -16,7 +16,9 @@ public class AulaArmazenamentoSequencial_Main
         lista.adiciona(aluno3);
         lista.remove(1);
         lista.adiciona(aluno4);
+        lista.remove(0);
         
         System.out.println(lista);
+        System.out.println(lista.getTamanho());
     }
 }

@@ -6,6 +6,8 @@ public class AulaArmazenamentoSequencial_Vetor
 {
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
+    private static int tamanhoTotal;
+
     // Atributos de Instância
     private AulaArmazenamentoSequencial_Aluno[] alunos = new AulaArmazenamentoSequencial_Aluno[100];
     
@@ -37,10 +39,6 @@ public class AulaArmazenamentoSequencial_Vetor
     {
         return false;
     }
-    public int tamanho()
-    {
-        return 0;
-    }
 
     // Métodos de Polimorfismo
     @Override
@@ -50,4 +48,15 @@ public class AulaArmazenamentoSequencial_Vetor
     }
     
     // Métodos Getters e Setters
+    public int getTamanho()
+    {
+        for (AulaArmazenamentoSequencial_Aluno i: alunos)
+        {
+            if (i != null)
+            {
+                AulaArmazenamentoSequencial_Vetor.tamanhoTotal += 1;
+            }
+        }
+        return AulaArmazenamentoSequencial_Vetor.tamanhoTotal;
+    }
 }
