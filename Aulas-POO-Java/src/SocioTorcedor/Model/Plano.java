@@ -7,6 +7,7 @@ public class Plano
     // Atributos de Instância
     private String nomePlano;
     private float valorPlano;
+    private Torcedor[] membros = new Torcedor[100];
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores

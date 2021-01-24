@@ -13,13 +13,13 @@ public class Torcedor
     private String dataCadastroTorcedor;
     private String idTorcedor;
     private String nomeTorcedor;
-    private byte idadeTorcedor;
+    private int idadeTorcedor;
     private boolean statusTorcedor;
     private Plano sociedade;
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public Torcedor(String nome, byte idade)
+    public Torcedor(String nome, int idade)
     {
         Torcedor.setTotalTorcedor();
         this.setDataCadastroTorcedor();
@@ -81,11 +81,11 @@ public class Torcedor
         return this.nomeTorcedor;
     }
 
-    private void setIdadeTorcedor(byte idade)
+    private void setIdadeTorcedor(int idade)
     {
         this.idadeTorcedor = idade;
     }
-    public byte getIdadeTorcedor()
+    public int getIdadeTorcedor()
     {
         return this.idadeTorcedor;
     }
