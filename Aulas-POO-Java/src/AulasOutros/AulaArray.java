@@ -8,23 +8,36 @@ public class AulaArray
     static String disciplina;
     static int quantiaNotas;
     static float[] notas = new float[50];
+    static float mediaNotas;
     
     public static void main(String[] args) 
     {
-        System.out.println("Bem-vindo! Vamos calcular sua média.");
+        abertura();
         parametrosIniciais();
         entradaDeNotas();
         calcularMedia();
-        
+        apresentarMedia();
     }
 
+    public static void apresentarMedia()
+    {
+        pulaLinha();
+        System.out.printf("Sua média em %s é: %.2f", disciplina, mediaNotas);
+        pulaLinha();
+    }
+    
     public static void calcularMedia()
     {
-        
+        for (int contador = 0; contador < quantiaNotas; contador++)
+        {
+            mediaNotas += notas[contador];
+        }
+        mediaNotas = (mediaNotas / quantiaNotas);
     }
 
     public static void entradaDeNotas()
     {
+        pulaLinha();
         for (int contador = 0; contador < quantiaNotas; contador++)
         {
             do
@@ -46,6 +59,16 @@ public class AulaArray
         } while (quantiaNotas <= 0 || quantiaNotas > 50);
     }
 
+    public static void abertura()
+    {
+        System.out.println("-------------------------------");
+        System.out.println("--------- Bem-Vindo! ----------");
+        System.out.println("-------------------------------");
+        System.out.println("-- Vamos calcular sua média! --");
+        System.out.println("-------------------------------");
+        pulaLinha();
+    }
+    
     public static void pulaLinha()
     {
         System.out.print("\n");
