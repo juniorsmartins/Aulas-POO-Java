@@ -2,19 +2,19 @@ package AulasUdemy;
 
 public class AulaListaDuplaLigada_Celula 
 {
-    private Object elementos;
+    private Object elemento;
     private AulaListaDuplaLigada_Celula proximo;
     private AulaListaDuplaLigada_Celula anterior;
 
-    public AulaListaDuplaLigada_Celula (Object elementos, AulaListaDuplaLigada_Celula proximo)
+    public AulaListaDuplaLigada_Celula (Object elemento, AulaListaDuplaLigada_Celula proximo)
     {
-        this.elementos = elementos;
+        this.elemento = elemento;
         this.proximo = proximo;
     }
     
-    public AulaListaDuplaLigada_Celula (Object elementos)
+    public AulaListaDuplaLigada_Celula (Object elemento)
     {
-        this(elementos, null);
+        this(elemento, null);
     }
     
     public AulaListaDuplaLigada_Celula getProximo ()
@@ -29,7 +29,7 @@ public class AulaListaDuplaLigada_Celula
     
     public Object getElemento ()
     {
-        return this.elementos;
+        return this.elemento;
     }
     
     public AulaListaDuplaLigada_Celula getAnterior ()

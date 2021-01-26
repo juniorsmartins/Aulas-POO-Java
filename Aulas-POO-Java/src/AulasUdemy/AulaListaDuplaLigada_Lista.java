@@ -8,19 +8,19 @@ public class AulaListaDuplaLigada_Lista
     
     /**
      * Método que adiciiona um objeto no começo da lista
-     * @param elementos 
+     * @param elemento
      */
-    public void adicionaNoComeco (Object elementos)
+    public void adicionaNoComeco (Object elemento)
     {
         if (this.total == 0)
         {
-            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos);
+            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elemento);
             this.primeira = nova;
             this.ultima = nova;
         }
         else
         {
-            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos, this.primeira);
+            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elemento, this.primeira);
             this.primeira.setAnterior(nova);
             this.primeira = nova;
         }
@@ -29,11 +29,11 @@ public class AulaListaDuplaLigada_Lista
 
     /**
      * Método que adiciona um objeto no final da lista
-     * @param elementos 
+     * @param elemento
      */
-    public void adiciona (Object elementos)
+    public void adiciona (Object elemento)
     {
-        AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos);
+        AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elemento);
         this.ultima.setProximo(nova);
         nova.setAnterior(this.ultima);
         this.ultima = nova;
@@ -43,23 +43,23 @@ public class AulaListaDuplaLigada_Lista
     /**
      * Método que adiciona um elemento no meio da lista conforme posição determinada
      * @param posicao
-     * @param elementos 
+     * @param elemento
      */
-    public void adiciona (int posicao, Object elementos)
+    public void adiciona (int posicao, Object elemento)
     {
         if (posicao == 0)
         {
-            this.adicionaNoComeco(elementos);
+            this.adicionaNoComeco(elemento);
         }
         else if (posicao == this.total)
         {
-            this.adiciona(elementos);
+            this.adiciona(elemento);
         }
         else
         {
             AulaListaDuplaLigada_Celula anterior = this.pegaCelula(posicao - 1);
             AulaListaDuplaLigada_Celula proxima = anterior.getProximo();
-            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos, anterior.getProximo());
+            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elemento, anterior.getProximo());
             anterior.setProximo(nova);
             nova.setAnterior(anterior);
             proxima.setAnterior(nova);
