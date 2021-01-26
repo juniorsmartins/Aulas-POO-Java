@@ -14,8 +14,18 @@ public class Trem
     // Métodos Construtores
     public Trem (Object carga, VagaoTrem anterior, VagaoTrem posterior)
     {
-        VagaoTrem novo = new VagaoTrem(carga, anterior, posterior);
-        
+        if (Trem.getTotalVagoes() == 0)
+        {
+            VagaoTrem novo = new VagaoTrem(carga, anterior, posterior);
+            this.cauda = novo;
+            this.cabeca = novo;
+        }
+        else
+        {
+            VagaoTrem novo = new VagaoTrem(carga, anterior, posterior);
+            
+            
+        }
     }
 
     // Métodos de Classe
