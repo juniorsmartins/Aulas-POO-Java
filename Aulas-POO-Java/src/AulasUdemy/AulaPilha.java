@@ -32,4 +32,10 @@ public class AulaPilha
         //TODO
         return false;
     }
+    
+    @Override
+    public String toString ()
+    {
+        return this.nomes.toString();
+    }
 }

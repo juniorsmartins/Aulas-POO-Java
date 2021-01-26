@@ -9,6 +9,7 @@ public class ProgramaPilha
 {
     public static void main(String[] args) 
     {
-        
+        AulaPilha pilha = new AulaPilha();
+        System.out.println(pilha);
     }
 }
