@@ -8,18 +8,22 @@ public class AulaListaDuplaLigada_Lista
     
     /**
      * Método que adiciiona um objeto no começo da lista
-     * @param elemento 
+     * @param elementos 
      */
-    public void adicionaNoComeco (Object elemento)
+    public void adicionaNoComeco (Object elementos)
     {
-        AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula (elemento, this.primeira);
-        this.primeira = nova;
-        
         if (this.total == 0)
         {
-            this.ultima = this.primeira;
+            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos);
+            this.primeira = nova;
+            this.ultima = nova;
         }
-
+        else
+        {
+            AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos, this.primeira);
+            this.primeira.setAnterior(nova);
+            this.primeira = nova;
+        }
         this.total = this.total + 1;
     }
 
@@ -29,8 +33,9 @@ public class AulaListaDuplaLigada_Lista
      */
     public void adiciona (Object elementos)
     {
-        AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos, null);
+        AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos);
         this.ultima.setProximo(nova);
+        nova.setAnterior(this.ultima);
         this.ultima = nova;
         this.total = this.total + 1;
     }
@@ -53,8 +58,11 @@ public class AulaListaDuplaLigada_Lista
         else
         {
             AulaListaDuplaLigada_Celula anterior = this.pegaCelula(posicao - 1);
+            AulaListaDuplaLigada_Celula proxima = anterior.getProximo();
             AulaListaDuplaLigada_Celula nova = new AulaListaDuplaLigada_Celula(elementos, anterior.getProximo());
             anterior.setProximo(nova);
+            nova.setAnterior(anterior);
+            proxima.setAnterior(nova);
             this.total = this.total + 1;
         }
     }
