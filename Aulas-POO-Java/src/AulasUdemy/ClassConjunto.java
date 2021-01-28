@@ -17,17 +17,22 @@ public class ClassConjunto
     
     private int calculaIndice(String nome)
     {
+        // Calcula o índice por meio do valor ASCII da primeira letra do nome
         return nome.toLowerCase().charAt(0) % 26;
     }
     
     public void adiciona(String nome)
     {
-        // Passo 1 - Calcula o índice do nome
-        int indice = calculaIndice(nome);
-        // Passo 2 - Pega a lista de acordo com o índice
-        List<String> lista = tabela.get(indice);
-        // Passo 3 - Adiciona o nome na lista correta (conforme ordem alfabética)
-        lista.add(nome);
+        // Passo 1 - Verifica se o nome não existe na lista (para evitar duplicação)
+        if (!contem(nome))
+        {
+            // Passo 2 - Calcula o índice do nome
+            int indice = calculaIndice(nome);
+            // Passo 3 - Pega a lista de acordo com o índice
+            List<String> lista = tabela.get(indice);
+            // Passo 4 - Adiciona o nome na lista correta (conforme ordem alfabética)
+            lista.add(nome);
+        }
     }
     
     private boolean contem(String nome)
@@ -36,5 +41,11 @@ public class ClassConjunto
         int indice = calculaIndice(nome);
         // Passo 2 - Busca o nome na tabela específica do índice
         return tabela.get(indice).contains(nome);
+    }
+    
+    @Override
+    public String toString()
+    {
+        return tabela.toString();
     }
 }
