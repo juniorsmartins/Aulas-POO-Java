@@ -12,5 +12,23 @@ public class AulaConjuntos4
         LinkedList<String> conjunto = new LinkedList<String>();
         
         System.out.println(conjunto);
+        
+        conjunto.add("Angelina");
+        conjunto.add("Felicity");
+        conjunto.add("Mariana");
+        
+        System.out.println(conjunto);
+        
+//        for (int i = 97; i < 123; i++) 
+//        {
+//            System.out.print((char)i + " "); // tabela ASCII
+//        }
+//        System.out.println("");
+
+        System.out.println("\nTeste!");
+        String nome = "Angelina";
+        System.out.println(nome.toLowerCase());
+        System.out.println(nome.toLowerCase().charAt(0));
+        System.out.println(nome.toLowerCase().charAt(0) % 26);
     }
 }
