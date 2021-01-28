@@ -40,7 +40,7 @@ public class AulaConjuntos4
         conjunto.adiciona("Mariana");
         conjunto.adiciona("Barbara");
         conjunto.adiciona("Amelia");
-        conjunto.adiciona("Junior");
+        conjunto.adiciona("Junior"); // Não entra repetido
         conjunto.adiciona("Ana");
         conjunto.adiciona("Fabiana");
         conjunto.adiciona("Camila");
@@ -53,7 +53,13 @@ public class AulaConjuntos4
         conjunto.adiciona("Isabele");
         conjunto.adiciona("Patricia");
         conjunto.adiciona("Ivone");
-
+        conjunto.adiciona("Ivo");
+        conjunto.adiciona("Eduarda");
+        
+        System.out.println(conjunto);
+        
+        conjunto.remove("Ivone"); // Retirou Ivone da lista - com performance (só procurou na lista iniciada com I)
+        
         System.out.println(conjunto);
     }
 }

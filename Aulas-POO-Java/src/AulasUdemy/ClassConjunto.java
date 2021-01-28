@@ -43,6 +43,20 @@ public class ClassConjunto
         return tabela.get(indice).contains(nome);
     }
     
+    public void remove(String nome)
+    {
+        // Passo 1 - Verificamos se o nome existe em alguma lista
+        if(contem(nome))
+        {
+            // Passo 2 - Calculamos o índice do nome
+            int indice = calculaIndice(nome);
+            // Passo 3 - Pegamos a lista específica do nome
+            List<String> lista = tabela.get(indice);
+            // Passo 4 - Removemos o nome da lista
+            lista.remove(nome);
+        }
+    }
+    
     @Override
     public String toString()
     {
