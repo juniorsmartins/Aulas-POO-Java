@@ -3,10 +3,12 @@
  */
 package AulasUdemy;
 
-public class AulaDefaultMethods 
+public class AulaDefaultMethods implements InterfaceDefaultMethods 
 {
-    public static void main(String[] args) 
+    @Override
+    public String mensagem() 
     {
-        
+        System.out.println("\n");
+        return "Ola, Mundo!";
     }
 }
