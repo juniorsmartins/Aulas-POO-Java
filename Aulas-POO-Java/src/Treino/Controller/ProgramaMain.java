@@ -1,8 +1,8 @@
-package SocioTorcedor.Controller;
+package Treino.Controller;
 
-import SocioTorcedor.Model.Plano;
-import SocioTorcedor.Model.Torcedor;
-import SocioTorcedor.Model.Armazenar;
+import Treino.Model.Plano;
+import Treino.Model.Torcedor;
+import Treino.Model.Armazenar;
 
 import java.util.Scanner;
 

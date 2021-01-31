@@ -1,4 +1,4 @@
-package ProjetoContaBancaria.Modelo;
+package Projetos.Projeto1.Modelo;
 
 public class Banco 
 {

@@ -1,7 +1,7 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package ProjetoContaBancaria.Modelo;
+package Projetos.Projeto1.Modelo;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;

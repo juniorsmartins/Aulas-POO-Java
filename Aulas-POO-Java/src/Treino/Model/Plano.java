@@ -1,4 +1,4 @@
-package SocioTorcedor.Model;
+package Treino.Model;
 
 public class Plano 
 {

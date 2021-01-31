@@ -1,4 +1,4 @@
-package SocioTorcedor.Model;
+package Treino.Model;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
