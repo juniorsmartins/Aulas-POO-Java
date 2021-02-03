@@ -21,4 +21,10 @@ public class Curso
         return this.alunos;
     }
     
+    @Override
+    public String toString()
+    {
+        return this.nome;
+    }
+    
 }
