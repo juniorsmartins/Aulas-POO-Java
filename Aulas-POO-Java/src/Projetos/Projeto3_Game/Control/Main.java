@@ -1,4 +1,4 @@
-package Projetos.Projeto3.Control;
+package Projetos.Projeto3_Game.Control;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
