@@ -16,6 +16,7 @@ public class Game
     
     public static void jogar()
     {
+        pulaLinha();
         System.out.println("Nível de dificuldade (1, 2, 3 ou 4): ");
         int dificuldade = Game.teclado.nextInt();
         
@@ -74,10 +75,15 @@ public class Game
         }
         else
         {
-            System.out.println(" ");
+            pulaLinha();
             System.out.println("Você fez o total de " + Game.pontos + " ponto(s).");
             System.out.println("Até uma próxima vez!");
             System.exit(0);
         }
+    }
+    
+    public static void pulaLinha()
+    {
+        System.out.print("\n");
     }
 }
