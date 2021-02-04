@@ -24,7 +24,7 @@ public class Mercado
     
     private static void menu()
     {
-        pulaLinha(1);
+        pulaLinha(2);
         System.out.println("======================");
         System.out.println("==   Bem-vindo(a)   ==");
         System.out.println("==    Geek Shop     ==");
@@ -73,7 +73,7 @@ public class Mercado
                 Utils.pausar(2);
                 System.exit(0);
             default:
-                System.out.println("Opção Inválida!");
+                System.out.println("Opção inválida!");
                 Utils.pausar(2);
                 Mercado.menu();
                 break;
@@ -120,14 +120,14 @@ public class Mercado
     {
         if(Mercado.produtos.size() >0)
         {
+            pulaLinha(2);
             System.out.println("======================");
             System.out.println("= Lista de Produtos! =");
             System.out.println("======================");
-            pulaLinha(1);
             for(Produto p: Mercado.produtos)
             {
                 System.out.println(p);
-                pulaLinha(1);
+                System.out.println("======================");
             }
         }
         else
@@ -143,11 +143,117 @@ public class Mercado
 
     private static void comprarProduto()
     {
-        System.out.println("Comprar Produto!");
+        if(Mercado.produtos.size() > 0)
+        {
+            pulaLinha(2);
+            System.out.println("======================");
+            System.out.println("====   Produtos   ====");
+            System.out.println("======================");
+            for(Produto p: Mercado.produtos)
+            {
+                System.out.println(p);
+                System.out.println("======================");
+            }
+            
+            System.out.print("Qual comprar? (digite código) ");
+            int codigo = Integer.parseInt(Mercado.teclado.nextLine());
+            boolean tem = false;
+            for(Produto p: Mercado.produtos)
+            {
+                if(p.getCodigo() == codigo)
+                {
+                    int quant = 0;
+                    try
+                    {
+                        quant = Mercado.carrinho.get(p);
+                        // atualiza quantidade de produto do carrinho
+                        Mercado.carrinho.put(p, quant + 1);
+                    }
+                    catch(NullPointerException e)
+                    {
+                        // Primeiro produto no carrinho
+                        Mercado.carrinho.put(p, 1);
+                    }
+                    System.out.println("O produto " + p.getNome() + " foi adicionado ao carrinho!");
+                    tem = true;
+                }
+                else
+                {
+                    pulaLinha(1);
+                    System.out.println("Produto não encontrado! Código " + codigo + " incompatível!");
+                    Utils.pausar(2);
+                    Mercado.menu();
+                }
+
+                if(tem)
+                {
+                    System.out.print("Deseja adicionar mais produtos ao carrinho? (1 - sim ou 2 - não) ");
+                    int op = Integer.parseInt(Mercado.teclado.nextLine());
+                    if(op == 1)
+                    {
+                        Mercado.comprarProduto();
+                    }
+                    else
+                    {
+                        System.out.println("Por favor, aguarde enquanto fechamos seu pedido!");
+                        Utils.pausar(2);
+                        Mercado.fecharPedido();
+                    }
+                }
+
+            }
+        }
+        else
+        {
+            pulaLinha(1);
+            System.out.println("Ainda não existem produtos!");
+            Utils.pausar(2);
+            Mercado.menu();
+        }
     }
 
     private static void verCarrinho()
     {
-        System.out.println("Visualizar Produto!");
+        if(Mercado.carrinho.size() > 0)
+        {
+            pulaLinha(2);
+            System.out.println("======================");
+            System.out.println("====   Carrinho   ====");
+            System.out.println("======================");
+            for(Produto item: Mercado.carrinho.keySet())
+            {
+                System.out.println("Produto: " + item + "\nQuantidade: " + Mercado.carrinho.get(item));
+            }
+        }
+        else
+        {
+            pulaLinha(1);
+            System.out.print("Ainda não existem produtos no carrinho!");
+        }
+        Utils.pausar(2);
+        Mercado.menu();
+    }
+    
+    private static void fecharPedido()
+    {
+        Double valorTotal = 0.0;
+        pulaLinha(2);
+        System.out.println("======================");
+        System.out.println("====    Pedido    ====");
+        System.out.println("======================");
+        for(Produto p: Mercado.carrinho.keySet())
+        {
+            int quant = Mercado.carrinho.get(p);
+            valorTotal += p.getPreco() * quant;
+            System.out.println(p);
+            System.out.println("Quantidade: " + quant);
+            System.out.println("======================");
+        }
+        
+        System.out.println("Fatura de: " + Utils.doubleParaString(valorTotal));
+        Mercado.carrinho.clear();
+        System.out.println("Obrigado pela preferência!");
+        Utils.pausar(3);
+        Mercado.menu();
     }
 }

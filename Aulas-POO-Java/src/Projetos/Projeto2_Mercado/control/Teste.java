@@ -11,7 +11,7 @@ public class Teste
         Produto xbox = new Produto("Xbox 360", 1699.0);
         
         System.out.println(ps4);
-        pulaLinha();
+        pulaLinha(1);
         System.out.println(xbox);
     }
 }
