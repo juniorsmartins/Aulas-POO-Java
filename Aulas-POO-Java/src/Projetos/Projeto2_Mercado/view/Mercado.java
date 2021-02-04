@@ -89,7 +89,7 @@ public class Mercado
         System.out.println("======================");
         
         System.out.print("Nome do produto: ");
-        String nome = (String)Mercado.teclado.nextLine(); // Entrada de dados do tipo String (reforçado com casting) pelo teclado
+        String nome = Mercado.teclado.nextLine(); // Entrada de dados do tipo String (reforçado com casting) pelo teclado
         
         System.out.print("Preço do produto: ");
         Double preco = Double.parseDouble(Mercado.teclado.nextLine()); // Entrada de dados do tipo String convertido para tipo Double
@@ -143,11 +143,18 @@ public class Mercado
             }
             
             System.out.print("Qual comprar? (digite código) ");
-            int codigo = (int)Integer.parseInt(Mercado.teclado.nextLine());
+            int codigo = Integer.parseInt(Mercado.teclado.nextLine());
             boolean temNaCesta = false;
             for(Produto prods: Mercado.produtos)
             {
-                if(codigo == prods.getCodigo())
+                if(prods.getCodigo() != codigo)
+                {
+                    pulaLinha(1);
+                    System.out.println("Produto não encontrado! Código " + codigo + " incompatível!");
+                    Utils.pausar(2);
+                    Mercado.menu();
+                }
+                else
                 {
                     int quant = 0;
                     try
@@ -164,14 +171,7 @@ public class Mercado
                     System.out.println("O produto " + prods.getNome() + " foi adicionado ao carrinho!");
                     temNaCesta = true;
                 }
-                else
-                {
-                    pulaLinha(1);
-                    System.out.println("Produto não encontrado! Código " + codigo + " incompatível!");
-                    Utils.pausar(2);
-                    Mercado.menu();
-                }
-
+                
                 if(temNaCesta)
                 {
                     System.out.print("Deseja adicionar mais produtos ao carrinho (S ou N)? ");
@@ -209,6 +209,7 @@ public class Mercado
             for(Produto item: Mercado.carrinho.keySet())
             {
                 System.out.println("Produto: " + item + "\nQuantidade: " + Mercado.carrinho.get(item));
+                System.out.println("======================");
             }
         }
         else
