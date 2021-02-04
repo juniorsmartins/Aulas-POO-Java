@@ -1,20 +1,20 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package Projetos.Projeto1.Modelo;
+package Projetos.Projeto5.Modelo;
 
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author Junior Martins
- * @since 16/01/21 - 09h00
+ * @since 18/01/21 - 17h55
  */
-public class ContaCorrente extends Conta
+public class ContaPoupanca extends Conta
 {
     /* --------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
-    private static int numContas;
+    private static int numContasPoup;
     
     // Atributos de Instância
     private String dataConta;
@@ -25,24 +25,24 @@ public class ContaCorrente extends Conta
 
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public ContaCorrente(Cliente pessoa)
+    public ContaPoupanca(PessoaFisica pessoa)
     {
         /**
          * Trilogia para geração de ID de Conta
          */
-        ContaCorrente.setNumContas();
+        ContaPoupanca.setNumContasPoup();
         this.setDataConta();
         this.setIdConta();
         this.setSaldoConta(0);
         this.setDonoConta(pessoa);
         this.abreConta();
     }
-    public ContaCorrente(Cliente empresa, double valorInicial)
+    public ContaPoupanca(PessoaJuridica empresa, double valorInicial)
     {
         /**
          * Trilogia para geração de ID de Conta
          */
-        ContaCorrente.setNumContas();
+        ContaPoupanca.setNumContasPoup();
         this.setDataConta();
         this.setIdConta();
         this.setSaldoConta(valorInicial);
@@ -51,13 +51,13 @@ public class ContaCorrente extends Conta
     }
 
     // Métodos Especiais de Classe
-    private static void setNumContas()
+    private static void setNumContasPoup()
     {
-        ContaCorrente.numContas += 1;
+        ContaPoupanca.numContasPoup += 1;
     }
-    public static int getNumContas()
+    public static int getNumContasPoup()
     {
-        return ContaCorrente.numContas;
+        return ContaPoupanca.numContasPoup;
     }
 
     @Override
@@ -135,7 +135,7 @@ public class ContaCorrente extends Conta
     
     private void setIdConta()
     {
-        this.idConta = (this.getDataConta() + "-" + ContaCorrente.getNumContas());
+        this.idConta = (this.getDataConta() + "-" + ContaPoupanca.getNumContasPoup());
     }
     public String getIdConta()
     {

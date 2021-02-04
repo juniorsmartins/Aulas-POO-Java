@@ -1,7 +1,7 @@
-package Projetos.Projeto3_Game.Control;
+package Projetos.Projeto1_Game.Control;
 
 import java.util.Scanner;
-import Projetos.Projeto3_Game.Model.Calcular;
+import Projetos.Projeto1_Game.Model.Calcular;
 
 public class Game 
 {

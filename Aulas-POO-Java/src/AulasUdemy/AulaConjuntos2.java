@@ -1,7 +1,7 @@
 package AulasUdemy;
 
-import Projetos.Projeto1.Modelo.ContaCorrente;
-import Projetos.Projeto1.Modelo.PessoaFisica;
+import Projetos.Projeto5.Modelo.ContaCorrente;
+import Projetos.Projeto5.Modelo.PessoaFisica;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package Projetos.Projeto3_Game.Model;
+package Projetos.Projeto1_Game.Model;
 
 import java.util.Random;
 

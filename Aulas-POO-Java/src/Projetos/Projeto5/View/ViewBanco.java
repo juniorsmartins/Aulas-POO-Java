@@ -1,7 +1,7 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package Projetos.Projeto1.View;
+package Projetos.Projeto5.View;
 
 /**
  * @author Junior Martins
