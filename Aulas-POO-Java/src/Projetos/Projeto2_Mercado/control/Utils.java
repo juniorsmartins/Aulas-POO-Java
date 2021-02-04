@@ -48,8 +48,11 @@ public class Utils
         }
     }
     
-    public static void pulaLinha()
+    public static void pulaLinha(int linha)
     {
-        System.out.print("\n");
+        for(int i = 1; i <= linha; i++)
+        {
+            System.out.print("\n");
+        }
     }
 }
