@@ -72,7 +72,7 @@ public class Calcular
                 operac = "Operacao Desconhecida!";
                 break;
         }
-        return ("Valor 1: " + this.getValor1() + "\nValor2 : " + this.getValor2() + "\nDificuldade: " + this.getDificuldade() + "\nOperacao: " + operac);
+        return ("Valor 1: " + this.getValor1() + "\nValor 2: " + this.getValor2() + "\nDificuldade: " + this.getDificuldade() + "\nOperacao: " + operac);
     }
     
     public boolean somar(int resposta)
