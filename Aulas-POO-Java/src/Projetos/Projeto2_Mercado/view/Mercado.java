@@ -11,21 +11,21 @@ import java.util.InputMismatchException;
 
 public class Mercado 
 {
-    private static Scanner teclado = new Scanner(System.in);
-    private static ArrayList<Produto> produtos;
-    private static Map<Produto, Integer> carrinho;
+    private static Scanner teclado = new Scanner(System.in); // Permite acesso de informações pelo teclado
+    private static ArrayList<Produto> produtos; // Declaração para criar uma lista para armazenar produtos
+    private static Map<Produto, Integer> carrinho; // Declaração para criar interface que mapeia valores para chaves 
     
     public static void main(String[] args) 
     {
-        produtos = new ArrayList<Produto>();
-        carrinho = new HashMap<Produto, Integer>();
-        Mercado.menu();
+        produtos = new ArrayList<Produto>(); // Instanciação de lista para armazenar produtos
+        carrinho = new HashMap<Produto, Integer>(); // Instanciação de intervaça para mapear valores/chaves
+        Mercado.menu(); // Chama o método Menu
     }
     
     private static void menu()
     {
         pulaLinha(2);
-        System.out.println("======================");
+        System.out.println("======================"); // Menu de abertura do programa
         System.out.println("==   Bem-vindo(a)   ==");
         System.out.println("==    Geek Shop     ==");
         System.out.println("======================");
@@ -37,10 +37,9 @@ public class Mercado
         System.out.println("==  5 - Sair        ==");
         System.out.println("======================");
         pulaLinha(1);
-        System.out.print("Qual escolhe? ");
-        
         int opcao = 0;
-        try
+        System.out.print("Qual escolhe? ");
+        try // Tratamento de erro para a opção selecionada do Menu
         {
             opcao = Integer.parseInt(Mercado.teclado.nextLine());
         }
@@ -52,8 +51,12 @@ public class Mercado
         {
             Mercado.menu();
         }
+        catch(Exception m)
+        {
+            Mercado.menu();
+        }
         
-        switch(opcao)
+        switch(opcao) // Rotea a opção escolhida para os métodos executores correspondentes
         {
             case 1:
                 Mercado.cadastrarProduto();
@@ -68,10 +71,8 @@ public class Mercado
                 Mercado.verCarrinho();
                 break;
             case 5:
-                pulaLinha(1);
-                System.out.println("Volte sempre!");
-                Utils.pausar(2);
-                System.exit(0);
+                Mercado.sair();
+                break;
             default:
                 System.out.println("Opção inválida!");
                 Utils.pausar(2);
@@ -86,47 +87,33 @@ public class Mercado
         System.out.println("======================");
         System.out.println("= Cadastrar Produto! =");
         System.out.println("======================");
+        
         System.out.print("Nome do produto: ");
-        String nome = (String)Mercado.teclado.nextLine();
+        String nome = (String)Mercado.teclado.nextLine(); // Entrada de dados do tipo String (reforçado com casting) pelo teclado
+        
         System.out.print("Preço do produto: ");
-        Double preco = Double.parseDouble(Mercado.teclado.nextLine());            
+        Double preco = Double.parseDouble(Mercado.teclado.nextLine()); // Entrada de dados do tipo String convertido para tipo Double
 
-        Produto produto = new Produto(nome, preco); // instanciou o objeto produto
+        Produto produto = new Produto(nome, preco); // instanciou/manufaturou um objeto do tipo produto
         Mercado.produtos.add(produto); // adicionou o objeto produto na lista de produtos
         
         pulaLinha(1);
-        System.out.print("O produto " + produto.getNome() + " foi cadastrado com sucesso!");
+        System.out.print("Cadastrado com sucesso! Produto: " + produto.getNome() + "\n");
         Utils.pausar(1);
-        
-        pulaLinha(2);
-        int deNovo;
-        do
-        {
-            System.out.print("Cadastrar novo? (1 - sim ou 2 - não) ");
-            deNovo = Integer.parseInt(Mercado.teclado.nextLine());            
-        } while(deNovo != 1 && deNovo != 2);
-
-        if(deNovo == 1)
-        {
-            Mercado.cadastrarProduto();
-        }
-        else
-        {
-            Mercado.menu();
-        }
+        Mercado.menu();
     }
 
     private static void listarProduto()
     {
-        if(Mercado.produtos.size() >0)
+        if(Mercado.produtos.size() > 0)
         {
             pulaLinha(2);
             System.out.println("======================");
             System.out.println("= Lista de Produtos! =");
             System.out.println("======================");
-            for(Produto p: Mercado.produtos)
+            for(Produto itens: Mercado.produtos)
             {
-                System.out.println(p);
+                System.out.println(itens);
                 System.out.println("======================");
             }
         }
@@ -149,33 +136,33 @@ public class Mercado
             System.out.println("======================");
             System.out.println("====   Produtos   ====");
             System.out.println("======================");
-            for(Produto p: Mercado.produtos)
+            for(Produto item: Mercado.produtos)
             {
-                System.out.println(p);
+                System.out.println(item);
                 System.out.println("======================");
             }
             
             System.out.print("Qual comprar? (digite código) ");
-            int codigo = Integer.parseInt(Mercado.teclado.nextLine());
-            boolean tem = false;
-            for(Produto p: Mercado.produtos)
+            int codigo = (int)Integer.parseInt(Mercado.teclado.nextLine());
+            boolean temNaCesta = false;
+            for(Produto prods: Mercado.produtos)
             {
-                if(p.getCodigo() == codigo)
+                if(codigo == prods.getCodigo())
                 {
                     int quant = 0;
                     try
                     {
-                        quant = Mercado.carrinho.get(p);
+                        quant = Mercado.carrinho.get(prods);
                         // atualiza quantidade de produto do carrinho
-                        Mercado.carrinho.put(p, quant + 1);
+                        Mercado.carrinho.put(prods, quant + 1);
                     }
                     catch(NullPointerException e)
                     {
                         // Primeiro produto no carrinho
-                        Mercado.carrinho.put(p, 1);
+                        Mercado.carrinho.put(prods, 1);
                     }
-                    System.out.println("O produto " + p.getNome() + " foi adicionado ao carrinho!");
-                    tem = true;
+                    System.out.println("O produto " + prods.getNome() + " foi adicionado ao carrinho!");
+                    temNaCesta = true;
                 }
                 else
                 {
@@ -185,11 +172,11 @@ public class Mercado
                     Mercado.menu();
                 }
 
-                if(tem)
+                if(temNaCesta)
                 {
-                    System.out.print("Deseja adicionar mais produtos ao carrinho? (1 - sim ou 2 - não) ");
-                    int op = Integer.parseInt(Mercado.teclado.nextLine());
-                    if(op == 1)
+                    System.out.print("Deseja adicionar mais produtos ao carrinho (S ou N)? ");
+                    String repete = (String)Mercado.teclado.nextLine();
+                    if(repete.equals("s") || repete.equals("S"))
                     {
                         Mercado.comprarProduto();
                     }
@@ -200,7 +187,6 @@ public class Mercado
                         Mercado.fecharPedido();
                     }
                 }
-
             }
         }
         else
@@ -233,6 +219,15 @@ public class Mercado
         Utils.pausar(2);
         Mercado.menu();
     }
+
+    public static void sair() // Método para encerrar a execução do sistema - Sair
+    {
+        pulaLinha(1);
+        System.out.println("Volte sempre!");
+        System.out.println("Que a força esteja com você!");
+        Utils.pausar(2);
+        System.exit(0);
+    }
     
     private static void fecharPedido()
     {
@@ -256,4 +251,5 @@ public class Mercado
         Utils.pausar(3);
         Mercado.menu();
     }
+    
 }
