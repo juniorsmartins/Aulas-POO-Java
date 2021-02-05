@@ -2,6 +2,7 @@ package Projetos.Projeto5.sistema;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import Projetos.Projeto5.sistema_telas.Login;
 
 public class Sistema 
 {
@@ -20,6 +21,9 @@ public class Sistema
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         
-        Navegador.login();
+        tela = new Login();
+        tela.setVisible(true);
+        frame.add(tela);
+        frame.setVisible(true);
     }
 }
