@@ -47,6 +47,11 @@ public class CargosInserir extends JPanel
         campoCargo = new JTextField();
         botaoGravar = new JButton("Adicionar Cargo");
         
+        labelTitulo.setBounds(20, 20, 660, 40);
+        labelCargo.setBounds(150, 120, 400, 20);
+        campoCargo.setBounds(150, 140, 400, 40);
+        botaoGravar.setBounds(250, 380, 200, 40);
+        
         /*
          * Abaixo, componentes adicionados a tela
         */
@@ -107,7 +112,7 @@ public class CargosInserir extends JPanel
             
             // Criando a Instrução SQL
             instrucaoSQL = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            instrucaoSQL.executeUpdate("INSERT INTO cargos(nome) VALUES ('"+novoCargo.getNome()+"')");
+            instrucaoSQL.executeUpdate("INSERT INTO cargos (nome) VALUES ('"+novoCargo.getNome()+"')");
             
             JOptionPane.showMessageDialog(null, "Cargo adicionado com sucesso!");
         }
