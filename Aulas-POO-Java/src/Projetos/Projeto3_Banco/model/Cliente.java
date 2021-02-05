@@ -40,7 +40,7 @@ public class Cliente
     @Override
     public String toString()
     {
-        return ("Código: " + this.getCodigo() +
+        return ("\nCódigo: " + this.getCodigo() +
                 "\nNome: " + this.getNome() +
                 "\nCPF: " + this.getCpf() +
                 "\nEmail: " + this.getEmail() +

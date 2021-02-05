@@ -54,7 +54,7 @@ public class Conta
             else
             {
                 Double restante = this.getSaldo() - valor;
-                this.setLimite(this.getLimite() - restante);
+                this.setLimite(this.getLimite() + restante);
                 this.setSaldo(0.0);
                 this.atualizaSaldoTotal();
                 System.out.println("Saque efetuado com sucesso! O limite foi usado.");
@@ -80,7 +80,7 @@ public class Conta
             else
             {
                 Double restante = this.getSaldo() - valor;
-                this.setLimite(this.getLimite() - restante);
+                this.setLimite(this.getLimite() + restante);
                 this.setSaldo(0.0);
                 destino.setSaldo(destino.getSaldo() + valor);
                 this.atualizaSaldoTotal();
@@ -98,7 +98,7 @@ public class Conta
     @Override
     public String toString()
     {
-        return ("Número da conta: " + this.getNumero() +
+        return ("\nNúmero da conta: " + this.getNumero() +
                 "\nCliente: " + this.cliente.getNome() +
                 "\nSaldo Total: " + Utils.doubleParaString(this.getSaldoTotal()));
     }
@@ -138,9 +138,10 @@ public class Conta
     {
         this.saldo = valor;
     }
-    private void setLimite(Double limite)
+    public void setLimite(Double limite)
     {
         this.limite = limite;
+        this.atualizaSaldoTotal();
     }
     private void setSaldoTotal(Double total)
     {
