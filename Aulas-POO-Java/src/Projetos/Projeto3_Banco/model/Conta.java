@@ -100,6 +100,9 @@ public class Conta
     {
         return ("\nNúmero da conta: " + this.getNumero() +
                 "\nCliente: " + this.cliente.getNome() +
+                "\nCPF: " + this.cliente.getCpf() +
+                "\nData Nascimento: " + this.cliente.getDataNascimento() +
+                "\nE-mail: " + this.cliente.getEmail() +
                 "\nSaldo Total: " + Utils.doubleParaString(this.getSaldoTotal()));
     }
     
