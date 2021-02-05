@@ -1,6 +1,5 @@
 package Projetos.Projeto3_Banco.control;
 
-import Projetos.Projeto2_Mercado.control.*;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
@@ -18,6 +17,18 @@ public class Utils
     public static String dateParaString(Date data)
     {
         return Utils.formatarData.format(data);
+    }
+    
+    public static Date stringParaData(String data)
+    {
+        try
+        {
+            return Utils.formatarData.parse(data);
+        }
+        catch(ParseException e)
+        {
+            return null;
+        }
     }
     
     public static String doubleParaString(Double valor)

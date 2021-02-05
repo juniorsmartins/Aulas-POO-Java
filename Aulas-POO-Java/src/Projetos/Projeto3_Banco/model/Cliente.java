@@ -23,7 +23,7 @@ public class Cliente
         this.setCpf(cpf);
         this.setDataNascimento(dataNasc);
         this.setDataCadastro();
-        Cliente.contador += 1;
+        Cliente.setContador();
     }
     
     // Métodos de Classe
