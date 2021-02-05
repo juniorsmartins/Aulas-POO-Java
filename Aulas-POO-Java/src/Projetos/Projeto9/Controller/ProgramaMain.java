@@ -1,8 +1,8 @@
-package Projetos.Projeto4.Controller;
+package Projetos.Projeto9.Controller;
 
-import Projetos.Projeto4.Model.Plano;
-import Projetos.Projeto4.Model.Torcedor;
-import Projetos.Projeto4.Model.Armazenar;
+import Projetos.Projeto9.Model.Plano;
+import Projetos.Projeto9.Model.Torcedor;
+import Projetos.Projeto9.Model.Armazenar;
 
 import java.util.Scanner;
 

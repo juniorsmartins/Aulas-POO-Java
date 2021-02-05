@@ -1,12 +1,12 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package Projetos.Projeto5.Controller;
+package Projetos.Projeto8.Controller;
 
-import Projetos.Projeto5.Modelo.PessoaFisica;
-import Projetos.Projeto5.Modelo.PessoaJuridica;
-import Projetos.Projeto5.Modelo.ContaCorrente;
-import Projetos.Projeto5.Modelo.ContaPoupanca;
+import Projetos.Projeto8.Modelo.PessoaFisica;
+import Projetos.Projeto8.Modelo.PessoaJuridica;
+import Projetos.Projeto8.Modelo.ContaCorrente;
+import Projetos.Projeto8.Modelo.ContaPoupanca;
 
 import java.util.Scanner;
 

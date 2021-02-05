@@ -1,4 +1,4 @@
-package Projetos.Projeto4.Model;
+package Projetos.Projeto9.Model;
 
 public class Armazenar 
 {

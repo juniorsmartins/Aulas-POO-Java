@@ -1,7 +1,7 @@
 /*
  * Exercício para aprendizagem de Java
  */
-package Projetos.Projeto5.Modelo;
+package Projetos.Projeto8.Modelo;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
