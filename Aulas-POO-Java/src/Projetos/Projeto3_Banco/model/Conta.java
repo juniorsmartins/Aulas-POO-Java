@@ -32,12 +32,14 @@ public class Conta
     {
         if(valor > 0)
         {
+            Utils.pulaLinha(1);
             this.setSaldo(this.getSaldo() + valor);
             this.atualizaSaldoTotal();
             System.out.println("Depósito efetuado com sucesso!");
         }
         else
         {
+            Utils.pulaLinha(1);
             System.out.println("Erro ao efetuar depósito. Tente novamente!");
         }
     }
@@ -47,12 +49,14 @@ public class Conta
         {
             if(this.getSaldo() >= valor)
             {
+                Utils.pulaLinha(1);
                 this.setSaldo(this.getSaldo() - valor);
                 this.atualizaSaldoTotal();
                 System.out.println("Saque efetuado com sucesso! Sacado do saldo.");
             }
             else
             {
+                Utils.pulaLinha(1);
                 Double restante = this.getSaldo() - valor;
                 this.setLimite(this.getLimite() + restante);
                 this.setSaldo(0.0);
@@ -71,6 +75,7 @@ public class Conta
         {
             if(this.getSaldo() >= valor)
             {
+                Utils.pulaLinha(1);
                 this.setSaldo(this.getSaldo() - valor);
                 destino.setSaldo(destino.getSaldo() + valor);
                 this.atualizaSaldoTotal();
@@ -79,6 +84,7 @@ public class Conta
             }
             else
             {
+                Utils.pulaLinha(1);
                 Double restante = this.getSaldo() - valor;
                 this.setLimite(this.getLimite() + restante);
                 this.setSaldo(0.0);
