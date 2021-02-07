@@ -101,11 +101,11 @@ public class CargosConsultar extends JPanel
         
         botaoEditar.addActionListener(new ActionListener()
         {
-         @Override
-         public void actionPerformed(ActionEvent e)
-         {
-             
-         }
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+
+            }
         });
 
         /*

@@ -15,7 +15,7 @@ public class Navegador
     private static boolean menuConstruido;
     private static boolean menuHabilitado;
     private static JMenuBar menuBar;
-    private static JMenu menuArquivo, menuFuncionarios, menuCargos, menuRelatorio;
+    private static JMenu menuArquivo, menuFuncionarios, menuCargos, menuRelatorios;
     private static JMenuItem miSair, miFuncionariosConsultar, miFuncionariosCadastrar, miCargosConsultar;
     private static JMenuItem miCargosCadastrar, miRelatoriosCargos, miRelatoriosSalarios;
     
@@ -94,16 +94,24 @@ public class Navegador
         {
             menuConstruido = true;
             
-            menuBar = new JMenuBar();
+            menuBar = new JMenuBar(); // JMenuBar instanciado
             
             // Menu arquivo
+            /*
+             * Criado o primeiro item do Menu, com o nome Arquivo, e adicionado um botão para fechar a aplicação (sair)
+            */
             menuArquivo = new JMenu("Arquivo");
             menuBar.add(menuArquivo);
             miSair = new JMenuItem("Sair");
             menuArquivo.add(miSair);
             
             // Menu funcionários
-            menuFuncionarios = new JMenu("Funcionarios");
+            /*
+             * Criado o segundo item do Menu, com o nome Funcionários. A ele adicionado um botão para acessar
+             * a tela de cadastro de funcionários (Cadastrar) e outro botão para acessar a tela de consulta
+             * de funcionários (Consultar)
+            */
+            menuFuncionarios = new JMenu("Funcionários");
             menuBar.add(menuFuncionarios);
             miFuncionariosCadastrar = new JMenuItem("Cadastrar");
             menuFuncionarios.add(miFuncionariosCadastrar);
@@ -111,6 +119,11 @@ public class Navegador
             menuFuncionarios.add(miFuncionariosConsultar);
             
             // Menu Cargos
+            /*
+             * Criado o terceiro item do Menu, com o nome Cargos. A ele adicionado um botão para acessar 
+             * a tela de cadastro de cargos (Cadastrar) e outro botão para acessar a tela de consulta
+             * de cargos (Consultar)
+            */
             menuCargos = new JMenu("Cargos");
             menuBar.add(menuCargos);
             miCargosCadastrar = new JMenuItem("Cadastrar");
@@ -119,11 +132,111 @@ public class Navegador
             menuCargos.add(miCargosConsultar);
             
             // Menu Relatórios
+            /*
+             * Criado o quarto item do Menu, com o nome Relatórios. A ele adicionado um botão para acessar a tela
+             * de relatórios do sistema. 
+            */
             menuRelatorios = new JMenu("Relatórios");
             menuBar.add(menuRelatorios);
             miRelatoriosCargos = new JMenuItem("Funcionários por cargos");
             menuRelatorios.add(miRelatoriosCargos);
+            miRelatoriosSalarios = new JMenuItem("Salários dos funcionários");
+            menuRelatorios.add(miRelatoriosSalarios);
             
+            criarEventosMenu();
         }
+    }
+    
+    /*
+     * O método habilitaMenu é responsável por verificar se o menu já foi criado e habilitado. Em caso negativo, 
+     * ele criará o menu chamando o método construirMenu e adicionará o menu ao JFrame do sistema.
+    */
+    public static void habilitaMenu()
+    {
+        if(!menuConstruido) construirMenu();
+        if(!menuHabilitado) 
+        {
+            menuHabilitado = true;
+            Sistema.frame.setJMenuBar(menuBar);
+        }
+    }
+    
+    /*
+     * O método desabilitaMenu é responsável por verificar se o menu está habilitado. Em caso positivo (if verdadeiro), ele 
+     * desabilita o menu e remove o JMenuBar do JFrame do sistema.
+    */
+    public static void desabilitaMenu()
+    {
+        if(menuHabilitado)
+        {
+            menuHabilitado = false;
+            Sistema.frame.setJMenuBar(null);
+        }
+    }
+    
+    private static void criarEventosMenu()
+    {
+        miSair.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                System.exit(0);
+            }
+        });
+        
+        // Funcionário
+        miFuncionariosCadastrar.addActionListener(new ActionListener() 
+        {
+           @Override
+           public void actionPerformed(ActionEvent e)
+           {
+               
+           }
+        });
+        miFuncionariosConsultar.addActionListener(new ActionListener() 
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        });
+        
+        // Cargos
+        miCargosCadastrar.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                cargosCadastrar();
+            }
+        });
+        miCargosConsultar.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                cargosConsultar();
+            }
+        });
+        
+        // Relatórios
+        miRelatoriosCargos.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        });
+        miRelatoriosSalarios.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        });
     }
 }

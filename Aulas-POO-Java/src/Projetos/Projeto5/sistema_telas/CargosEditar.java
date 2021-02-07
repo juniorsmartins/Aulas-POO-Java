@@ -36,7 +36,7 @@ public class CargosEditar extends JPanel
     
     private void criarComponentes()
     {
-        setLayout(null);
+        setLayout(null); // Não será utilizado nenhum gerenciador de layout
         
         /*
          * Os componentes JLabel são inicializados com texto e alinhamento específicos
