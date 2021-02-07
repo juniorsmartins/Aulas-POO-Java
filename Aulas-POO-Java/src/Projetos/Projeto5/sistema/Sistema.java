@@ -2,7 +2,6 @@ package Projetos.Projeto5.sistema;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import Projetos.Projeto5.sistema_telas.*;
 
 public class Sistema 
 {
@@ -21,13 +20,6 @@ public class Sistema
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         
-//        tela = new CargosInserir();
-//        tela = new Login();
-//        tela = new Inicio();
-        tela = new CargosConsultar();
-        tela.setVisible(true);
-        frame.add(tela);
-        
-        frame.setVisible(true);
+        Navegador.login();
     }
 }

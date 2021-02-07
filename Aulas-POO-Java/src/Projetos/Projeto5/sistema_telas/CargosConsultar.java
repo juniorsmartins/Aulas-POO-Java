@@ -21,6 +21,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import Projetos.Projeto5.sistema.BancoDeDados;
+import Projetos.Projeto5.sistema.Navegador;
 import Projetos.Projeto5.sistema_entidades.Cargo;
 
 public class CargosConsultar extends JPanel
@@ -104,7 +105,7 @@ public class CargosConsultar extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
+                Navegador.cargosEditar(cargoAtual);
             }
         });
 

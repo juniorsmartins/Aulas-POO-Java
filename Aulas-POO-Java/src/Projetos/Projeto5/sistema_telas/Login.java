@@ -1,5 +1,6 @@
 package Projetos.Projeto5.sistema_telas;
 
+import Projetos.Projeto5.sistema.Navegador;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -72,6 +73,15 @@ public class Login extends JPanel
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                // validando as credenciais de login e senha
+                if(campoUsuario.getText().equals("admin") && new String(campoSenha.getPassword()).equals("admin"))
+                {
+                    Navegador.inicio();
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Acesso não permitido!");
+                }
                 
             }
         });

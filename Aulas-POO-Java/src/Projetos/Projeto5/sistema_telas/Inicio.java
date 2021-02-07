@@ -3,6 +3,8 @@ package Projetos.Projeto5.sistema_telas;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Projetos.Projeto5.sistema.Navegador;
+
 public class Inicio extends JPanel
 {
     JLabel labelTitulo;
@@ -11,6 +13,7 @@ public class Inicio extends JPanel
     {
         criarComponentes();
         criarEventos();
+        Navegador.habilitaMenu();
     }
     
     private void criarComponentes()
@@ -31,5 +34,4 @@ public class Inicio extends JPanel
     {
         //TODO
     }
-    
 }
