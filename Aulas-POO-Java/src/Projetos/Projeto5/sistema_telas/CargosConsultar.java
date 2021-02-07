@@ -144,6 +144,9 @@ public class CargosConsultar extends JPanel
         });
     }
     
+    /*
+     * realizada conexão com banco de dados para obter todo os cargos cadastrados e adicioná-los à lista de seleção
+    */
     private void sqlPesquisarCargos(String nome)
     {
         // Conexão
@@ -156,7 +159,64 @@ public class CargosConsultar extends JPanel
         try
         {
             // Conectando ao banco de dados
+            conexao = DriverManager.getConnection(BancoDeDados.stringDeConexao, BancoDeDados.usuario, BancoDeDados.senha);
             
+            // Criando a instrução SQL
+            instrucaoSQL = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            resultados = instrucaoSQL.executeQuery("SELECT * FROM cargos WHERE nome like '%" + nome + "%'");
+            
+            listasCargosModelo.clear();
+            
+            while(resultados.next())
+            {
+                Cargo cargo = new Cargo();
+                cargo.setId(resultados.getInt("id"));
+                cargo.setNome(resultados.getString("nome"));
+                
+                listasCargosModelo.addElement(cargo);
+            }
+        }
+        catch(SQLException ex)
+        {
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro ao consultar os cargos.");
+            Logger.getLogger(CargosInserir.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    /*
+     * Precisa selecionar um cargo na JList e clicar em Excluir Cargo
+     * Ao ser acionado, o botão Excluir Cargo executará o método sqlDeletarCargo. E esse método se conectará com o 
+     * banco de dados e executará a instrução SQL que irá remover o cargo selecionado
+    */
+    private void sqlDeletarCargo()
+    {
+        int confirmacao = JOptionPane.showConfirmDialog(null, "Deseja realmente excluir o Cargo" + cargoAtual.getNome() + 
+                                                        "?", "Excluir", JOptionPane.YES_NO_OPTION);
+
+        if(confirmacao == JOptionPane.YES_OPTION)
+        {
+            // Conexão
+            Connection conexao;
+            // Instrução SQL
+            Statement instrucaoSQL;
+            // Resultados
+            ResultSet resultados;
+            
+            try
+            {
+                // Conectando ao banco de dados
+                conexao = DriverManager.getConnection(BancoDeDados.stringDeConexao, BancoDeDados.usuario, BancoDeDados.senha);
+                // Criando a instrução SQL
+                instrucaoSQL = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                instrucaoSQL.executeUpdate("DELETE cargos WHERE id=" + cargoAtual.getId()+"");
+                
+                JOptionPane.showMessageDialog(null, "Cargo deletado com sucesso!");
+            }
+            catch(SQLException ex)
+            {
+                JOptionPane.showMessageDialog(null, "Ocorreu um erro ao excluir o cargo.");
+                Logger.getLogger(CargosInserir.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 }

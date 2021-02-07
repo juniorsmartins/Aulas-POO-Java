@@ -23,7 +23,8 @@ public class Sistema
         
 //        tela = new CargosInserir();
 //        tela = new Login();
-        tela = new Inicio();
+//        tela = new Inicio();
+        tela = new CargosConsultar();
         tela.setVisible(true);
         frame.add(tela);
         
