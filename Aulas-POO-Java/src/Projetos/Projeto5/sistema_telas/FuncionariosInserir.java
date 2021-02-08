@@ -131,10 +131,10 @@ public class FuncionariosInserir extends JPanel
                 novoFuncionario.setSobrenome(campoSobrenome.getText());
                 novoFuncionario.setDataNascimento(campoDataNascimento.getText());
                 novoFuncionario.setEmail(campoEmail.getText());
-                Cargo cargoSelecionado = (Cargo)comboboxCargo.getSelectedItem();
+                Cargo cargoSelecionado = (Cargo) comboboxCargo.getSelectedItem();
                 if(cargoSelecionado != null) novoFuncionario.setCargo(cargoSelecionado.getId());
                 novoFuncionario.setSalario(Double.valueOf(campoSalario.getText().replace(",", ".")));
-                sqlInserirFuncionanrio(novoFuncionario);
+                sqlInserirFuncionario(novoFuncionario);
             }
         });
     }
@@ -170,9 +170,86 @@ public class FuncionariosInserir extends JPanel
         catch(SQLException ex)
         {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro ao carregar os cargos.");
-            Logger.getLogger(FuncionariosInserir.class.getName().log(Level.SEVERE, null, ex));
+            Logger.getLogger(FuncionariosInserir.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    
+    /*
+     * Validação dos dados que foram digitados. Caso haja alguma inconsistência nos dados, uma mensagem
+     * será apresentada ao usuário.
+    */
+    private void sqlInserirFuncionario(Funcionario novoFuncionario)
+    {
+        // Validando nome
+        if(campoNome.getText().length() <= 3)
+        {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha o nome corretamente.");
+            return;
+        }
+        
+        // Validando Sobrenome
+        if(campoSobrenome.getText().length() <= 3)
+        {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha o sobrenome corretamente.");
+            return;
+        }
+        
+        // Validando salário
+        if(Double.parseDouble(campoSalario.getText().replace(",", ".")) <= 100)
+        {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha o salário corretamente");
+            return;
+        }
+        
+        // Validando email
+        Boolean emailValidado = false;
+        String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+        Pattern p = Pattern.compile(ePattern);
+        Matcher m = p.matcher(campoEmail.getText());
+        emailValidado = m.matches();
+        
+        if(!emailValidado)
+        {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha o e-mail corretamente");
+            return;
+        }
+        
+        // Conexão
+        Connection conexao;
+        // Instrução SQL
+        PreparedStatement instrucaoSQL;
+        
+        try
+        {
+            // Conectando ao Banco de Dados
+            conexao = DriverManager.getConnection(BancoDeDados.stringDeConexao, BancoDeDados.usuario, BancoDeDados.senha);
+            String template = "INSERT INTO funcionarios (nome, sobrenome, dataNascimento, email, cargo, salario)";
+            template = template + "VALUES (?, ?, ?, ?, ?, ?)";
+            instrucaoSQL = conexao.prepareStatement(template);
+            instrucaoSQL.setString(1, novoFuncionario.getNome());
+            instrucaoSQL.setString(2, novoFuncionario.getSobrenome());
+            instrucaoSQL.setString(3, novoFuncionario.getDataNascimento());
+            instrucaoSQL.setString(4, novoFuncionario.getEmail());
+            if(novoFuncionario.getCargo() > 0)
+            {
+                instrucaoSQL.setInt(5, novoFuncionario.getCargo());
+            }
+            else
+            {
+                instrucaoSQL.setNull(5, java.sql.Types.INTEGER);
+            }
+            instrucaoSQL.setString(6, Double.toString(novoFuncionario.getSalario()));
+            instrucaoSQL.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Funcionário adicionado com sucesso!");
+            Navegador.inicio();
+            
+            conexao.close();
+        }
+        catch(SQLException ex)
+        {
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro ao adicionar o Funcionário.");
+            Logger.getLogger(FuncionariosInserir.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
