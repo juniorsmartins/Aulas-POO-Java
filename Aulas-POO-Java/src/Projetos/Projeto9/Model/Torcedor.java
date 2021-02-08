@@ -10,12 +10,14 @@ public class Torcedor
     public static double totalTorcedor;
     
     // Atributos de Instância
-    private String dataCadastroTorcedor;
-    private String idTorcedor;
-    private String nomeTorcedor;
-    private int idadeTorcedor;
-    private boolean statusTorcedor;
-    private Plano sociedade;
+    private String dataCadastro;
+    private String id;
+    private String nome;
+    private String cpf;
+    private String email;
+    private String dataNascimento;
+    private int telefone;
+    private Plano plano;
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores

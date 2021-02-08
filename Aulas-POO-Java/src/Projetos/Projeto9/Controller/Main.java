@@ -6,7 +6,7 @@ import Projetos.Projeto9.Model.Armazenar;
 
 import java.util.Scanner;
 
-public class ProgramaMain 
+public class Main 
 {
     static Scanner scan = new Scanner(System.in);
     private static byte opcaoMenuPrincipal;

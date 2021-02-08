@@ -5,9 +5,14 @@ public class Plano
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
     // Atributos de Instância
-    private String nomePlano;
-    private float valorPlano;
-    private Torcedor[] membros = new Torcedor[100];
+    private String tipo;
+    private float valor;
+    private String dataAssociacao;
+    private String dataRenovacao;
+    private String dataDesligamento;
+    private String indicadoPor;
+    private Boolean status;
+    private Torcedor[] membros = new Torcedor[5];
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
