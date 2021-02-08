@@ -1,9 +1,9 @@
-package Projetos.Projeto5.sistema_telas;
+package Projetos.Projeto5_GestaoFuncionarios.sistema_telas;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import Projetos.Projeto5.sistema.Navegador;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.Navegador;
 
 public class Inicio extends JPanel
 {

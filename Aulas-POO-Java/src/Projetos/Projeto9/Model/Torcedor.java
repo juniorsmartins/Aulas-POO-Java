@@ -1,112 +1,117 @@
 package Projetos.Projeto9.Model;
 
 import java.util.Date;
-import java.text.SimpleDateFormat;
 
 public class Torcedor 
 {
     /* ---------- ÁREA DE ATRIBUTOS ---------- */
     // Atributos de Classe
-    public static double totalTorcedor;
+    public static int totalTorcedor = 1;
     
     // Atributos de Instância
-    private String dataCadastro;
-    private String id;
+    private int id;
     private String nome;
     private String cpf;
     private String email;
-    private String dataNascimento;
+    private Date dataNascimento;
     private int telefone;
-    private Plano plano;
     
     /* ---------- ÁREA DE MÉTODOS ---------- */
     // Métodos Construtores
-    public Torcedor(String nome, int idade)
+    public Torcedor(String nome, String cpf, String email, Date data, int tel)
     {
+        this.setId();
+        this.setNome(nome);
+        this.setCpf(cpf);
+        this.setEmail(email);
+        this.setDataNascimento(data);
+        this.setTelefone(tel);
         Torcedor.setTotalTorcedor();
-        this.setDataCadastroTorcedor();
-        this.setIdTorcedor();
-        this.setNomeTorcedor(nome);
-        this.setIdadeTorcedor(idade);
-        this.ativaStatusTorcedor();
     }
-
+    
     // Métodos Abstratos
     // Métodos Especiais de Classe
-
-    // Métodos Especiais de Instância
-    public void ativaStatusTorcedor()
+    public static int getTotalTorcedor()
     {
-        this.setStatusTorcedor(true);
+        return Torcedor.totalTorcedor;
     }
-    public void desativaStatusTorcedor()
-    {
-        this.setStatusTorcedor(false);
-    }
-
-    // Métodos Setters e Getters
     private static void setTotalTorcedor()
     {
         Torcedor.totalTorcedor += 1;
     }
-    public static double getTotalTorcedor()
+    
+    // Métodos Especiais de Instância
+    public void alterarNome(String nome)
     {
-        return Torcedor.totalTorcedor;
+        this.setNome(nome);
     }
-
-    private void setDataCadastroTorcedor()
+    public void alterarCpf(String cpf)
     {
-        Date data = new Date();
-        SimpleDateFormat formatar = new SimpleDateFormat("ddMMyyyy");
-        this.dataCadastroTorcedor = formatar.format(data);
+        this.setCpf(cpf);
     }
-    public String getDataCadastroTorcedor()
+    public void alterarEmail(String email)
     {
-        return this.dataCadastroTorcedor;
+        this.setEmail(email);
     }
-
-    private void setIdTorcedor()
+    public void alterarDataNascimento(Date data)
     {
-        this.idTorcedor = (this.getDataCadastroTorcedor() + "-" + Torcedor.getTotalTorcedor());
+        this.setDataNascimento(data);
     }
-    public String getIdTorcedor()
+    public void alterarTelefone(int tel)
     {
-        return this.idTorcedor;
+        this.setTelefone(tel);
     }
     
-    private void setNomeTorcedor(String nome)
+    
+    // Métodos Getters
+    public int getId()
     {
-        this.nomeTorcedor = nome;
+        return this.id;
     }
-    public String getNomeTorcedor()
+    public String getNome()
     {
-        return this.nomeTorcedor;
+        return this.nome;
     }
-
-    private void setIdadeTorcedor(int idade)
+    public String getCpf()
     {
-        this.idadeTorcedor = idade;
+        return this.cpf;
     }
-    public int getIdadeTorcedor()
+    public String email()
     {
-        return this.idadeTorcedor;
+        return this.email;
     }
-
-    private void setStatusTorcedor(boolean status)
+    public Date getDataNascimento()
     {
-        this.statusTorcedor = status;
+        return this.dataNascimento;
     }
-    public boolean getStatusTorcedor()
+    public int getTelefone()
     {
-        return this.statusTorcedor;
+        return this.telefone;
     }
     
-    private void setSociedade(Plano plan)
+    // Métodos Setters
+    private void setId()
     {
-        this.sociedade = plan;
+        this.id = Torcedor.getTotalTorcedor();
     }
-    public Plano getSociedade()
+    private void setNome(String nome)
     {
-        return this.sociedade;
+        this.nome = nome;
+    }
+    private void setCpf(String cpf)
+    {
+        this.cpf = cpf;
+    }
+    private void setEmail(String mail)
+    {
+        this.email = mail;
+    }
+    private void setDataNascimento(Date data)
+    {
+        this.dataNascimento = data;
+    }
+    private void setTelefone(int tel)
+    {
+        this.telefone = tel;
     }
 }

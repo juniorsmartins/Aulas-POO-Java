@@ -1,4 +1,4 @@
-package Projetos.Projeto5.sistema_telas;
+package Projetos.Projeto5_GestaoFuncionarios.sistema_telas;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -20,9 +20,9 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import Projetos.Projeto5.sistema.BancoDeDados;
-import Projetos.Projeto5.sistema.Navegador;
-import Projetos.Projeto5.sistema_entidades.Cargo;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.BancoDeDados;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.Navegador;
+import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.Cargo;
 
 public class CargosConsultar extends JPanel
 {

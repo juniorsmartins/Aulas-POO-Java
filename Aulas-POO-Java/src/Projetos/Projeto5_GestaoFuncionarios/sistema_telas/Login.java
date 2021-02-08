@@ -1,6 +1,6 @@
-package Projetos.Projeto5.sistema_telas;
+package Projetos.Projeto5_GestaoFuncionarios.sistema_telas;
 
-import Projetos.Projeto5.sistema.Navegador;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.Navegador;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

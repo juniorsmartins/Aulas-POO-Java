@@ -1,4 +1,4 @@
-package Projetos.Projeto5.sistema_entidades;
+package Projetos.Projeto5_GestaoFuncionarios.sistema_entidades;
 
 public class Cargo 
 {

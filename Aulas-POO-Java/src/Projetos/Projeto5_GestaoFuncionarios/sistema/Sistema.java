@@ -1,4 +1,4 @@
-package Projetos.Projeto5.sistema;
+package Projetos.Projeto5_GestaoFuncionarios.sistema;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

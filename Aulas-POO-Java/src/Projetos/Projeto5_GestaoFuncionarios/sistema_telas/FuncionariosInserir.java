@@ -1,4 +1,4 @@
-package Projetos.Projeto5.sistema_telas;
+package Projetos.Projeto5_GestaoFuncionarios.sistema_telas;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -26,10 +26,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
-import Projetos.Projeto5.sistema.BancoDeDados;
-import Projetos.Projeto5.sistema.Navegador;
-import Projetos.Projeto5.sistema_entidades.Cargo;
-import Projetos.Projeto5.sistema_entidades.Funcionario;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.BancoDeDados;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.Navegador;
+import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.Cargo;
+import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.Funcionario;
 
 public class FuncionariosInserir extends JPanel
 {
