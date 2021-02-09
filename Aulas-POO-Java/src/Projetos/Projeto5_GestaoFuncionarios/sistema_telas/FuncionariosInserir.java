@@ -216,6 +216,8 @@ public class FuncionariosInserir extends JPanel
         Connection conexao;
         // Instrução SQL
         PreparedStatement instrucaoSQL;
+        // Resultados
+        ResultSet resultados;
         
         try
         {
