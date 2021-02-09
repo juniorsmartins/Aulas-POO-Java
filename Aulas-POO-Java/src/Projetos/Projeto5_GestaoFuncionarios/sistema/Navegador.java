@@ -6,7 +6,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.Cargo;
+import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.*;
+import Projetos.Projeto5_GestaoFuncionarios.sistema_telas.*;
 
 public class Navegador 
 {

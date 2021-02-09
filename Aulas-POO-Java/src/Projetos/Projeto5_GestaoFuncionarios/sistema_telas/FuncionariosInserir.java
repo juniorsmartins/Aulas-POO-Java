@@ -26,10 +26,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
-import Projetos.Projeto5_GestaoFuncionarios.sistema.BancoDeDados;
-import Projetos.Projeto5_GestaoFuncionarios.sistema.Navegador;
-import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.Cargo;
-import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.Funcionario;
+import Projetos.Projeto5_GestaoFuncionarios.sistema.*;
+import Projetos.Projeto5_GestaoFuncionarios.sistema_entidades.*;
 
 public class FuncionariosInserir extends JPanel
 {
