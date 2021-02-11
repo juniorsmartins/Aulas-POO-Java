@@ -1,4 +1,4 @@
-package Hackerrank.Desafio01;
+package Hackerrank.DesafiosEasy;
 
 import java.util.*;
 
