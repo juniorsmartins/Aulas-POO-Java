@@ -49,6 +49,5 @@ public class AulaQueue
         
         System.out.println(filaBanco.isEmpty()); // Diz se a lista está vazia
         
-        
     }
 }
