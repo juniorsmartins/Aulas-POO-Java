@@ -15,9 +15,7 @@ public class AulaSet_TreeSet
         capitais.add("Curitiba");
         capitais.add("São Paulo");
         capitais.add("Rio de Janeiro");
-        capitais.add("Belo Horizonte");
-        capitais.add("Cuiabá");
-        
+
         System.out.println(capitais);
         
         // Retorna o elemento que esta no topo/raiz da árvore
@@ -27,10 +25,10 @@ public class AulaSet_TreeSet
         System.out.println("Capital na ponta/folha da árvore: " + capitais.last());
         
         // Retorna o primeiro elemento logo abaixo do elemento que enviei como parâmetro (Florianópolis)
-        System.out.println(capitais.lower("Florianopólis"));
+        System.out.println("lower: " + capitais.lower("Florianopólis"));
         
         // Retorna o primeiro elemento acima do elemento que enviei como parâmetro (Florianópolis)
-        System.out.println(capitais.higher("Florianópolis"));
+        System.out.println("higher: " + capitais.higher("Florianópolis"));
         
         // Exibe todas as capitais no console
         System.out.println(capitais);
