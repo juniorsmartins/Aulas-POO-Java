@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-public class AulaList 
+public class AulaList_ArrayList 
 {
     public static void main(String[] args) 
     {

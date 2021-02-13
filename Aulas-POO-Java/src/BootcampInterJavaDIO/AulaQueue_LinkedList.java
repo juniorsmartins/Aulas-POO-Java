@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class AulaQueue 
+public class AulaQueue_LinkedList 
 {
     public static void main(String[] args) 
     {
