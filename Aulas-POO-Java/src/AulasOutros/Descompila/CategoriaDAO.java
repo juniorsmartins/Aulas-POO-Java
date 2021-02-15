@@ -8,7 +8,7 @@ public class CategoriaDAO
 {
     private Connection con = null;
     
-    private CategoriaDAO()
+    public CategoriaDAO()
     {
         con = ConnectionFactory.getConnection();
     }
