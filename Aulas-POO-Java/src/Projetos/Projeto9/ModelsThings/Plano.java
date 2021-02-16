@@ -1,5 +1,6 @@
-package Projetos.Projeto9.Model;
+package Projetos.Projeto9.ModelsThings;
 
+import Projetos.Projeto9.ModelsPersonas.Torcedor;
 import java.util.Date;
 
 public class Plano 

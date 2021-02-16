@@ -1,4 +1,4 @@
-package Projetos.Projeto9.Model;
+package Projetos.Projeto9.ModelsPersonas;
 
 import java.util.Date;
 
