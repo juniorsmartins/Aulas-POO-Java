@@ -22,7 +22,7 @@ public class Main
         {
             System.out.println("ENTRADA DE DADOS");
             System.out.print("Nome: ");
-            nome = scan.nextLine();
+            nome = (String)scan.nextLine();
             System.out.print("Sobrenome: ");
             sobrenome = scan.nextLine();
             System.out.print("CPF: ");
