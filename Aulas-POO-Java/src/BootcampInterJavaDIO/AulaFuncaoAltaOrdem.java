@@ -14,6 +14,7 @@ public class AulaFuncaoAltaOrdem
     }
 }
 
+@FunctionalInterface
 interface Calculo
 {
     public int calcular(int a, int b);
