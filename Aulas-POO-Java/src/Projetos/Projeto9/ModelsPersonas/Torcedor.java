@@ -2,6 +2,8 @@ package Projetos.Projeto9.ModelsPersonas;
 
 public final class Torcedor extends Fisica implements InterfaceTorcedor
 {
+    public static int totalCadastrosTorcedor;
+    
     private String time;
     
     public Torcedor(String nome, String sobrenome, String cpf, String nacionalidade, String time)
@@ -12,6 +14,15 @@ public final class Torcedor extends Fisica implements InterfaceTorcedor
         this.editarCpf(cpf);
         this.editarNacionalidade(nacionalidade);
         this.editarTime(time);
+    }
+    
+    public static int getTotalCadastrosTorcedor()
+    {
+        return Torcedor.totalCadastrosTorcedor;
+    }
+    protected static void setTotalCadastrosTorcedor()
+    {
+        Torcedor.totalCadastrosTorcedor += 1;
     }
     
     protected String getTime()
@@ -60,6 +71,9 @@ public final class Torcedor extends Fisica implements InterfaceTorcedor
     public void gerarId()
     {
         this.setId();
+        Pessoa.setTotalCadastrosPessoa();
+        Fisica.setTotalCadastrosFisica();
+        Torcedor.setTotalCadastrosTorcedor();
     }
     @Override
     public void editarNacionalidade(String nacionalidade)

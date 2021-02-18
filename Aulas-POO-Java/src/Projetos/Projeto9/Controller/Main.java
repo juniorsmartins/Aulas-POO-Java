@@ -16,7 +16,7 @@ public class Main
         String nome, sobrenome, cpf, nacionalidade, time;
         
         System.out.print("Cadastrar quantos? ");
-        int quantia = Integer.parseInt(scan.next());
+        int quantia = Integer.parseInt(scan.nextLine());
         
         for(int contador = 0; contador < quantia; contador++)
         {
@@ -40,14 +40,17 @@ public class Main
         for(Torcedor torce: listaTorcedor)
         {
             System.out.println("TORCEDOR");
-            System.out.println("ID: " + torce.getId());
-            System.out.println("Nome completo: " + torce.getNome() + " " + torce.getSobrenome());
-            System.out.println("CPF: " + torce.getCpf());
-            System.out.println("Nacionalidade: " + torce.getNacionalidade());
-            System.out.println("Time: " + torce.getTime());
+            System.out.println("ID: " + torce.verId());
+            System.out.println("Nome completo: " + torce.verNome() + " " + torce.verSobrenome());
+            System.out.println("CPF: " + torce.verCpf());
+            System.out.println("Nacionalidade: " + torce.verNacionalidade());
+            System.out.println("Time: " + torce.verTime());
             pulaLinha(1);
         }
-
+        
+        System.out.println("Total Pessoas: " + Pessoa.getTotalCadastrosPessoa());
+        System.out.println("Total Pessoas Fisica: " + Fisica.getTotalCadastrosFisica());
+        System.out.println("Total Pessoas Fisica Torcedor: " + Torcedor.getTotalCadastrosTorcedor());
 
         pulaLinha(2);
     }
