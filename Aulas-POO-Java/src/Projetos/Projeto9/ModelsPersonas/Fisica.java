@@ -6,28 +6,28 @@ public abstract class Fisica extends Pessoa
     private String sobrenome;
     private String cpf;
     
-    public String getNome()
+    protected String getNome()
     {
         return nome;
     }
-    public String getSobrenome()
+    protected String getSobrenome()
     {
         return sobrenome;
     }
-    public String getCpf()
+    protected String getCpf()
     {
         return cpf;
     }
     
-    public void setNome(String nom)
+    protected void setNome(String nom)
     {
         nome = nom;
     }
-    public void setSobrenome(String sobre)
+    protected void setSobrenome(String sobre)
     {
         sobrenome = sobre;
     }
-    public void setCpf(String doc)
+    protected void setCpf(String doc)
     {
         cpf = doc;
     }

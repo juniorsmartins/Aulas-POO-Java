@@ -5,25 +5,20 @@ public abstract class Pessoa
     private int id;
     private String nacionalidade;
     
-    public Pessoa()
-    {
-        setId();
-    }
-    
-    public int getId()
+    protected int getId()
     {
         return id;
     }
-    public String getNacionalidade()
+    protected String getNacionalidade()
     {
         return nacionalidade;
     }
 
-    private void setId()
+    protected void setId()
     {
         id += 1;
     }
-    public void setNacionalidade(String nacional)
+    protected void setNacionalidade(String nacional)
     {
         nacionalidade = nacional;
     }
