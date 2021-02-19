@@ -1,5 +1,8 @@
 package Projetos.Projeto9.ModelsPersonas;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
 public abstract class Pessoa 
 {
     // Atributos de Classe
@@ -8,6 +11,8 @@ public abstract class Pessoa
     // Atributos de Instância
     private int id;
     private String paisOrigem;
+    private String dataCadastro;
+    private String time;
     
     // Métodos Getters e Setters de Classe
     public static int getTotalCadastrosPessoa()
@@ -28,6 +33,14 @@ public abstract class Pessoa
     {
         return this.paisOrigem;
     }
+    protected String getDataCadastro()
+    {
+        return this.dataCadastro;
+    }
+    protected String getTime()
+    {
+        return this.time;
+    }
 
     // Métodos Setters de Instância
     protected void setId()
@@ -37,5 +50,15 @@ public abstract class Pessoa
     protected void setPaisOrigem(String pais)
     {
         this.paisOrigem = pais;
+    }
+    protected void setDataCadastro()
+    {
+        Date data = new Date();
+        SimpleDateFormat formatar = new SimpleDateFormat("dd/MM/yyyy");
+        this.dataCadastro = formatar.format(data);
+    }
+    protected void setTime(String time)
+    {
+        this.time = time;
     }
 }

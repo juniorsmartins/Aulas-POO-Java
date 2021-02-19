@@ -4,6 +4,7 @@ public interface InterfacePessoa
 {
     public int verId();
     public String verPaisOrigem();
+    public String verDataCadastro();
     public String verNome();
     public String verSobrenome();
     public String verDocumento();

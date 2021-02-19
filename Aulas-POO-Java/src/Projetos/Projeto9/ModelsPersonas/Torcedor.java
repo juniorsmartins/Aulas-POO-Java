@@ -6,12 +6,12 @@ public final class Torcedor extends Fisica implements InterfacePessoa
     public static int totalCadastrosTorcedor;
     
     // Atributos de Instância
-    private String time;
     
     // Métodos Construtores
     public Torcedor(String nome, String sobrenome, String cpf, String pais, String time)
     {
         this.gerarId();
+        this.setDataCadastro();
         this.editarNome(nome);
         this.editarSobrenome(sobrenome);
         this.editarDocumento(cpf);
@@ -30,16 +30,8 @@ public final class Torcedor extends Fisica implements InterfacePessoa
     }
     
     // Métodos Getters de Instância
-    protected String getTime()
-    {
-        return this.time;
-    }
-    
+        
     // Métodos Setters de Instância
-    protected void setTime(String time)
-    {
-        this.time = time;
-    }
 
     // Implementações da Interface Pessoa
     @Override
@@ -51,6 +43,11 @@ public final class Torcedor extends Fisica implements InterfacePessoa
     public String verPaisOrigem()
     {
         return this.getPaisOrigem();
+    }
+    @Override
+    public String verDataCadastro()
+    {
+        return this.getDataCadastro();
     }
     @Override
     public String verNome()
@@ -72,7 +69,7 @@ public final class Torcedor extends Fisica implements InterfacePessoa
     {
         return this.getTime();
     }
-
+    
     @Override
     public void gerarId()
     {
