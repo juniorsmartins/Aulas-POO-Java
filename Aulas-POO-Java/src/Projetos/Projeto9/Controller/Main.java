@@ -6,6 +6,7 @@ import static Projetos.Projeto9.Controller.Uteis.pulaLinha;
 import static Projetos.Projeto9.Controller.Create.menuCreate;
 import static Projetos.Projeto9.Controller.Read.menuRead;
 import static Projetos.Projeto9.Controller.Update.menuUpdate;
+import static Projetos.Projeto9.Controller.Delete.menuDelete;
 
 public class Main 
 {
@@ -43,12 +44,10 @@ public class Main
             case 3:
                 pulaLinha(1);
                 menuUpdate();
-                menuPrincipal();
                 break;
             case 4:
                 pulaLinha(1);
-                deletePessoa();
-                menuPrincipal();
+                menuDelete();
                 break;
             case 0:
                 pulaLinha(2);
