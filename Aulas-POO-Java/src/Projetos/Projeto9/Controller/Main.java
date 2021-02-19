@@ -11,6 +11,7 @@ import static Projetos.Projeto9.Controller.Delete.menuDelete;
 public class Main 
 {
     static Scanner scan = new Scanner(System.in);
+    static String opcao;
 
     public static void main(String[] args) 
     {
@@ -56,8 +57,8 @@ public class Main
                 System.exit(0);
             default:
                 pulaLinha(2);
-                System.out.print("Opção Inválida! Tecle enter para continuar...");
-                String opcao = scan.nextLine();
+                System.out.print("Opção Inválida! Tecle <Enter> para continuar...");
+                opcao = scan.nextLine();
                 pulaLinha(2);
                 menuPrincipal();
         }
