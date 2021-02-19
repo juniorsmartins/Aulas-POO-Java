@@ -2,11 +2,14 @@ package Projetos.Projeto9.ModelsPersonas;
 
 public abstract class Pessoa 
 {
+    // Atributos de Classe
     public static int totalCadastrosPessoa;
     
+    // Atributos de Instância
     private int id;
-    private String nacionalidade;
+    private String paisOrigem;
     
+    // Métodos Getters e Setters de Classe
     public static int getTotalCadastrosPessoa()
     {
         return Pessoa.totalCadastrosPessoa;
@@ -16,21 +19,23 @@ public abstract class Pessoa
         Pessoa.totalCadastrosPessoa += 1;
     }
     
+    // Métodos Getters de Instância
     protected int getId()
     {
         return this.id;
     }
-    protected String getNacionalidade()
+    protected String getPaisOrigem()
     {
-        return this.nacionalidade;
+        return this.paisOrigem;
     }
 
+    // Métodos Setters de Instância
     protected void setId()
     {
         this.id = Pessoa.getTotalCadastrosPessoa() + 1;
     }
-    protected void setNacionalidade(String nacional)
+    protected void setPaisOrigem(String pais)
     {
-        this.nacionalidade = nacional;
+        this.paisOrigem = pais;
     }
 }

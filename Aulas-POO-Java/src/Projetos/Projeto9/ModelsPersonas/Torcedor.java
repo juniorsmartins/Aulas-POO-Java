@@ -1,21 +1,25 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public final class Torcedor extends Fisica implements InterfaceTorcedor
+public final class Torcedor extends Fisica implements InterfacePessoa
 {
+    // Atributos de Classe
     public static int totalCadastrosTorcedor;
     
+    // Atributos de Instância
     private String time;
     
-    public Torcedor(String nome, String sobrenome, String cpf, String nacionalidade, String time)
+    // Métodos Construtores
+    public Torcedor(String nome, String sobrenome, String cpf, String pais, String time)
     {
         this.gerarId();
         this.editarNome(nome);
         this.editarSobrenome(sobrenome);
-        this.editarCpf(cpf);
-        this.editarNacionalidade(nacionalidade);
+        this.editarDocumento(cpf);
+        this.editarPaisOrigem(pais);
         this.editarTime(time);
     }
     
+    // Métodos Getters e Setters de Classe
     public static int getTotalCadastrosTorcedor()
     {
         return Torcedor.totalCadastrosTorcedor;
@@ -25,26 +29,28 @@ public final class Torcedor extends Fisica implements InterfaceTorcedor
         Torcedor.totalCadastrosTorcedor += 1;
     }
     
+    // Métodos Getters de Instância
     protected String getTime()
     {
         return this.time;
     }
     
+    // Métodos Setters de Instância
     protected void setTime(String time)
     {
         this.time = time;
     }
 
-    // Implementações da Interface Torcedor
+    // Implementações da Interface Pessoa
     @Override
     public int verId()
     {
         return this.getId();
     }
     @Override
-    public String verNacionalidade()
+    public String verPaisOrigem()
     {
-        return this.getNacionalidade();
+        return this.getPaisOrigem();
     }
     @Override
     public String verNome()
@@ -57,7 +63,7 @@ public final class Torcedor extends Fisica implements InterfaceTorcedor
         return this.getSobrenome();
     }
     @Override
-    public String verCpf()
+    public String verDocumento()
     {
         return this.getCpf();
     }
@@ -76,9 +82,9 @@ public final class Torcedor extends Fisica implements InterfaceTorcedor
         Torcedor.setTotalCadastrosTorcedor();
     }
     @Override
-    public void editarNacionalidade(String nacionalidade)
+    public void editarPaisOrigem(String pais)
     {
-        this.setNacionalidade(nacionalidade);
+        this.setPaisOrigem(pais);
     }
     @Override
     public void editarNome(String nome)
@@ -91,7 +97,7 @@ public final class Torcedor extends Fisica implements InterfaceTorcedor
         this.setSobrenome(sobre);
     }
     @Override
-    public void editarCpf(String cp)
+    public void editarDocumento(String cp)
     {
         this.setCpf(cp);
     }

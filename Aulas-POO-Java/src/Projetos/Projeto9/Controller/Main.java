@@ -13,7 +13,7 @@ public class Main
     {
         ArrayList<Torcedor> listaTorcedor = new ArrayList<>();
         Torcedor torcedor;
-        String nome, sobrenome, cpf, nacionalidade, time;
+        String nome, sobrenome, cpf, pais, time;
         
         System.out.print("Cadastrar quantos? ");
         int quantia = Integer.parseInt(scan.nextLine());
@@ -27,23 +27,22 @@ public class Main
             sobrenome = scan.nextLine();
             System.out.print("CPF: ");
             cpf = scan.nextLine();
-            System.out.print("Nacionalidade: ");
-            nacionalidade = scan.nextLine();
+            System.out.print("País de origem: ");
+            pais = scan.nextLine();
             System.out.print("Time: ");
             time = scan.nextLine();
             pulaLinha(2);
-            torcedor = new Torcedor(nome, sobrenome, cpf, nacionalidade, time);
+            torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
             listaTorcedor.add(torcedor);
         }
-
         
         for(Torcedor torce: listaTorcedor)
         {
             System.out.println("TORCEDOR");
             System.out.println("ID: " + torce.verId());
             System.out.println("Nome completo: " + torce.verNome() + " " + torce.verSobrenome());
-            System.out.println("CPF: " + torce.verCpf());
-            System.out.println("Nacionalidade: " + torce.verNacionalidade());
+            System.out.println("CPF: " + torce.verDocumento());
+            System.out.println("Nacionalidade: " + torce.verPaisOrigem());
             System.out.println("Time: " + torce.verTime());
             pulaLinha(1);
         }

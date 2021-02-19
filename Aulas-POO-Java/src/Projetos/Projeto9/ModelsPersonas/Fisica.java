@@ -2,12 +2,15 @@ package Projetos.Projeto9.ModelsPersonas;
 
 public abstract class Fisica extends Pessoa
 {
+    // Atributos de Classe
     public static int totalCadastrosFisica;
     
+    // Atributos de Instância
     private String nome;
     private String sobrenome;
     private String cpf;
     
+    // Métodos de Getters e Setters de Classe
     public static int getTotalCadastrosFisica()
     {
         return Fisica.totalCadastrosFisica;
@@ -17,29 +20,31 @@ public abstract class Fisica extends Pessoa
         Fisica.totalCadastrosFisica += 1;
     }
     
+    // Métodos Getters de Instância
     protected String getNome()
     {
-        return nome;
+        return this.nome;
     }
     protected String getSobrenome()
     {
-        return sobrenome;
+        return this.sobrenome;
     }
     protected String getCpf()
     {
-        return cpf;
+        return this.cpf;
     }
     
-    protected void setNome(String nom)
+    // Métodos Setters de Instância
+    protected void setNome(String nome)
     {
-        nome = nom;
+        this.nome = nome;
     }
     protected void setSobrenome(String sobre)
     {
-        sobrenome = sobre;
+        this.sobrenome = sobre;
     }
-    protected void setCpf(String doc)
+    protected void setCpf(String cpf)
     {
-        cpf = doc;
+        this.cpf = cpf;
     }
 }

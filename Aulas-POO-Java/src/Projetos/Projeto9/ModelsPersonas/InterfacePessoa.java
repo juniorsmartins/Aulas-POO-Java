@@ -1,18 +1,18 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public interface InterfaceTorcedor 
+public interface InterfacePessoa 
 {
     public int verId();
-    public String verNacionalidade();
+    public String verPaisOrigem();
     public String verNome();
     public String verSobrenome();
-    public String verCpf();
+    public String verDocumento();
     public String verTime();
 
     public void gerarId();
-    public void editarNacionalidade(String nacionalidade);
+    public void editarPaisOrigem(String pais);
     public void editarNome(String nome);
     public void editarSobrenome(String sobre);
-    public void editarCpf(String cp);
+    public void editarDocumento(String doc);
     public void editarTime(String time);
 }
