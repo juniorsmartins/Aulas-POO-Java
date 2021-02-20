@@ -9,6 +9,7 @@ public interface InterfacePessoa
     public String verSobrenome();
     public String verDocumento();
     public String verTime();
+    public void verTudo();
 
     public void gerarId();
     public void editarPaisOrigem(String pais);

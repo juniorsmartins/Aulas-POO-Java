@@ -69,6 +69,16 @@ public final class Empresa extends Juridica implements InterfacePessoa
     {
         return this.getTime();
     }
+    @Override
+    public void verTudo()
+    {
+        System.out.println("\nID: " + this.verId());
+        System.out.println("Razão Social: " + this.verNome());
+        System.out.println("Nome Fantasia: " + this.verSobrenome());
+        System.out.println("CNPJ: " + this.verDocumento());
+        System.out.println("País: " + this.verPaisOrigem());
+        System.out.println("Time: " + this.verTime());
+    }
     
     @Override
     public void gerarId()

@@ -69,6 +69,16 @@ public final class Torcedor extends Fisica implements InterfacePessoa
     {
         return this.getTime();
     }
+    @Override
+    public void verTudo()
+    {
+        System.out.println("\nID: " + this.verId());
+        System.out.println("Nome: " + this.verNome());
+        System.out.println("Sobrenome: " + this.verSobrenome());
+        System.out.println("CPF: " + this.verDocumento());
+        System.out.println("País: " + this.verPaisOrigem());
+        System.out.println("Time: " + this.verTime());
+    }
     
     @Override
     public void gerarId()

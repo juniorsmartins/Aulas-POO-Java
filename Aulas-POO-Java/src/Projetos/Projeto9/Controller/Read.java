@@ -1,12 +1,8 @@
 package Projetos.Projeto9.Controller;
 
-import static Projetos.Projeto9.Controller.Create.listaTorcedor;
-import static Projetos.Projeto9.Controller.Create.listaEmpresa;
 import static Projetos.Projeto9.Controller.Main.*;
 import static Projetos.Projeto9.Controller.Uteis.*;
-import Projetos.Projeto9.ModelsPersonas.Empresa;
 import Projetos.Projeto9.ModelsPersonas.Torcedor;
-import java.util.Iterator;
 
 public class Read 
 {
@@ -31,19 +27,22 @@ public class Read
             case 1:
             {
                 pulaLinha(1);
-                System.out.println("Lista Torcedor");
-                for(Torcedor item: listaTorcedor)
+                System.out.println("*************************");
+                System.out.println("***** Lista Torcedor ****");
+                System.out.println("*************************");
+                System.out.println("***** Tamanho: " + listaTorcedor.size());
+                boolean checarLista = listaTorcedor.isEmpty();
+                if(checarLista == true)
                 {
                     pulaLinha(1);
-                    System.out.println("ID: " + item.verId());
-                    System.out.println("Nome: " + item.verNome());
-                    System.out.println("Sobrenome: " + item.verSobrenome());
-                    System.out.println("CPF: " + item.verDocumento());
-                    System.out.println("País de Origem: " + item.verPaisOrigem());
-                    System.out.println("Time favorito: " + item.verTime());
+                    System.out.println("Lista Vazia!");
+                }
+                else
+                {
+                    listaTorcedor.forEach(torcedor -> {torcedor.verTudo();});
                 }
                 pulaLinha(1);
-                System.out.println("Tecle <Enter> para continuar...");
+                System.out.print("Tecle <Enter> para continuar...");
                 String opcao = scan.nextLine();
                 menuRead();
             }
@@ -69,7 +68,10 @@ public class Read
                 menuRead();
             case 6:
                 pulaLinha(1);
+                System.out.println("*************************");
                 System.out.println("***** Lista Empresa *****");
+                System.out.println("*************************");
+                System.out.println("***** Tamanho: " + listaEmpresa.size());
                 boolean checarLista = listaEmpresa.isEmpty();
                 if(checarLista == true)
                 {
@@ -78,15 +80,10 @@ public class Read
                 }
                 else
                 {
-                    Iterator<Empresa> iterator = listaEmpresa.iterator();
-                    while (iterator.hasNext())
-                    {
-                        pulaLinha(1);
-                        System.out.println(iterator.next());
-                    }
+                    listaEmpresa.forEach(empresa -> {empresa.verTudo();});
                 }
                 pulaLinha(1);
-                System.out.println("Tecle <Enter> para continuar...");
+                System.out.print("Tecle <Enter> para continuar...");
                 opcao = scan.nextLine();
                 menuRead();
             case 0:

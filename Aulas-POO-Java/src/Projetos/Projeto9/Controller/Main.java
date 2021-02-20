@@ -7,12 +7,18 @@ import static Projetos.Projeto9.Controller.Create.menuCreate;
 import static Projetos.Projeto9.Controller.Read.menuRead;
 import static Projetos.Projeto9.Controller.Update.menuUpdate;
 import static Projetos.Projeto9.Controller.Delete.menuDelete;
+import Projetos.Projeto9.ModelsPersonas.Empresa;
+import Projetos.Projeto9.ModelsPersonas.Torcedor;
+
+import java.util.ArrayList;
 
 public class Main 
 {
-    static Scanner scan = new Scanner(System.in);
-    static String opcao;
-
+    public static Scanner scan = new Scanner(System.in);
+    public static String opcao;
+    public static ArrayList<Empresa> listaEmpresa = new ArrayList<>();
+    public static ArrayList<Torcedor> listaTorcedor = new ArrayList<>();
+    
     public static void main(String[] args) 
     {
         menuPrincipal();

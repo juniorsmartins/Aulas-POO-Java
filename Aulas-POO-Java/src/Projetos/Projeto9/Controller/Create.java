@@ -1,16 +1,12 @@
 package Projetos.Projeto9.Controller;
 
 import static Projetos.Projeto9.Controller.Main.*;
-import static Projetos.Projeto9.Controller.Uteis.pulaLinha;
+import static Projetos.Projeto9.Controller.Uteis.*;
 import Projetos.Projeto9.ModelsPersonas.Torcedor;
 import Projetos.Projeto9.ModelsPersonas.Empresa;
 
-import java.util.ArrayList;
-
 public class Create 
 {
-    static ArrayList<Empresa> listaEmpresa;
-    static ArrayList<Torcedor> listaTorcedor;
     public static void menuCreate()
     {
         pulaLinha(1);
@@ -61,8 +57,6 @@ public class Create
     
     public static void createTorcedor()
     {
-        Torcedor torcedor;
-        listaTorcedor = new ArrayList<>();
         String nome, sobrenome, cpf, pais, time;
         
         System.out.print("\nNome: ");
@@ -76,7 +70,7 @@ public class Create
         System.out.print("Time de FA: ");
         time = scan.nextLine();
         
-        torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
+        Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
         listaTorcedor.add(torcedor);
         
         menuCreate();
@@ -128,8 +122,6 @@ public class Create
 
     public static void createEmpresa()
     {
-        Empresa empresa;
-        listaEmpresa = new ArrayList<>();
         String razaoSocial, nomeFantasia, cnpj, pais, time;
         
         System.out.print("\nRazão Social: ");
@@ -143,7 +135,7 @@ public class Create
         System.out.print("Time de FA: ");
         time = scan.nextLine();
         
-        empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, time);
+        Empresa empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, time);
         listaEmpresa.add(empresa);
 
         menuCreate();
