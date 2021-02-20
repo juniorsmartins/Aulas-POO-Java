@@ -44,13 +44,9 @@ public class Create
                 createEmpresa();
                 break;
             case 0:
-                pulaLinha(1);
                 menuPrincipal();
             default:
-                pulaLinha(2);
-                System.out.print("Opção Inválida! Tecle <Enter> para continuar...");
-                String opcao = scan.nextLine();
-                pulaLinha(1);
+                opcaoInvalida();
                 menuCreate();
         }
     }

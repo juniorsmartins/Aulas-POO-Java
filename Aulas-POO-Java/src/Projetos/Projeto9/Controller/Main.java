@@ -26,7 +26,7 @@ public class Main
     
     public static void menuPrincipal()
     {
-        pulaLinha(1);
+        pulaLinha(2);
         System.out.println("****************************");
         System.out.println("*******  MENU CRUD  ********");
         System.out.println("****************************");

@@ -2,7 +2,6 @@ package Projetos.Projeto9.Controller;
 
 import static Projetos.Projeto9.Controller.Main.*;
 import static Projetos.Projeto9.Controller.Uteis.*;
-import Projetos.Projeto9.ModelsPersonas.Torcedor;
 
 public class Read 
 {
@@ -25,76 +24,96 @@ public class Read
         switch(opcaoSubMenu)
         {
             case 1:
-            {
-                pulaLinha(1);
-                System.out.println("*************************");
-                System.out.println("***** Lista Torcedor ****");
-                System.out.println("*************************");
-                System.out.println("***** Tamanho: " + listaTorcedor.size());
-                boolean checarLista = listaTorcedor.isEmpty();
-                if(checarLista == true)
-                {
-                    pulaLinha(1);
-                    System.out.println("Lista Vazia!");
-                }
-                else
-                {
-                    listaTorcedor.forEach(torcedor -> {torcedor.verTudo();});
-                }
-                pulaLinha(1);
-                System.out.print("Tecle <Enter> para continuar...");
-                String opcao = scan.nextLine();
-                menuRead();
-            }
+                readTorcedor();
             case 2:
-                //TODO
-                pulaLinha(1);
-                System.out.println("Lista Colaborador");
-                menuRead();
+                readColaborador();
             case 3:
-                //TODO
-                pulaLinha(1);
-                System.out.println("Lista Atleta");
-                menuRead();
+                readAtleta();
             case 4:
-                //TODO
-                pulaLinha(1);
-                System.out.println("Lista Time");
-                menuRead();
+                readTime();
             case 5:
-                //TODO
-                pulaLinha(1);
-                System.out.println("Lista Entidade");
-                menuRead();
+                readEntidade();
             case 6:
-                pulaLinha(1);
-                System.out.println("*************************");
-                System.out.println("***** Lista Empresa *****");
-                System.out.println("*************************");
-                System.out.println("***** Tamanho: " + listaEmpresa.size());
-                boolean checarLista = listaEmpresa.isEmpty();
-                if(checarLista == true)
-                {
-                    pulaLinha(1);
-                    System.out.println("Lista Vazia!");
-                }
-                else
-                {
-                    listaEmpresa.forEach(empresa -> {empresa.verTudo();});
-                }
-                pulaLinha(1);
-                System.out.print("Tecle <Enter> para continuar...");
-                opcao = scan.nextLine();
-                menuRead();
+                readEmpresa();
             case 0:
-                pulaLinha(1);
                 menuPrincipal();
             default:
-                pulaLinha(2);
-                System.out.print("Opção Inválida! Tecle <Enter> para continuar...");
-                opcao = scan.nextLine();
-                pulaLinha(1);
-                menuRead();                
+                opcaoInvalida();
+                menuRead();      
         }
+    }
+    
+    public static void readTorcedor()
+    {
+        pulaLinha(1);
+        System.out.println("*************************");
+        System.out.println("***** Lista Torcedor ****");
+        System.out.println("*************************");
+        System.out.println("***** Tamanho: " + listaTorcedor.size());
+        boolean checarLista = listaTorcedor.isEmpty();
+        if(checarLista == true)
+        {
+            pulaLinha(1);
+            System.out.println("Lista Vazia!");
+        }
+        else
+        {
+            listaTorcedor.forEach(torcedor -> {torcedor.verTudo();});
+        }
+        pulaLinha(1);
+        System.out.print("Tecle <Enter> para continuar...");
+        String opcao = scan.nextLine();
+        menuRead();        
+    }
+    
+    public static void readColaborador()
+    {
+        pulaLinha(1);
+        System.out.println("Lista Colaborador");
+        menuRead();
+    }
+    
+    public static void readAtleta()
+    {
+        pulaLinha(1);
+        System.out.println("Lista Atleta");
+        menuRead();
+    }
+    
+    public static void readTime()
+    {
+        pulaLinha(1);
+        System.out.println("Lista Time");
+        menuRead();
+    }
+    
+    public static void readEntidade()
+    {
+        pulaLinha(1);
+        System.out.println("Lista Entidade");
+        menuRead();
+    }
+    
+    public static void readEmpresa()
+    {
+        pulaLinha(1);
+        System.out.println("*************************");
+        System.out.println("***** Lista Empresa *****");
+        System.out.println("*************************");
+        System.out.println("***** Tamanho: " + listaEmpresa.size());
+        boolean checarLista = listaEmpresa.isEmpty();
+        if(checarLista == true)
+        {
+            pulaLinha(1);
+            System.out.println("Lista Vazia!");
+        }
+        else
+        {
+            listaEmpresa.forEach(empresa -> {empresa.verTudo();});
+        }
+        pulaLinha(1);
+        System.out.print("Tecle <Enter> para continuar...");
+        opcao = scan.nextLine();
+        menuRead();        
     }
 }
