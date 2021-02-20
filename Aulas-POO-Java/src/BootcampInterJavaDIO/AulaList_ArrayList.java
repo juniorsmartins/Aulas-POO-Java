@@ -54,7 +54,7 @@ public class AulaList_ArrayList
             System.out.println("------->" + iterator.next()); // retorna um elemento pelo next
         }
 
-        nomes.clear(); // Lismpa totalmente a lista
+        nomes.clear(); // Limpa totalmente a lista
         
         boolean listaVazia = nomes.isEmpty(); // Verifica se a lista está ou não vazia
         System.out.println(listaVazia);

@@ -67,13 +67,13 @@ public class Create
         
         System.out.print("\nNome: ");
         nome = scan.nextLine();
-        System.out.print("\nSobrenome: ");
+        System.out.print("Sobrenome: ");
         sobrenome = scan.nextLine();
-        System.out.print("\nCPF: ");
+        System.out.print("CPF: ");
         cpf = scan.nextLine();
-        System.out.print("\nPaís de Origem: ");
+        System.out.print("País de Origem: ");
         pais = scan.nextLine();
-        System.out.print("\nTime de FA: ");
+        System.out.print("Time de FA: ");
         time = scan.nextLine();
         
         torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
@@ -134,13 +134,13 @@ public class Create
         
         System.out.print("\nRazão Social: ");
         razaoSocial = scan.nextLine();
-        System.out.print("\nNome Fantasia: ");
+        System.out.print("Nome Fantasia: ");
         nomeFantasia = scan.nextLine();
-        System.out.print("\nCNPJ: ");
+        System.out.print("CNPJ: ");
         cnpj = scan.nextLine();
-        System.out.print("\nPais de Origem: ");
+        System.out.print("Pais de Origem: ");
         pais = scan.nextLine();
-        System.out.print("\nTime de FA: ");
+        System.out.print("Time de FA: ");
         time = scan.nextLine();
         
         empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, time);

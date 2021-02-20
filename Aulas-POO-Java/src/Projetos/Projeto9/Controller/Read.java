@@ -6,6 +6,7 @@ import static Projetos.Projeto9.Controller.Main.*;
 import static Projetos.Projeto9.Controller.Uteis.*;
 import Projetos.Projeto9.ModelsPersonas.Empresa;
 import Projetos.Projeto9.ModelsPersonas.Torcedor;
+import java.util.Iterator;
 
 public class Read 
 {
@@ -34,12 +35,12 @@ public class Read
                 for(Torcedor item: listaTorcedor)
                 {
                     pulaLinha(1);
-                    System.out.println(item.verId());
-                    System.out.println(item.verNome());
-                    System.out.println(item.verSobrenome());
-                    System.out.println(item.verDocumento());
-                    System.out.println(item.verPaisOrigem());
-                    System.out.println(item.verTime());
+                    System.out.println("ID: " + item.verId());
+                    System.out.println("Nome: " + item.verNome());
+                    System.out.println("Sobrenome: " + item.verSobrenome());
+                    System.out.println("CPF: " + item.verDocumento());
+                    System.out.println("País de Origem: " + item.verPaisOrigem());
+                    System.out.println("Time favorito: " + item.verTime());
                 }
                 pulaLinha(1);
                 System.out.println("Tecle <Enter> para continuar...");
@@ -69,15 +70,20 @@ public class Read
             case 6:
                 pulaLinha(1);
                 System.out.println("***** Lista Empresa *****");
-                for(Empresa item: listaEmpresa)
+                boolean checarLista = listaEmpresa.isEmpty();
+                if(checarLista == true)
                 {
                     pulaLinha(1);
-                    System.out.println(item.verId());
-                    System.out.println(item.verNome());
-                    System.out.println(item.verSobrenome());
-                    System.out.println(item.verDocumento());
-                    System.out.println(item.verPaisOrigem());
-                    System.out.println(item.verTime());
+                    System.out.println("Lista Vazia!");
+                }
+                else
+                {
+                    Iterator<Empresa> iterator = listaEmpresa.iterator();
+                    while (iterator.hasNext())
+                    {
+                        pulaLinha(1);
+                        System.out.println(iterator.next());
+                    }
                 }
                 pulaLinha(1);
                 System.out.println("Tecle <Enter> para continuar...");
