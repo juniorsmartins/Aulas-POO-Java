@@ -1,6 +1,6 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public final class Torcedor extends Fisica implements InterfacePessoa
+public final class Torcedor extends Fisica implements InterfacePF
 {
     // Atributos de Classe
     public static int totalCadastrosTorcedor;

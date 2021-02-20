@@ -11,13 +11,18 @@ import Projetos.Projeto9.ModelsPersonas.Fisica;
 import Projetos.Projeto9.ModelsPersonas.Juridica;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main 
 {
     public static Scanner scan = new Scanner(System.in);
     public static String opcao;
-    public static ArrayList<Juridica> listaJuridica = new ArrayList<>();
-    public static ArrayList<Fisica> listaFisica = new ArrayList<>();
+    public static List<Juridica> listaTime = new ArrayList<>();
+    public static List<Juridica> listaEntidade = new ArrayList<>();
+    public static List<Juridica> listaEmpresa = new ArrayList<>();
+    public static List<Fisica> listaTorcedor = new ArrayList<>();
+    public static List<Fisica> listaColaborador = new ArrayList<>();
+    public static List<Fisica> listaAtleta = new ArrayList<>();
     
     public static void main(String[] args) 
     {

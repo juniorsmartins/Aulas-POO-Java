@@ -1,6 +1,6 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public class Time extends Juridica implements InterfacePessoa
+public class Time extends Juridica implements InterfacePJ
 {
     // Atributos de Classe
     public static int totalCadastrosTime;

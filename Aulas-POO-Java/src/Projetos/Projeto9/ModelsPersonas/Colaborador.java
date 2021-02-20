@@ -1,14 +1,22 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public final class Colaborador extends Fisica implements InterfacePessoa
+public final class Colaborador extends Fisica implements InterfacePF
 {
     // Atributo de Classe
     public static int totalCadastrosColaborador;
+    
+    // Atributos de Instância
 
     // Métodos Construtores
-    public Colaborador()
+    public Colaborador(String nome, String sobrenome, String cpf, String pais, String time)
     {
-        //TODO
+        this.gerarId();
+        this.setDataCadastro();
+        this.editarNome(nome);
+        this.editarSobrenome(sobrenome);
+        this.editarDocumento(cpf);
+        this.editarPaisOrigem(pais);
+        this.editarTime(time);
     }
     
     // Métodos Getters e Setters de Classe
@@ -16,7 +24,7 @@ public final class Colaborador extends Fisica implements InterfacePessoa
     {
         return Colaborador.totalCadastrosColaborador;
     }
-    public static void setTotalCadastrosColaborador()
+    protected static void setTotalCadastrosColaborador()
     {
         Colaborador.totalCadastrosColaborador += 1;
     }

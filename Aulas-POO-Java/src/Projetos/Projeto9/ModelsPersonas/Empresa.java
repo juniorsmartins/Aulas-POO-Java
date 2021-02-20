@@ -1,6 +1,6 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public final class Empresa extends Juridica implements InterfacePessoa
+public final class Empresa extends Juridica implements InterfacePJ
 {
     // Atributos de Classe
     public static int totalCadastrosEmpresa;

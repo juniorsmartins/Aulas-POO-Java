@@ -1,6 +1,6 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public interface InterfacePessoa 
+public interface InterfacePJ 
 {
     public int verId();
     public String verPaisOrigem();
@@ -16,5 +16,5 @@ public interface InterfacePessoa
     public void editarNome(String nome);
     public void editarSobrenome(String sobre);
     public void editarDocumento(String doc);
-    public void editarTime(String time);
+    public void editarTime(String time);    
 }

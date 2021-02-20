@@ -1,14 +1,22 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public class Atleta extends Fisica implements InterfacePessoa
+public final class Atleta extends Fisica implements InterfacePF
 {
     // Atributos de Classe
     public static int totalCadastrosAtleta;
     
+    // Atributos de Instância
+    
     // Métodos Construtores
-    public Atleta()
+    public Atleta(String nome, String sobrenome, String cpf, String pais, String time)
     {
-        //TODO
+        this.gerarId();
+        this.setDataCadastro();
+        this.editarNome(nome);
+        this.editarSobrenome(sobrenome);
+        this.editarDocumento(cpf);
+        this.editarPaisOrigem(pais);
+        this.editarTime(time);
     }
     
     // Métodos Getters e Setters de Classe
@@ -16,7 +24,7 @@ public class Atleta extends Fisica implements InterfacePessoa
     {
         return Atleta.totalCadastrosAtleta;
     }
-    public static void setTotalCadastrosAtleta()
+    protected static void setTotalCadastrosAtleta()
     {
         Atleta.totalCadastrosAtleta += 1;
     }

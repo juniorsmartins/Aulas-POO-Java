@@ -2,8 +2,7 @@ package Projetos.Projeto9.Controller;
 
 import static Projetos.Projeto9.Controller.Main.*;
 import static Projetos.Projeto9.Controller.Uteis.*;
-import Projetos.Projeto9.ModelsPersonas.Torcedor;
-import Projetos.Projeto9.ModelsPersonas.Empresa;
+import Projetos.Projeto9.ModelsPersonas.*;
 
 public class Create 
 {
@@ -67,18 +66,30 @@ public class Create
         time = scan.nextLine();
         
         Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
-        listaFisica.add(torcedor);
+        listaTorcedor.add(torcedor);
         
         menuCreate();
     }
 
     public static void createColaborador()
     {
-        //TODO
-        pulaLinha(2);
-        System.out.println("Colaborador");
-        tecleEnter();
-        menuCreate();        
+        String nome, sobrenome, cpf, pais, time;
+        
+        System.out.print("\nNome: ");
+        nome = scan.nextLine();
+        System.out.print("Sobrenome: ");
+        sobrenome = scan.nextLine();
+        System.out.print("CPF: ");
+        cpf = scan.nextLine();
+        System.out.print("País de Origem: ");
+        pais = scan.nextLine();
+        System.out.print("Time de FA: ");
+        time = scan.nextLine();
+        
+        Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
+        listaColaborador.add(colaborador);
+        
+        menuCreate();
     }
 
     public static void createAtleta()
@@ -124,7 +135,7 @@ public class Create
         time = scan.nextLine();
         
         Empresa empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, time);
-        listaJuridica.add(empresa);
+        listaEmpresa.add(empresa);
 
         menuCreate();
     }
