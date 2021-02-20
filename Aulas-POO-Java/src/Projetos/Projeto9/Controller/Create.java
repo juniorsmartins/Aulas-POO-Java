@@ -94,28 +94,64 @@ public class Create
 
     public static void createAtleta()
     {
-        //TODO
-        pulaLinha(2);
-        System.out.println("Atleta");
-        tecleEnter();
+        String nome, sobrenome, cpf, pais, time;
+        
+        System.out.print("\nNome: ");
+        nome = scan.nextLine();
+        System.out.print("Sobrenome: ");
+        sobrenome = scan.nextLine();
+        System.out.print("CPF: ");
+        cpf = scan.nextLine();
+        System.out.print("País de Origem: ");
+        pais = scan.nextLine();
+        System.out.print("Time de FA: ");
+        time = scan.nextLine();
+        
+        Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
+        listaAtleta.add(atleta);
+        
         menuCreate();
     }
 
     public static void createTime()
     {
-        //TODO
-        pulaLinha(2);
-        System.out.println("Time");
-        tecleEnter();
+        String razaoSocial, nomeFantasia, cnpj, pais, equipe;
+        
+        System.out.print("\nRazão Social: ");
+        razaoSocial = scan.nextLine();
+        System.out.print("Nome Fantasia: ");
+        nomeFantasia = scan.nextLine();
+        System.out.print("CNPJ: ");
+        cnpj = scan.nextLine();
+        System.out.print("Pais de Origem: ");
+        pais = scan.nextLine();
+        System.out.print("Time de FA: ");
+        equipe = scan.nextLine();
+        
+        Time time = new Time(razaoSocial, nomeFantasia, cnpj, pais, equipe);
+        listaTime.add(time);
+
         menuCreate();
     }
 
     public static void createEntidade()
     {
-        //TODO
-        pulaLinha(2);
-        System.out.println("Entidade");
-        tecleEnter();
+        String razaoSocial, nomeFantasia, cnpj, pais, time;
+        
+        System.out.print("\nRazão Social: ");
+        razaoSocial = scan.nextLine();
+        System.out.print("Nome Fantasia: ");
+        nomeFantasia = scan.nextLine();
+        System.out.print("CNPJ: ");
+        cnpj = scan.nextLine();
+        System.out.print("Pais de Origem: ");
+        pais = scan.nextLine();
+        System.out.print("Time de FA: ");
+        time = scan.nextLine();
+        
+        Entidade entidade = new Entidade(razaoSocial, nomeFantasia, cnpj, pais, time);
+        listaEntidade.add(entidade);
+
         menuCreate();
     }
 

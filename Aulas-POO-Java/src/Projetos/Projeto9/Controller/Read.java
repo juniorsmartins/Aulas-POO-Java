@@ -49,16 +49,15 @@ public class Read
         System.out.println("*************************");
         System.out.println("***** Lista Torcedor ****");
         System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaFisica.size());
-        boolean checarLista = listaFisica.isEmpty();
+        System.out.println("***** Tamanho: " + listaTorcedor.size());
+        boolean checarLista = listaTorcedor.isEmpty();
         if(checarLista == true)
         {
             listaVazia();
         }
         else
         {
-            
-            listaFisica.forEach(torcedor -> {torcedor.verTudo();});
+            listaTorcedor.forEach(torcer -> {torcer.toString();});
         }
         tecleEnter();
         menuRead();
@@ -67,7 +66,19 @@ public class Read
     public static void readColaborador()
     {
         pulaLinha(1);
-        System.out.println("Lista Colaborador");
+        System.out.println("*************************");
+        System.out.println("*** Lista Colaborador ***");
+        System.out.println("*************************");
+        System.out.println("***** Tamanho: " + listaColaborador.size());
+        boolean checarLista = listaColaborador.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            listaColaborador.forEach(colaborar -> {colaborar.toString();});
+        }
         tecleEnter();
         menuRead();
     }
@@ -75,7 +86,19 @@ public class Read
     public static void readAtleta()
     {
         pulaLinha(1);
-        System.out.println("Lista Atleta");
+        System.out.println("*************************");
+        System.out.println("****** Lista Atleta *****");
+        System.out.println("*************************");
+        System.out.println("***** Tamanho: " + listaAtleta.size());
+        boolean checarLista = listaAtleta.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            listaAtleta.forEach(jogador -> {jogador.toString();});
+        }
         tecleEnter();
         menuRead();
     }
@@ -83,7 +106,19 @@ public class Read
     public static void readTime()
     {
         pulaLinha(1);
-        System.out.println("Lista Time");
+        System.out.println("*************************");
+        System.out.println("******* Lista Time ******");
+        System.out.println("*************************");
+        System.out.println("***** Tamanho: " + listaTime.size());
+        boolean checarLista = listaTime.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            listaTime.forEach(equipe -> {equipe.toString();});
+        }
         tecleEnter();
         menuRead();
     }
@@ -91,7 +126,19 @@ public class Read
     public static void readEntidade()
     {
         pulaLinha(1);
-        System.out.println("Lista Entidade");
+        System.out.println("*************************");
+        System.out.println("***** Lista Entidade ****");
+        System.out.println("*************************");
+        System.out.println("***** Tamanho: " + listaEntidade.size());
+        boolean checarLista = listaEntidade.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            listaEntidade.forEach(ente -> {ente.toString();});
+        }
         tecleEnter();
         menuRead();
     }
@@ -102,15 +149,15 @@ public class Read
         System.out.println("*************************");
         System.out.println("***** Lista Empresa *****");
         System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaJuridica.size());
-        boolean checarLista = listaJuridica.isEmpty();
+        System.out.println("***** Tamanho: " + listaEmpresa.size());
+        boolean checarLista = listaEmpresa.isEmpty();
         if(checarLista == true)
         {
             listaVazia();
         }
         else
         {
-            listaJuridica.forEach(empresa -> {empresa.verTudo();});
+            listaEmpresa.forEach(firma -> {firma.toString();});
         }
         tecleEnter();
         menuRead();        

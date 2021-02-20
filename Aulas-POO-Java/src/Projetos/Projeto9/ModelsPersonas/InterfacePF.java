@@ -9,7 +9,7 @@ public interface InterfacePF
     public String verSobrenome();
     public String verDocumento();
     public String verTime();
-    public void verTudo();
+    public String toString();
 
     public void gerarId();
     public void editarPaisOrigem(String pais);

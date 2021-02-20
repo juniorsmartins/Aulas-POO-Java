@@ -70,7 +70,7 @@ public final class Empresa extends Juridica implements InterfacePJ
         return this.getTime();
     }
     @Override
-    public void verTudo()
+    public String toString()
     {
         System.out.println("\nID: " + this.verId());
         System.out.println("Razão Social: " + this.verNome());
@@ -78,6 +78,7 @@ public final class Empresa extends Juridica implements InterfacePJ
         System.out.println("CNPJ: " + this.verDocumento());
         System.out.println("País: " + this.verPaisOrigem());
         System.out.println("Time: " + this.verTime());
+        return "";
     }
     
     @Override

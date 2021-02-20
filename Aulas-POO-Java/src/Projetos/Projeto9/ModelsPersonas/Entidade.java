@@ -1,14 +1,22 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public class Entidade extends Juridica implements InterfacePJ
+public final class Entidade extends Juridica implements InterfacePJ
 {
     // Atributos de Classe
     public static int totalCadastrosEntidade;
     
+    // Atributos de Instância
+    
     // Métodos Construtores
-    public Entidade()
+    public Entidade(String razao, String fantasia, String cnpj, String pais, String time)
     {
-        //TODO
+        this.gerarId();
+        this.setDataCadastro();
+        this.editarNome(razao);
+        this.editarSobrenome(fantasia);
+        this.editarDocumento(cnpj);
+        this.editarPaisOrigem(pais);
+        this.editarTime(time);
     }
     
     // Métodos Getters e Setters de Classe
@@ -16,7 +24,7 @@ public class Entidade extends Juridica implements InterfacePJ
     {
         return Entidade.totalCadastrosEntidade;
     }
-    public static void setTotalCadastrosEntidade()
+    protected static void setTotalCadastrosEntidade()
     {
         Entidade.totalCadastrosEntidade += 1;
     }
@@ -58,7 +66,7 @@ public class Entidade extends Juridica implements InterfacePJ
         return this.getTime();
     }
     @Override
-    public void verTudo()
+    public String toString()
     {
         System.out.println("\nID: " + this.verId());
         System.out.println("Razão Social: " + this.verNome());
@@ -66,6 +74,7 @@ public class Entidade extends Juridica implements InterfacePJ
         System.out.println("CNPJ: " + this.verDocumento());
         System.out.println("País: " + this.verPaisOrigem());
         System.out.println("Time: " + this.verTime());
+        return "";
     }
 
     @Override

@@ -70,7 +70,7 @@ public final class Torcedor extends Fisica implements InterfacePF
         return this.getTime();
     }
     @Override
-    public void verTudo()
+    public String toString()
     {
         System.out.println("\nID: " + this.verId());
         System.out.println("Nome: " + this.verNome());
@@ -78,6 +78,7 @@ public final class Torcedor extends Fisica implements InterfacePF
         System.out.println("CPF: " + this.verDocumento());
         System.out.println("País: " + this.verPaisOrigem());
         System.out.println("Time: " + this.verTime());
+        return "";
     }
     
     @Override
