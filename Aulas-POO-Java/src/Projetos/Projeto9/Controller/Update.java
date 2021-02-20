@@ -7,7 +7,7 @@ public class Update
 {
     public static void menuUpdate()
     {
-        pulaLinha(1);
+        pulaLinha(2);
         System.out.println("****************************");
         System.out.println("******   MENU UPDATE   *****");
         System.out.println("****************************");
@@ -45,31 +45,59 @@ public class Update
     
     public static void editarTorcedor()
     {
-        //TODO
+        boolean checarLista = listaFisica.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            buscaPorCPF();
+        }
     }
     
     public static void editarColaborador()
     {
         //TODO
+        pulaLinha(1);
+        System.out.println("Editar Colaborador");
+        tecleEnter();
+        menuUpdate();
     }
     
     public static void editarAtleta()
     {
         //TODO
+        pulaLinha(1);
+        System.out.println("Editar Atleta");
+        tecleEnter();
+        menuUpdate();
     }
     
     public static void editarTime()
     {
         //TODO
+        pulaLinha(1);
+        System.out.println("Editar Time");
+        tecleEnter();
+        menuUpdate();
     }
     
     public static void editarEntidade()
     {
         //TODO
+        pulaLinha(1);
+        System.out.println("Editar Entidade");
+        tecleEnter();
+        menuUpdate();
     }
     
     public static void editarEmpresa()
     {
         //TODO
+        pulaLinha(1);
+        System.out.println("Editar Empresa");
+        tecleEnter();
+        menuUpdate();
     }
 }

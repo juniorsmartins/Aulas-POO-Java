@@ -9,7 +9,7 @@ public class Create
 {
     public static void menuCreate()
     {
-        pulaLinha(1);
+        pulaLinha(2);
         System.out.println("****************************");
         System.out.println("******  MENU CREATE  *******");
         System.out.println("****************************");
@@ -67,7 +67,7 @@ public class Create
         time = scan.nextLine();
         
         Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
-        listaTorcedor.add(torcedor);
+        listaFisica.add(torcedor);
         
         menuCreate();
     }
@@ -77,9 +77,7 @@ public class Create
         //TODO
         pulaLinha(2);
         System.out.println("Colaborador");
-        System.out.print("Pressione <Enter> para continuar...");
-        opcao = scan.nextLine();
-        pulaLinha(2);
+        tecleEnter();
         menuCreate();        
     }
 
@@ -88,9 +86,7 @@ public class Create
         //TODO
         pulaLinha(2);
         System.out.println("Atleta");
-        System.out.print("Pressione <Enter> para continuar...");
-        opcao = scan.nextLine();
-        pulaLinha(2);
+        tecleEnter();
         menuCreate();
     }
 
@@ -99,9 +95,7 @@ public class Create
         //TODO
         pulaLinha(2);
         System.out.println("Time");
-        System.out.print("Pressione <Enter> para continuar...");
-        opcao = scan.nextLine();
-        pulaLinha(2);
+        tecleEnter();
         menuCreate();
     }
 
@@ -110,9 +104,7 @@ public class Create
         //TODO
         pulaLinha(2);
         System.out.println("Entidade");
-        System.out.print("Pressione <Enter> para continuar...");
-        opcao = scan.nextLine();
-        pulaLinha(2);
+        tecleEnter();
         menuCreate();
     }
 
@@ -132,7 +124,7 @@ public class Create
         time = scan.nextLine();
         
         Empresa empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, time);
-        listaEmpresa.add(empresa);
+        listaJuridica.add(empresa);
 
         menuCreate();
     }

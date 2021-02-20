@@ -17,4 +17,35 @@ public class Uteis
         opcao = scan.nextLine();
         pulaLinha(1);
     }
+    
+    public static void listaVazia()
+    {
+        pulaLinha(1);
+        System.out.println("*****     Lista Vazia!     *****");
+    }
+    
+    public static void tecleEnter()
+    {
+        pulaLinha(1);
+        System.out.print("Tecle <Enter> para continuar...");
+        String opcao = scan.nextLine();
+    }
+    
+    public static void buscaPorCPF()
+    {
+        pulaLinha(1);
+        System.out.print("Busca por CPF: ");
+        String buscaCPF = scan.nextLine();
+        int indiceFisica = listaFisica.indexOf(buscaCPF);
+        if(indiceFisica < 0)
+        {
+            pulaLinha(1);
+            System.out.println("CPF não encontrado!");
+            tecleEnter();
+        }
+        else
+        {
+            
+        }
+    }
 }

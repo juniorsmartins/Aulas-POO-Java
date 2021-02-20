@@ -7,7 +7,7 @@ public class Read
 {
     public static void menuRead()
     {
-        pulaLinha(1);
+        pulaLinha(2);
         System.out.println("****************************");
         System.out.println("******   MENU READ   *******");
         System.out.println("****************************");
@@ -49,27 +49,26 @@ public class Read
         System.out.println("*************************");
         System.out.println("***** Lista Torcedor ****");
         System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaTorcedor.size());
-        boolean checarLista = listaTorcedor.isEmpty();
+        System.out.println("***** Tamanho: " + listaFisica.size());
+        boolean checarLista = listaFisica.isEmpty();
         if(checarLista == true)
         {
-            pulaLinha(1);
-            System.out.println("Lista Vazia!");
+            listaVazia();
         }
         else
         {
-            listaTorcedor.forEach(torcedor -> {torcedor.verTudo();});
+            
+            listaFisica.forEach(torcedor -> {torcedor.verTudo();});
         }
-        pulaLinha(1);
-        System.out.print("Tecle <Enter> para continuar...");
-        String opcao = scan.nextLine();
-        menuRead();        
+        tecleEnter();
+        menuRead();
     }
     
     public static void readColaborador()
     {
         pulaLinha(1);
         System.out.println("Lista Colaborador");
+        tecleEnter();
         menuRead();
     }
     
@@ -77,6 +76,7 @@ public class Read
     {
         pulaLinha(1);
         System.out.println("Lista Atleta");
+        tecleEnter();
         menuRead();
     }
     
@@ -84,6 +84,7 @@ public class Read
     {
         pulaLinha(1);
         System.out.println("Lista Time");
+        tecleEnter();
         menuRead();
     }
     
@@ -91,6 +92,7 @@ public class Read
     {
         pulaLinha(1);
         System.out.println("Lista Entidade");
+        tecleEnter();
         menuRead();
     }
     
@@ -100,20 +102,17 @@ public class Read
         System.out.println("*************************");
         System.out.println("***** Lista Empresa *****");
         System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaEmpresa.size());
-        boolean checarLista = listaEmpresa.isEmpty();
+        System.out.println("***** Tamanho: " + listaJuridica.size());
+        boolean checarLista = listaJuridica.isEmpty();
         if(checarLista == true)
         {
-            pulaLinha(1);
-            System.out.println("Lista Vazia!");
+            listaVazia();
         }
         else
         {
-            listaEmpresa.forEach(empresa -> {empresa.verTudo();});
+            listaJuridica.forEach(empresa -> {empresa.verTudo();});
         }
-        pulaLinha(1);
-        System.out.print("Tecle <Enter> para continuar...");
-        opcao = scan.nextLine();
+        tecleEnter();
         menuRead();        
     }
 }

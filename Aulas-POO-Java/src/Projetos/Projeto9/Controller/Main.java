@@ -2,13 +2,13 @@ package Projetos.Projeto9.Controller;
 
 import java.util.Scanner;
 
-import static Projetos.Projeto9.Controller.Uteis.pulaLinha;
+import static Projetos.Projeto9.Controller.Uteis.*;
 import static Projetos.Projeto9.Controller.Create.menuCreate;
 import static Projetos.Projeto9.Controller.Read.menuRead;
 import static Projetos.Projeto9.Controller.Update.menuUpdate;
 import static Projetos.Projeto9.Controller.Delete.menuDelete;
-import Projetos.Projeto9.ModelsPersonas.Empresa;
-import Projetos.Projeto9.ModelsPersonas.Torcedor;
+import Projetos.Projeto9.ModelsPersonas.Fisica;
+import Projetos.Projeto9.ModelsPersonas.Juridica;
 
 import java.util.ArrayList;
 
@@ -16,8 +16,8 @@ public class Main
 {
     public static Scanner scan = new Scanner(System.in);
     public static String opcao;
-    public static ArrayList<Empresa> listaEmpresa = new ArrayList<>();
-    public static ArrayList<Torcedor> listaTorcedor = new ArrayList<>();
+    public static ArrayList<Juridica> listaJuridica = new ArrayList<>();
+    public static ArrayList<Fisica> listaFisica = new ArrayList<>();
     
     public static void main(String[] args) 
     {
@@ -26,7 +26,7 @@ public class Main
     
     public static void menuPrincipal()
     {
-        pulaLinha(2);
+        pulaLinha(3);
         System.out.println("****************************");
         System.out.println("*******  MENU CRUD  ********");
         System.out.println("****************************");
@@ -59,13 +59,10 @@ public class Main
             case 0:
                 pulaLinha(2);
                 System.out.println("Tchau! Amiguinho. Que a força esteja convosco!");
-                pulaLinha(2);
+                pulaLinha(1);
                 System.exit(0);
             default:
-                pulaLinha(2);
-                System.out.print("Opção Inválida! Tecle <Enter> para continuar...");
-                opcao = scan.nextLine();
-                pulaLinha(2);
+                opcaoInvalida();
                 menuPrincipal();
         }
     }
