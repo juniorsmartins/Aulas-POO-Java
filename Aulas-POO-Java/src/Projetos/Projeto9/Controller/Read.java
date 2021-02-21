@@ -24,17 +24,13 @@ public class Read
         switch(opcaoSubMenu)
         {
             case 1:
-                readTorcedor();
             case 2:
-                readColaborador();
             case 3:
-                readAtleta();
+                readFisica(opcaoSubMenu);
             case 4:
-                readTime();
             case 5:
-                readEntidade();
             case 6:
-                readEmpresa();
+                readJuridica(opcaoSubMenu);
             case 0:
                 menuPrincipal();
             default:
@@ -43,67 +39,61 @@ public class Read
         }
     }
     
-    public static void readTorcedor()
+    public static void readFisica(int opcaoSubMenu)
     {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("***** Lista Torcedor ****");
-        System.out.println("*************************");
+
         System.out.println("***** Tamanho: " + listaTorcedor.size());
-        boolean checarLista = listaTorcedor.isEmpty();
-        if(checarLista == true)
+        
+        String tipo;
+        boolean checarLista;
+        switch(opcaoSubMenu)
         {
-            listaVazia();
+            case 1:
+                tipo = "Torcedores";
+                apresentaLista(tipo);
+                System.out.println("***** Tamanho: " + listaTorcedor.size());
+                checarLista = listaTorcedor.isEmpty();
+                if(checarLista == true)
+                {
+                    listaVazia();
+                }
+                else
+                {
+                    listaTorcedor.forEach(objeto -> {objeto.toString();});
+                }
+            case 2:
+                tipo = "Colaboradores";
+                apresentaLista(tipo);
+                System.out.println("***** Tamanho: " + listaColaborador.size());
+                checarLista = listaColaborador.isEmpty();
+                if(checarLista == true)
+                {
+                    listaVazia();
+                }
+                else
+                {
+                    listaColaborador.forEach(objeto -> {objeto.toString();});
+                }
+            case 3:
+                tipo = "Atletas";
+                apresentaLista(tipo);
+                System.out.println("***** Tamanho: " + listaAtleta.size());
+                checarLista = listaAtleta.isEmpty();
+                if(checarLista == true)
+                {
+                    listaVazia();
+                }
+                else
+                {
+                    listaAtleta.forEach(objeto -> {objeto.toString();});
+                }
         }
-        else
-        {
-            listaTorcedor.forEach(torcer -> {torcer.toString();});
-        }
+        
         tecleEnter();
         menuRead();
     }
-    
-    public static void readColaborador()
-    {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("*** Lista Colaborador ***");
-        System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaColaborador.size());
-        boolean checarLista = listaColaborador.isEmpty();
-        if(checarLista == true)
-        {
-            listaVazia();
-        }
-        else
-        {
-            listaColaborador.forEach(colaborar -> {colaborar.toString();});
-        }
-        tecleEnter();
-        menuRead();
-    }
-    
-    public static void readAtleta()
-    {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("****** Lista Atleta *****");
-        System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaAtleta.size());
-        boolean checarLista = listaAtleta.isEmpty();
-        if(checarLista == true)
-        {
-            listaVazia();
-        }
-        else
-        {
-            listaAtleta.forEach(jogador -> {jogador.toString();});
-        }
-        tecleEnter();
-        menuRead();
-    }
-    
-    public static void readTime()
+     
+    public static void readJuridica(int opcaoSubMenu)
     {
         pulaLinha(1);
         System.out.println("*************************");
@@ -121,45 +111,5 @@ public class Read
         }
         tecleEnter();
         menuRead();
-    }
-    
-    public static void readEntidade()
-    {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("***** Lista Entidade ****");
-        System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaEntidade.size());
-        boolean checarLista = listaEntidade.isEmpty();
-        if(checarLista == true)
-        {
-            listaVazia();
-        }
-        else
-        {
-            listaEntidade.forEach(ente -> {ente.toString();});
-        }
-        tecleEnter();
-        menuRead();
-    }
-    
-    public static void readEmpresa()
-    {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("***** Lista Empresa *****");
-        System.out.println("*************************");
-        System.out.println("***** Tamanho: " + listaEmpresa.size());
-        boolean checarLista = listaEmpresa.isEmpty();
-        if(checarLista == true)
-        {
-            listaVazia();
-        }
-        else
-        {
-            listaEmpresa.forEach(firma -> {firma.toString();});
-        }
-        tecleEnter();
-        menuRead();        
     }
 }

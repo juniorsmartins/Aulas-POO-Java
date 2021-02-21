@@ -21,7 +21,7 @@ public class Uteis
     public static void listaVazia()
     {
         pulaLinha(1);
-        System.out.println("***** Lista Vazia! *****");
+        System.out.println("**** Lista Vazia! ****");
     }
     
     public static void tecleEnter()
@@ -34,12 +34,26 @@ public class Uteis
     public static void naoEncontrado()
     {
         pulaLinha(1);
-        System.out.print("Objeto não encontrado!");
+        System.out.print("**** Não encontrado! ****");
     }
     
     public static void encontradoNaLista()
     {
         pulaLinha(1);
-        System.out.print("Objeto encontrado!");
+        System.out.print("**** Encontrado com sucesso! ****");
+    }
+    
+    public static void createOK()
+    {
+        pulaLinha(1);
+        System.out.println("**** Cadastrado com sucesso! ****");
+    }
+    
+    public static void apresentaLista(String tipo)
+    {
+        pulaLinha(1);
+        System.out.println("*************************");
+        System.out.println("***** Lista de " + tipo);
+        System.out.println("*************************");
     }
 }

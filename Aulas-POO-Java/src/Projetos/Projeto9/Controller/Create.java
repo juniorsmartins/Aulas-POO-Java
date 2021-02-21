@@ -25,23 +25,13 @@ public class Create
         switch(opcaoSubMenu)
         {
             case 1:
-                createTorcedor();
-                break;
             case 2:
-                createColaborador();
-                break;
             case 3:
-                createAtleta();
-                break;
+                createFisica(opcaoSubMenu);
             case 4:
-                createTime();
-                break;
             case 5:
-                createEntidade();
-                break;
             case 6:
-                createEmpresa();
-                break;
+                createJuridica(opcaoSubMenu);
             case 0:
                 menuPrincipal();
             default:
@@ -50,7 +40,7 @@ public class Create
         }
     }
     
-    public static void createTorcedor()
+    public static void createFisica(int opcaoSubMenu)
     {
         String nome, sobrenome, cpf, pais, time;
         
@@ -65,55 +55,25 @@ public class Create
         System.out.print("Time de FA: ");
         time = scan.nextLine();
         
-        Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
-        listaTorcedor.add(torcedor);
+        switch(opcaoSubMenu)
+        {
+            case 1:
+                Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
+                listaTorcedor.add(torcedor);
+            case 2:
+                Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
+                listaColaborador.add(colaborador);
+            case 3:
+                Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
+                listaAtleta.add(atleta);
+        }
         
+        createOK();
+        tecleEnter();
         menuCreate();
     }
 
-    public static void createColaborador()
-    {
-        String nome, sobrenome, cpf, pais, time;
-        
-        System.out.print("\nNome: ");
-        nome = scan.nextLine();
-        System.out.print("Sobrenome: ");
-        sobrenome = scan.nextLine();
-        System.out.print("CPF: ");
-        cpf = scan.nextLine();
-        System.out.print("País de Origem: ");
-        pais = scan.nextLine();
-        System.out.print("Time de FA: ");
-        time = scan.nextLine();
-        
-        Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
-        listaColaborador.add(colaborador);
-        
-        menuCreate();
-    }
-
-    public static void createAtleta()
-    {
-        String nome, sobrenome, cpf, pais, time;
-        
-        System.out.print("\nNome: ");
-        nome = scan.nextLine();
-        System.out.print("Sobrenome: ");
-        sobrenome = scan.nextLine();
-        System.out.print("CPF: ");
-        cpf = scan.nextLine();
-        System.out.print("País de Origem: ");
-        pais = scan.nextLine();
-        System.out.print("Time de FA: ");
-        time = scan.nextLine();
-        
-        Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
-        listaAtleta.add(atleta);
-        
-        menuCreate();
-    }
-
-    public static void createTime()
+    public static void createJuridica(int opcaoSubMenu)
     {
         String razaoSocial, nomeFantasia, cnpj, pais, equipe;
         
@@ -123,56 +83,26 @@ public class Create
         nomeFantasia = scan.nextLine();
         System.out.print("CNPJ: ");
         cnpj = scan.nextLine();
-        System.out.print("Pais de Origem: ");
+        System.out.print("Pais de Fundação: ");
         pais = scan.nextLine();
         System.out.print("Time de FA: ");
         equipe = scan.nextLine();
         
-        Time time = new Time(razaoSocial, nomeFantasia, cnpj, pais, equipe);
-        listaTime.add(time);
-
-        menuCreate();
-    }
-
-    public static void createEntidade()
-    {
-        String razaoSocial, nomeFantasia, cnpj, pais, time;
+        switch(opcaoSubMenu)
+        {
+            case 4:
+                Time time = new Time(razaoSocial, nomeFantasia, cnpj, pais, equipe);
+                listaTime.add(time);
+            case 5:
+                Entidade entidade = new Entidade(razaoSocial, nomeFantasia, cnpj, pais, equipe);
+                listaEntidade.add(entidade);
+            case 6:
+                Empresa empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, equipe);
+                listaEmpresa.add(empresa);
+        }
         
-        System.out.print("\nRazão Social: ");
-        razaoSocial = scan.nextLine();
-        System.out.print("Nome Fantasia: ");
-        nomeFantasia = scan.nextLine();
-        System.out.print("CNPJ: ");
-        cnpj = scan.nextLine();
-        System.out.print("Pais de Origem: ");
-        pais = scan.nextLine();
-        System.out.print("Time de FA: ");
-        time = scan.nextLine();
-        
-        Entidade entidade = new Entidade(razaoSocial, nomeFantasia, cnpj, pais, time);
-        listaEntidade.add(entidade);
-
-        menuCreate();
-    }
-
-    public static void createEmpresa()
-    {
-        String razaoSocial, nomeFantasia, cnpj, pais, time;
-        
-        System.out.print("\nRazão Social: ");
-        razaoSocial = scan.nextLine();
-        System.out.print("Nome Fantasia: ");
-        nomeFantasia = scan.nextLine();
-        System.out.print("CNPJ: ");
-        cnpj = scan.nextLine();
-        System.out.print("Pais de Origem: ");
-        pais = scan.nextLine();
-        System.out.print("Time de FA: ");
-        time = scan.nextLine();
-        
-        Empresa empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, time);
-        listaEmpresa.add(empresa);
-
+        createOK();
+        tecleEnter();
         menuCreate();
     }
 }

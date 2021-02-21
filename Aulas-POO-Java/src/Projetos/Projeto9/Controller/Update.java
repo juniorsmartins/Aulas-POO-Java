@@ -27,17 +27,13 @@ public class Update
         switch(opcaoSubMenu)
         {
             case 1:
-                editarTorcedor();
             case 2:
-                editarColaborador();
             case 3:
-                editarAtleta();
+                editarPF(opcaoSubMenu);
             case 4:
-                editarTime();
             case 5:
-                editarEntidade();
             case 6:
-                editarEmpresa();
+                editarPJ(opcaoSubMenu);
             case 0:
                 menuPrincipal();
             default:
@@ -46,160 +42,220 @@ public class Update
         }
     }
     
-    public static void editarTorcedor()
+    public static void editarPF(int opcaoSubMenu)
     {
-        boolean checarLista = listaTorcedor.isEmpty();
-        if(checarLista == true)
+        if(opcaoSubMenu == 1)
         {
-            listaVazia();
+            //TORCEDOR
         }
-        else
+        if(opcaoSubMenu == 2)
         {
-            buscaPorCPF(listaTorcedor);
+            //COLABORADOR
+        }
+        if(opcaoSubMenu == 3)
+        {
+            //ATLETA
         }
     }
     
-    public static void editarColaborador()
+    public static void editarPJ(int opcaoSubMenu)
     {
-        boolean checarLista = listaColaborador.isEmpty();
-        if(checarLista == true)
+        if(opcaoSubMenu == 4)
         {
-            listaVazia();
+            //TIME
         }
-        else
+        if(opcaoSubMenu == 5)
         {
-            buscaPorCPF(listaColaborador);
+            //ENTIDADE
         }
+        if(opcaoSubMenu == 6)
+        {
+            //EMPRESA
+        }        
     }
     
-    public static void editarAtleta()
-    {
-        boolean checarLista = listaAtleta.isEmpty();
-        if(checarLista == true)
-        {
-            listaVazia();
-        }
-        else
-        {
-            buscaPorCPF(listaAtleta);
-        }
-    }
     
-    public static void editarTime()
-    {
-        //TODO
-        pulaLinha(1);
-        System.out.println("Editar Time");
-        tecleEnter();
-        menuUpdate();
-    }
     
-    public static void editarEntidade()
-    {
-        //TODO
-        pulaLinha(1);
-        System.out.println("Editar Entidade");
-        tecleEnter();
-        menuUpdate();
-    }
     
-    public static void editarEmpresa()
-    {
-        //TODO
-        pulaLinha(1);
-        System.out.println("Editar Empresa");
-        tecleEnter();
-        menuUpdate();
-    }
-
-    public static void buscaPorCPF(List listaFisica)
-    {
-        pulaLinha(1);
-        System.out.print("Busca por CPF: ");
-        String buscaCPF = scan.nextLine();
-
-        int indiceFisica = listaFisica.indexOf(buscaCPF);
-        if(indiceFisica < 0)
-        {
-            naoEncontrado();
-            tecleEnter();
-            menuUpdate();
-        }
-        else
-        {
-            encontradoNaLista();
-            editarBuscado(listaFisica, indiceFisica);
-        }
-    }
     
-    public static void editarBuscado(List listaFisica, int indiceFisica)
-    {
-        pulaLinha(1);
-        listaFisica.get(indiceFisica).toString();
-
-        String nome, sobrenome, cpf, pais, time;
-        
-        System.out.print("\nNome: ");
-        nome = scan.nextLine();
-        System.out.print("Sobrenome: ");
-        sobrenome = scan.nextLine();
-        System.out.print("CPF: ");
-        cpf = scan.nextLine();
-        System.out.print("País de Origem: ");
-        pais = scan.nextLine();
-        System.out.print("Time de FA: ");
-        time = scan.nextLine();
-        
-        if(listaFisica.get(indiceFisica) instanceof Torcedor)
-        {
-            Torcedor pessoa = (Torcedor)listaFisica.get(indiceFisica);
-            int copiaID = pessoa.verId();
-            Torcedor torcedor = new Torcedor();
-            torcedor.updateId(copiaID);
-            torcedor.editarNome(nome);
-            torcedor.editarSobrenome(sobrenome);
-            torcedor.editarDocumento(cpf);
-            torcedor.editarPaisOrigem(pais);
-            torcedor.editarTime(time);
-            
-            listaTorcedor.add(indiceFisica, torcedor);
-            System.out.println("*****  Update realizado com sucesso!  *****");
-            listaTorcedor.get(indiceFisica).toString();
-        }
-        else if(listaFisica.get(indiceFisica) instanceof Colaborador)
-        {
-            Colaborador pessoa = (Colaborador)listaFisica.get(indiceFisica);
-            int copiaID = pessoa.verId();
-            Colaborador colaborador = new Colaborador();
-            colaborador.updateId(copiaID);
-            colaborador.editarNome(nome);
-            colaborador.editarSobrenome(sobrenome);
-            colaborador.editarDocumento(cpf);
-            colaborador.editarPaisOrigem(pais);
-            colaborador.editarTime(time);
-            
-            listaColaborador.add(indiceFisica, colaborador);
-            System.out.println("*****  Update realizado com sucesso!  *****");
-            listaColaborador.get(indiceFisica).toString();
-        }
-        else if(listaFisica.get(indiceFisica) instanceof Atleta)
-        {
-            Atleta pessoa = (Atleta)listaFisica.get(indiceFisica);
-            int copiaID = pessoa.verId();
-            Atleta atleta = new Atleta();
-            atleta.updateId(copiaID);
-            atleta.editarNome(nome);
-            atleta.editarSobrenome(sobrenome);
-            atleta.editarDocumento(cpf);
-            atleta.editarPaisOrigem(pais);
-            atleta.editarTime(time);
-            
-            listaAtleta.add(indiceFisica, atleta);
-            System.out.println("*****  Update realizado com sucesso!  *****");
-            listaAtleta.get(indiceFisica).toString();
-        }
-        
-        tecleEnter();
-        menuUpdate();
-    }
+    
+//    
+//    public static void editarTorcedor()
+//    {
+//        boolean checarLista = listaTorcedor.isEmpty();
+//        if(checarLista == true)
+//        {
+//            listaVazia();
+//        }
+//        else
+//        {
+//            int tipo = 1;
+//            buscaPorCPF(tipo);
+//        }
+//    }
+//    
+//    public static void editarColaborador()
+//    {
+//        boolean checarLista = listaColaborador.isEmpty();
+//        if(checarLista == true)
+//        {
+//            listaVazia();
+//        }
+//        else
+//        {
+//            int tipo = 2;
+//            buscaPorCPF(tipo);
+//        }
+//    }
+//    
+//    public static void editarAtleta()
+//    {
+//        boolean checarLista = listaAtleta.isEmpty();
+//        if(checarLista == true)
+//        {
+//            listaVazia();
+//        }
+//        else
+//        {
+//            int tipo = 3;
+//            buscaPorCPF(tipo);
+//        }
+//    }
+//    
+//    public static void editarTime()
+//    {
+//        //TODO
+//        pulaLinha(1);
+//        System.out.println("Editar Time");
+//        tecleEnter();
+//        menuUpdate();
+//    }
+//    
+//    public static void editarEntidade()
+//    {
+//        //TODO
+//        pulaLinha(1);
+//        System.out.println("Editar Entidade");
+//        tecleEnter();
+//        menuUpdate();
+//    }
+//    
+//    public static void editarEmpresa()
+//    {
+//        //TODO
+//        pulaLinha(1);
+//        System.out.println("Editar Empresa");
+//        tecleEnter();
+//        menuUpdate();
+//    }
+//
+//    public static void buscaPorCPF(int tipo)
+//    {
+//        pulaLinha(1);
+//        System.out.print("Busca por CPF: ");
+//        String buscaCPF = scan.nextLine();
+//
+//        switch(tipo)
+//        {
+//            case 1:
+//            case 2:
+//            case 3:
+//        }
+//        if(tipo == 1)
+//        {
+//            //TORCEDOR
+//        }
+//        else if(tipo == 2)
+//        {
+//            //COLABORADOR
+//        }
+//        else if(tipo == 3)
+//        {
+//            //ATLETA
+//        }
+//
+//        int indiceFisica = listaFisica.indexOf(buscaCPF);
+//        if(indiceFisica < 0)
+//        {
+//            naoEncontrado();
+//            tecleEnter();
+//            menuUpdate();
+//        }
+//        else
+//        {
+//            encontradoNaLista();
+//            editarBuscado(tipo, indiceFisica);
+//        }
+//    }
+//    
+//    public static void editarBuscado(List listaFisica, int indiceFisica)
+//    {
+//        pulaLinha(1);
+//        listaFisica.get(indiceFisica).toString();
+//
+//        String nome, sobrenome, cpf, pais, time;
+//        
+//        System.out.print("\nNome: ");
+//        nome = scan.nextLine();
+//        System.out.print("Sobrenome: ");
+//        sobrenome = scan.nextLine();
+//        System.out.print("CPF: ");
+//        cpf = scan.nextLine();
+//        System.out.print("País de Origem: ");
+//        pais = scan.nextLine();
+//        System.out.print("Time de FA: ");
+//        time = scan.nextLine();
+//        
+//        if(listaFisica.get(indiceFisica) instanceof Torcedor)
+//        {
+//            Torcedor pessoa = (Torcedor)listaFisica.get(indiceFisica);
+//            int copiaID = pessoa.verId();
+//            Torcedor torcedor = new Torcedor();
+//            torcedor.updateId(copiaID);
+//            torcedor.editarNome(nome);
+//            torcedor.editarSobrenome(sobrenome);
+//            torcedor.editarDocumento(cpf);
+//            torcedor.editarPaisOrigem(pais);
+//            torcedor.editarTime(time);
+//            
+//            listaTorcedor.add(indiceFisica, torcedor);
+//            System.out.println("*****  Update realizado com sucesso!  *****");
+//            listaTorcedor.get(indiceFisica).toString();
+//        }
+//        else if(listaFisica.get(indiceFisica) instanceof Colaborador)
+//        {
+//            Colaborador pessoa = (Colaborador)listaFisica.get(indiceFisica);
+//            int copiaID = pessoa.verId();
+//            Colaborador colaborador = new Colaborador();
+//            colaborador.updateId(copiaID);
+//            colaborador.editarNome(nome);
+//            colaborador.editarSobrenome(sobrenome);
+//            colaborador.editarDocumento(cpf);
+//            colaborador.editarPaisOrigem(pais);
+//            colaborador.editarTime(time);
+//            
+//            listaColaborador.add(indiceFisica, colaborador);
+//            System.out.println("*****  Update realizado com sucesso!  *****");
+//            listaColaborador.get(indiceFisica).toString();
+//        }
+//        else if(listaFisica.get(indiceFisica) instanceof Atleta)
+//        {
+//            Atleta pessoa = (Atleta)listaFisica.get(indiceFisica);
+//            int copiaID = pessoa.verId();
+//            Atleta atleta = new Atleta();
+//            atleta.updateId(copiaID);
+//            atleta.editarNome(nome);
+//            atleta.editarSobrenome(sobrenome);
+//            atleta.editarDocumento(cpf);
+//            atleta.editarPaisOrigem(pais);
+//            atleta.editarTime(time);
+//            
+//            listaAtleta.add(indiceFisica, atleta);
+//            System.out.println("*****  Update realizado com sucesso!  *****");
+//            listaAtleta.get(indiceFisica).toString();
+//        }
+//        
+//        tecleEnter();
+//        menuUpdate();
+//    }
 }
