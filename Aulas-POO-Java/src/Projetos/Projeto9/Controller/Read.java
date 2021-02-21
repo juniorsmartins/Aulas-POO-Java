@@ -30,32 +30,41 @@ public class Read
                 tipo = "Torcedores";
                 cabecaApresentacao(listaTorcedor, tipo);
                 mostrarListaChecada(listaTorcedor);
+                break;
             case 2:
                 tipo = "Colaboradores";
                 cabecaApresentacao(listaColaborador, tipo);
                 mostrarListaChecada(listaColaborador);
+                break;
             case 3:
                 tipo = "Atletas";
                 cabecaApresentacao(listaAtleta, tipo);
                 mostrarListaChecada(listaAtleta);
+                break;
             case 4:
-                tipo = "Time";
+                tipo = "Times";
                 cabecaApresentacao(listaTime, tipo);
                 mostrarListaChecada(listaTime);
+                break;
             case 5:
-                tipo = "Entidade";
+                tipo = "Entidades";
                 cabecaApresentacao(listaEntidade, tipo);
                 mostrarListaChecada(listaEntidade);
+                break;
             case 6:
-                tipo = "Empresa";
+                tipo = "Empresas";
                 cabecaApresentacao(listaEmpresa, tipo);
                 mostrarListaChecada(listaEmpresa);
+                break;
             case 0:
                 menuPrincipal();
             default:
                 opcaoInvalida();
                 menuRead();      
         }
+        
+        tecleEnter();
+        menuRead();
     }
      
     public static void cabecaApresentacao(List lista, String tipo)

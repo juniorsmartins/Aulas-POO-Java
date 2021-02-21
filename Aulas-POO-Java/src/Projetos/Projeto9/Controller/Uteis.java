@@ -12,16 +12,15 @@ public class Uteis
     
     public static void opcaoInvalida()
     {
-        pulaLinha(2);
+        pulaLinha(1);
         System.out.print("Opção Inválida! Tecle <Enter> para continuar...");
         opcao = scan.nextLine();
-        pulaLinha(1);
     }
     
     public static void listaVazia()
     {
         pulaLinha(1);
-        System.out.println("**** Lista Vazia! ****");
+        System.out.println("***** Lista Vazia! *****");
     }
     
     public static void tecleEnter()
