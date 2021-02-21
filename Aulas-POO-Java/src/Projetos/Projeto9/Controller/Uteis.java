@@ -21,7 +21,7 @@ public class Uteis
     public static void listaVazia()
     {
         pulaLinha(1);
-        System.out.println("*****     Lista Vazia!     *****");
+        System.out.println("***** Lista Vazia! *****");
     }
     
     public static void tecleEnter()

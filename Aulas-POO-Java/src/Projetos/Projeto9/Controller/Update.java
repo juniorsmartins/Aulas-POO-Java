@@ -168,14 +168,32 @@ public class Update
         }
         else if(listaFisica.get(indiceFisica) instanceof Colaborador)
         {
-            Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
+            Colaborador pessoa = (Colaborador)listaFisica.get(indiceFisica);
+            int copiaID = pessoa.verId();
+            Colaborador colaborador = new Colaborador();
+            colaborador.updateId(copiaID);
+            colaborador.editarNome(nome);
+            colaborador.editarSobrenome(sobrenome);
+            colaborador.editarDocumento(cpf);
+            colaborador.editarPaisOrigem(pais);
+            colaborador.editarTime(time);
+            
             listaColaborador.add(indiceFisica, colaborador);
             System.out.println("*****  Update realizado com sucesso!  *****");
             listaColaborador.get(indiceFisica).toString();
         }
         else if(listaFisica.get(indiceFisica) instanceof Atleta)
         {
-            Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
+            Atleta pessoa = (Atleta)listaFisica.get(indiceFisica);
+            int copiaID = pessoa.verId();
+            Atleta atleta = new Atleta();
+            atleta.updateId(copiaID);
+            atleta.editarNome(nome);
+            atleta.editarSobrenome(sobrenome);
+            atleta.editarDocumento(cpf);
+            atleta.editarPaisOrigem(pais);
+            atleta.editarTime(time);
+            
             listaAtleta.add(indiceFisica, atleta);
             System.out.println("*****  Update realizado com sucesso!  *****");
             listaAtleta.get(indiceFisica).toString();
