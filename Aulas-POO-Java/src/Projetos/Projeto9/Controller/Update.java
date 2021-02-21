@@ -2,6 +2,7 @@ package Projetos.Projeto9.Controller;
 
 import static Projetos.Projeto9.Controller.Uteis.*;
 import static Projetos.Projeto9.Controller.Main.*;
+import java.util.List;
 
 public class Update 
 {
@@ -45,14 +46,14 @@ public class Update
     
     public static void editarTorcedor()
     {
-        boolean checarLista = listaFisica.isEmpty();
+        boolean checarLista = listaTorcedor.isEmpty();
         if(checarLista == true)
         {
             listaVazia();
         }
         else
         {
-            buscaPorCPF();
+            buscaPorCPF(listaTorcedor);
         }
     }
     
@@ -99,5 +100,32 @@ public class Update
         System.out.println("Editar Empresa");
         tecleEnter();
         menuUpdate();
+    }
+
+    public static void buscaPorCPF(List pessoaFisica)
+    {
+        pulaLinha(1);
+        System.out.print("Busca por CPF: ");
+        String buscaCPF = scan.nextLine();
+
+        int indiceFisica = pessoaFisica.indexOf(buscaCPF);
+        if(indiceFisica < 0)
+        {
+            naoEncontrado();
+            tecleEnter();
+        }
+        else
+        {
+            encontradoNaLista();
+            pulaLinha(1);
+
+            editarBuscado(pessoaFisica, indiceFisica);
+        }
+    }
+    
+    public static void editarBuscado(List pessoaFisica, int indiceFisica)
+    {
+        // parai aqui - fazer a edição....
+        pessoaFisica.get(indiceFisica).toString();
     }
 }

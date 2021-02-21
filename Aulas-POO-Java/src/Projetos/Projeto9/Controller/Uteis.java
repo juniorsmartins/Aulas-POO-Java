@@ -31,21 +31,15 @@ public class Uteis
         String opcao = scan.nextLine();
     }
     
-    public static void buscaPorCPF()
+    public static void naoEncontrado()
     {
         pulaLinha(1);
-        System.out.print("Busca por CPF: ");
-        String buscaCPF = scan.nextLine();
-        int indiceFisica = listaFisica.indexOf(buscaCPF);
-        if(indiceFisica < 0)
-        {
-            pulaLinha(1);
-            System.out.println("CPF não encontrado!");
-            tecleEnter();
-        }
-        else
-        {
-            
-        }
+        System.out.print("Objeto não encontrado!");
+    }
+    
+    public static void encontradoNaLista()
+    {
+        pulaLinha(1);
+        System.out.print("Objeto encontrado!");
     }
 }
