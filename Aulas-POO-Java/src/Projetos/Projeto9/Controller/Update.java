@@ -2,6 +2,8 @@ package Projetos.Projeto9.Controller;
 
 import static Projetos.Projeto9.Controller.Uteis.*;
 import static Projetos.Projeto9.Controller.Main.*;
+import Projetos.Projeto9.ModelsPersonas.*;
+
 import java.util.List;
 
 public class Update 
@@ -59,20 +61,28 @@ public class Update
     
     public static void editarColaborador()
     {
-        //TODO
-        pulaLinha(1);
-        System.out.println("Editar Colaborador");
-        tecleEnter();
-        menuUpdate();
+        boolean checarLista = listaColaborador.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            buscaPorCPF(listaColaborador);
+        }
     }
     
     public static void editarAtleta()
     {
-        //TODO
-        pulaLinha(1);
-        System.out.println("Editar Atleta");
-        tecleEnter();
-        menuUpdate();
+        boolean checarLista = listaAtleta.isEmpty();
+        if(checarLista == true)
+        {
+            listaVazia();
+        }
+        else
+        {
+            buscaPorCPF(listaAtleta);
+        }
     }
     
     public static void editarTime()
@@ -102,30 +112,76 @@ public class Update
         menuUpdate();
     }
 
-    public static void buscaPorCPF(List pessoaFisica)
+    public static void buscaPorCPF(List listaFisica)
     {
         pulaLinha(1);
         System.out.print("Busca por CPF: ");
         String buscaCPF = scan.nextLine();
 
-        int indiceFisica = pessoaFisica.indexOf(buscaCPF);
+        int indiceFisica = listaFisica.indexOf(buscaCPF);
         if(indiceFisica < 0)
         {
             naoEncontrado();
             tecleEnter();
+            menuUpdate();
         }
         else
         {
             encontradoNaLista();
-            pulaLinha(1);
-
-            editarBuscado(pessoaFisica, indiceFisica);
+            editarBuscado(listaFisica, indiceFisica);
         }
     }
     
-    public static void editarBuscado(List pessoaFisica, int indiceFisica)
+    public static void editarBuscado(List listaFisica, int indiceFisica)
     {
-        // parai aqui - fazer a edição....
-        pessoaFisica.get(indiceFisica).toString();
+        pulaLinha(1);
+        listaFisica.get(indiceFisica).toString();
+
+        String nome, sobrenome, cpf, pais, time;
+        
+        System.out.print("\nNome: ");
+        nome = scan.nextLine();
+        System.out.print("Sobrenome: ");
+        sobrenome = scan.nextLine();
+        System.out.print("CPF: ");
+        cpf = scan.nextLine();
+        System.out.print("País de Origem: ");
+        pais = scan.nextLine();
+        System.out.print("Time de FA: ");
+        time = scan.nextLine();
+        
+        if(listaFisica.get(indiceFisica) instanceof Torcedor)
+        {
+            Torcedor pessoa = (Torcedor)listaFisica.get(indiceFisica);
+            int copiaID = pessoa.verId();
+            Torcedor torcedor = new Torcedor();
+            torcedor.updateId(copiaID);
+            torcedor.editarNome(nome);
+            torcedor.editarSobrenome(sobrenome);
+            torcedor.editarDocumento(cpf);
+            torcedor.editarPaisOrigem(pais);
+            torcedor.editarTime(time);
+            
+            listaTorcedor.add(indiceFisica, torcedor);
+            System.out.println("*****  Update realizado com sucesso!  *****");
+            listaTorcedor.get(indiceFisica).toString();
+        }
+        else if(listaFisica.get(indiceFisica) instanceof Colaborador)
+        {
+            Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
+            listaColaborador.add(indiceFisica, colaborador);
+            System.out.println("*****  Update realizado com sucesso!  *****");
+            listaColaborador.get(indiceFisica).toString();
+        }
+        else if(listaFisica.get(indiceFisica) instanceof Atleta)
+        {
+            Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
+            listaAtleta.add(indiceFisica, atleta);
+            System.out.println("*****  Update realizado com sucesso!  *****");
+            listaAtleta.get(indiceFisica).toString();
+        }
+        
+        tecleEnter();
+        menuUpdate();
     }
 }

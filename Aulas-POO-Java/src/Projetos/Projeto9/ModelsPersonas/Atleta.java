@@ -8,6 +8,10 @@ public final class Atleta extends Fisica implements InterfacePF
     // Atributos de Instância
     
     // Métodos Construtores
+    public Atleta()
+    {
+        //TODO - sobrecarga de construtor
+    }
     public Atleta(String nome, String sobrenome, String cpf, String pais, String time)
     {
         this.gerarId();

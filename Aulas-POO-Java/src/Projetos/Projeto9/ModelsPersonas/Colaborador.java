@@ -2,12 +2,16 @@ package Projetos.Projeto9.ModelsPersonas;
 
 public final class Colaborador extends Fisica implements InterfacePF
 {
-    // Atributo de Classe
+    // Atributos de Classe
     public static int totalCadastrosColaborador;
     
     // Atributos de Instância
 
     // Métodos Construtores
+    public Colaborador()
+    {
+        //TODO - sobrecarga de construtor
+    }
     public Colaborador(String nome, String sobrenome, String cpf, String pais, String time)
     {
         this.gerarId();

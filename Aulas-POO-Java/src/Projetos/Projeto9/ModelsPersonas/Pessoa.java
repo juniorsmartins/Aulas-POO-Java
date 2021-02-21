@@ -47,6 +47,10 @@ public abstract class Pessoa
     {
         this.id = Pessoa.getTotalCadastrosPessoa() + 1;
     }
+    public void updateId(int id)
+    {
+        this.id = id;
+    }
     protected void setPaisOrigem(String pais)
     {
         this.paisOrigem = pais;

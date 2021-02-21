@@ -8,6 +8,10 @@ public final class Torcedor extends Fisica implements InterfacePF
     // Atributos de Instância
     
     // Métodos Construtores
+    public Torcedor()
+    {
+        //TODO - sobrecarga de construtor
+    }
     public Torcedor(String nome, String sobrenome, String cpf, String pais, String time)
     {
         this.gerarId();
