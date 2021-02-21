@@ -48,12 +48,4 @@ public class Uteis
         pulaLinha(1);
         System.out.println("**** Cadastrado com sucesso! ****");
     }
-    
-    public static void apresentaLista(String tipo)
-    {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("***** Lista de " + tipo);
-        System.out.println("*************************");
-    }
 }
