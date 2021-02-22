@@ -1,6 +1,12 @@
 package Projetos.Projeto9.Controller;
 
 import static Projetos.Projeto9.Controller.Uteis.*;
+import static Projetos.Projeto9.Controller.Main.listaTorcedor;
+import static Projetos.Projeto9.Controller.Main.listaColaborador;
+import static Projetos.Projeto9.Controller.Main.listaAtleta;
+import static Projetos.Projeto9.Controller.Main.listaTime;
+import static Projetos.Projeto9.Controller.Main.listaEntidade;
+import static Projetos.Projeto9.Controller.Main.listaEmpresa;
 import static Projetos.Projeto9.Controller.Main.*;
 import Projetos.Projeto9.ModelsPersonas.*;
 
@@ -27,14 +33,22 @@ public class Update
         switch(opcaoSubMenu)
         {
             case 1:
+                editarPF(listaTorcedor);
+                break;
             case 2:
+                editarPF(listaColaborador);
+                break;
             case 3:
-                editarPF(opcaoSubMenu);
+                editarPF(listaAtleta);
                 break;
             case 4:
+                editarPJ(listaTime);
+                break;
             case 5:
+                editarPJ(listaEntidade);
+                break;
             case 6:
-                editarPJ(opcaoSubMenu);
+                editarPJ(listaEmpresa);
                 break;
             case 0:
                 menuPrincipal();
@@ -44,40 +58,53 @@ public class Update
         }
     }
     
-    public static void editarPF(int opcaoSubMenu)
+    public static void editarPF(List listaPF)
     {
-        if(opcaoSubMenu == 1)
+        buscarPorCPF(listaPF);
+    }
+    
+    public static void editarPJ(List listaPJ)
+    {
+        buscarPorCNPJ(listaPJ);
+    }
+    
+    public static void buscarPorCPF(List lista)
+    {
+        boolean vaziaOuNao = lista.isEmpty();
+        if(vaziaOuNao == true)
         {
-            //TORCEDOR
+            listaVazia();
+            tecleEnter();
+            menuUpdate();
         }
-        if(opcaoSubMenu == 2)
+        else
         {
-            //COLABORADOR
-        }
-        if(opcaoSubMenu == 3)
-        {
-            //ATLETA
+            System.out.print("\nBusca por CPF: ");
+            String buscaCPF = scan.nextLine();
+            for(int i = 0; i < lista.size(); i++)
+            {
+
+            }
+
+            int posicaoBuscada = lista.indexOf(buscaCPF);
+            if(posicaoBuscada < 0)
+            {
+                naoEncontrado();
+                tecleEnter();
+                menuUpdate();
+            }
+            else
+            {
+                
+            }
+            
         }
     }
     
-    public static void editarPJ(int opcaoSubMenu)
+    public static void buscarPorCNPJ(List lista)
     {
-        if(opcaoSubMenu == 4)
-        {
-            //TIME
-        }
-        if(opcaoSubMenu == 5)
-        {
-            //ENTIDADE
-        }
-        if(opcaoSubMenu == 6)
-        {
-            //EMPRESA
-        }        
+        
     }
-    
-    
-    
     
     
     
