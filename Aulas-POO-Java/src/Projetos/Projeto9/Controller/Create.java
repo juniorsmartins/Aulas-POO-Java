@@ -28,16 +28,20 @@ public class Create
             case 2:
             case 3:
                 createFisica(opcaoSubMenu);
+                break;
             case 4:
             case 5:
             case 6:
                 createJuridica(opcaoSubMenu);
+                break;
             case 0:
                 menuPrincipal();
             default:
                 opcaoInvalida();
-                menuCreate();
         }
+
+        tecleEnter();
+        menuCreate();
     }
     
     public static void createFisica(int opcaoSubMenu)
@@ -50,7 +54,7 @@ public class Create
         sobrenome = scan.nextLine();
         System.out.print("CPF: ");
         cpf = scan.nextLine();
-        System.out.print("País de Origem: ");
+        System.out.print("País de Nascimento: ");
         pais = scan.nextLine();
         System.out.print("Time de FA: ");
         time = scan.nextLine();
@@ -60,17 +64,18 @@ public class Create
             case 1:
                 Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
                 listaTorcedor.add(torcedor);
+                break;
             case 2:
                 Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
                 listaColaborador.add(colaborador);
+                break;
             case 3:
                 Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
                 listaAtleta.add(atleta);
+                break;
         }
         
         createOK();
-        tecleEnter();
-        menuCreate();
     }
 
     public static void createJuridica(int opcaoSubMenu)
@@ -93,16 +98,17 @@ public class Create
             case 4:
                 Time time = new Time(razaoSocial, nomeFantasia, cnpj, pais, equipe);
                 listaTime.add(time);
+                break;
             case 5:
                 Entidade entidade = new Entidade(razaoSocial, nomeFantasia, cnpj, pais, equipe);
                 listaEntidade.add(entidade);
+                break;
             case 6:
                 Empresa empresa = new Empresa(razaoSocial, nomeFantasia, cnpj, pais, equipe);
                 listaEmpresa.add(empresa);
+                break;
         }
         
         createOK();
-        tecleEnter();
-        menuCreate();
     }
 }

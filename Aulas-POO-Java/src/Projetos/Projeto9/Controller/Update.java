@@ -30,10 +30,12 @@ public class Update
             case 2:
             case 3:
                 editarPF(opcaoSubMenu);
+                break;
             case 4:
             case 5:
             case 6:
                 editarPJ(opcaoSubMenu);
+                break;
             case 0:
                 menuPrincipal();
             default:
