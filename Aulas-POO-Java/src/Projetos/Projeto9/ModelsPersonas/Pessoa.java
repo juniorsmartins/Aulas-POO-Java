@@ -3,7 +3,7 @@ package Projetos.Projeto9.ModelsPersonas;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-public abstract class Pessoa 
+public abstract class Pessoa
 {
     // Atributos de Classe
     public static int totalCadastrosPessoa;
@@ -25,7 +25,7 @@ public abstract class Pessoa
     }
     
     // Métodos Getters de Instância
-    protected int getId()
+    public int getId()
     {
         return this.id;
     }

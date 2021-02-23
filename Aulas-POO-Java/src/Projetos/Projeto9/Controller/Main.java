@@ -7,8 +7,7 @@ import static Projetos.Projeto9.Controller.Create.menuCreate;
 import static Projetos.Projeto9.Controller.Read.menuRead;
 import static Projetos.Projeto9.Controller.Update.menuUpdate;
 import static Projetos.Projeto9.Controller.Delete.menuDelete;
-import Projetos.Projeto9.ModelsPersonas.Fisica;
-import Projetos.Projeto9.ModelsPersonas.Juridica;
+import Projetos.Projeto9.ModelsPersonas.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +16,12 @@ public class Main
 {
     public static Scanner scan = new Scanner(System.in);
     public static String opcao;
-    public static List<Juridica> listaTime = new ArrayList<>();
-    public static List<Juridica> listaEntidade = new ArrayList<>();
-    public static List<Juridica> listaEmpresa = new ArrayList<>();
-    public static List<Fisica> listaTorcedor = new ArrayList<>();
-    public static List<Fisica> listaColaborador = new ArrayList<>();
-    public static List<Fisica> listaAtleta = new ArrayList<>();
+    public static List<Time> listaTime = new ArrayList<>();
+    public static List<Entidade> listaEntidade = new ArrayList<>();
+    public static List<Empresa> listaEmpresa = new ArrayList<>();
+    public static List<Torcedor> listaTorcedor = new ArrayList<>();
+    public static List<Colaborador> listaColaborador = new ArrayList<>();
+    public static List<Atleta> listaAtleta = new ArrayList<>();
     
     public static void main(String[] args) 
     {

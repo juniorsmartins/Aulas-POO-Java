@@ -1,6 +1,6 @@
 package Projetos.Projeto9.ModelsPersonas;
 
-public final class Torcedor extends Fisica implements InterfacePF
+public final class Torcedor extends Fisica implements InterfacePF, Comparable<Torcedor>
 {
     // Atributos de Classe
     public static int totalCadastrosTorcedor;
@@ -117,5 +117,19 @@ public final class Torcedor extends Fisica implements InterfacePF
     public void editarTime(String time)
     {
         this.setTime(time);
+    }
+    
+    // Implementações da classe Comparable
+    @Override
+    public int compareTo(Torcedor outroObjeto) 
+    {
+        if(this.getId() == outroObjeto.getId())
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
     }
 }

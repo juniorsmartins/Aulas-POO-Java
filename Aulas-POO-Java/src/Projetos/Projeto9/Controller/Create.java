@@ -62,13 +62,16 @@ public class Create
         switch(opcaoSubMenu)
         {
             case 1:
-                listaTorcedor.add(new Torcedor(nome, sobrenome, cpf, pais, time));
+                Torcedor torcedor = new Torcedor(nome, sobrenome, cpf, pais, time);
+                listaTorcedor.add(torcedor);
                 break;
             case 2:
-                listaColaborador.add(new Colaborador(nome, sobrenome, cpf, pais, time));
+                Colaborador colaborador = new Colaborador(nome, sobrenome, cpf, pais, time);
+                listaColaborador.add(colaborador);
                 break;
             case 3:
-                listaAtleta.add(new Atleta(nome, sobrenome, cpf, pais, time));
+                Atleta atleta = new Atleta(nome, sobrenome, cpf, pais, time);
+                listaAtleta.add(atleta);
                 break;
         }
         
