@@ -57,51 +57,38 @@ public class Update
                 menuUpdate();
         }
     }
-    
-    public static void editarPF(List listaPF)
+
+    // 
+    public static void editarPF(List listaFlex)
     {
-        buscarPorCPF(listaPF);
-    }
-    
-    public static void editarPJ(List listaPJ)
-    {
-        buscarPorCNPJ(listaPJ);
-    }
-    
-    public static void buscarPorCPF(List lista)
-    {
-        boolean vaziaOuNao = lista.isEmpty();
-        if(vaziaOuNao == true)
+        boolean listaVaziaOuNao = listaVaziaOuNao(listaFlex);
+        if(listaVaziaOuNao == true)
         {
-            listaVazia();
             tecleEnter();
             menuUpdate();
         }
         else
         {
-            System.out.print("\nBusca por CPF: ");
-            String buscaCPF = scan.nextLine();
-            for(int i = 0; i < lista.size(); i++)
-            {
-
-            }
-
-            int posicaoBuscada = lista.indexOf(buscaCPF);
-            if(posicaoBuscada < 0)
-            {
-                naoEncontrado();
-                tecleEnter();
-                menuUpdate();
-            }
-            else
-            {
-                
-            }
-            
+            encontrarObjetoEditavel(listaFlex);
         }
     }
     
-    public static void buscarPorCNPJ(List lista)
+    // Verifica se há conteúdo na lista
+    public static boolean listaVaziaOuNao(List listFlexivel)
+    {
+        boolean listaFvaziaOuNao = listFlexivel.isEmpty();
+        if(listaFvaziaOuNao == true)
+        {
+            listaVazia();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public static void encontrarObjetoEditavel(List listaFlexivel)
     {
         
     }
