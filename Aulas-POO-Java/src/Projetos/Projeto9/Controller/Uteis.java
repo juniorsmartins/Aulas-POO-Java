@@ -53,4 +53,10 @@ public class Uteis
         pulaLinha(1);
         System.out.println("**** Editado com sucesso! ****");
     }
+    
+    public static void deletadoOK()
+    {
+        pulaLinha(1);
+        System.out.println("**** Deletado com sucesso! ****");
+    }
 }

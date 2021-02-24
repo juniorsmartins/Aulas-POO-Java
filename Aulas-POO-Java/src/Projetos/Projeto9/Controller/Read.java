@@ -28,33 +28,28 @@ public class Read
         {
             case 1:
                 tipo = "Torcedores";
-                cabecaApresentacao(listaTorcedor, tipo);
-                mostrarListaChecada(listaTorcedor);
+//                cabecaApresentacao(listaTorcedor, tipo);
+                mostrarListaChecada(listaTorcedor, tipo);
                 break;
             case 2:
                 tipo = "Colaboradores";
-                cabecaApresentacao(listaColaborador, tipo);
-                mostrarListaChecada(listaColaborador);
+                mostrarListaChecada(listaColaborador, tipo);
                 break;
             case 3:
                 tipo = "Atletas";
-                cabecaApresentacao(listaAtleta, tipo);
-                mostrarListaChecada(listaAtleta);
+                mostrarListaChecada(listaAtleta, tipo);
                 break;
             case 4:
                 tipo = "Times";
-                cabecaApresentacao(listaTime, tipo);
-                mostrarListaChecada(listaTime);
+                mostrarListaChecada(listaTime, tipo);
                 break;
             case 5:
                 tipo = "Entidades";
-                cabecaApresentacao(listaEntidade, tipo);
-                mostrarListaChecada(listaEntidade);
+                mostrarListaChecada(listaEntidade, tipo);
                 break;
             case 6:
                 tipo = "Empresas";
-                cabecaApresentacao(listaEmpresa, tipo);
-                mostrarListaChecada(listaEmpresa);
+                mostrarListaChecada(listaEmpresa, tipo);
                 break;
             case 0:
                 menuPrincipal();
@@ -67,16 +62,16 @@ public class Read
         menuRead();
     }
      
-    public static void cabecaApresentacao(List lista, String tipo)
-    {
-        pulaLinha(1);
-        System.out.println("*************************");
-        System.out.println("***** Lista de " + tipo);
-        System.out.println("*************************");
-        System.out.println("***** Tamanho: " + lista.size());
-    }
+//    public static void cabecaApresentacao(List lista, String tipo)
+//    {
+//        pulaLinha(1);
+//        System.out.println("*************************");
+//        System.out.println("***** Lista de " + tipo);
+//        System.out.println("*************************");
+//        System.out.println("***** Tamanho: " + lista.size());
+//    }
     
-    public static void mostrarListaChecada(List lista)
+    public static void mostrarListaChecada(List lista, String tipo)
     {
         boolean checarLista = lista.isEmpty();
         if(checarLista == true)
@@ -85,6 +80,11 @@ public class Read
         }
         else
         {
+            pulaLinha(1);
+            System.out.println("*************************");
+            System.out.println("***** Lista de " + tipo);
+            System.out.println("*************************");
+            System.out.println("***** Tamanho: " + lista.size());
             lista.forEach(objeto -> {objeto.toString();});
         }
     }

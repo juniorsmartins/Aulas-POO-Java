@@ -16,7 +16,6 @@ import Projetos.Projeto9.ModelsPersonas.Entidade;
 import Projetos.Projeto9.ModelsPersonas.Empresa;
 
 import java.util.Iterator;
-
 import java.util.List;
 
 public class Update 
