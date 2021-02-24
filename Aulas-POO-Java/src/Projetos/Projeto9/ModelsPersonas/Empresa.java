@@ -8,6 +8,10 @@ public final class Empresa extends Juridica implements InterfacePJ
     // Atributos de Instância
     
     // Métodos Construtores
+    public Empresa()
+    {
+        //TODO - sobrecarga de construtores
+    }
     public Empresa(String razao, String fantasia, String cnpj, String pais, String time)
     {
         this.gerarId();

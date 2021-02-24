@@ -47,4 +47,10 @@ public class Uteis
         pulaLinha(1);
         System.out.println("**** Cadastrado com sucesso! ****");
     }
+    
+    public static void objetoEditado()
+    {
+        pulaLinha(1);
+        System.out.println("**** Editado com sucesso! ****");
+    }
 }

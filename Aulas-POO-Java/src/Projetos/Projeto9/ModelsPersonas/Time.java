@@ -8,6 +8,10 @@ public final class Time extends Juridica implements InterfacePJ
     // Atributos de Instância
     
     // Métodos Construtores
+    public Time()
+    {
+        //TODO - sobrecarga de time
+    }
     public Time(String razao, String fantasia, String cnpj, String pais, String equipe)
     {
         this.gerarId();
