@@ -121,7 +121,8 @@ public class Update
                         objeto1.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto1.editarTime(time = scan.nextLine());
-                        listaTorcedor.add(objeto1.getId(), objeto1);
+                        listaTorcedor.remove(idEditavel);
+                        listaTorcedor.add(idEditavel, objeto1);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
@@ -146,7 +147,8 @@ public class Update
                         objeto2.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto2.editarTime(time = scan.nextLine());
-                        listaColaborador.add(objeto2.getId(), objeto2);
+                        listaColaborador.remove(idEditavel);
+                        listaColaborador.add(idEditavel, objeto2);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
@@ -171,7 +173,8 @@ public class Update
                         objeto3.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto3.editarTime(time = scan.nextLine());
-                        listaAtleta.add(objeto3.getId(), objeto3);
+                        listaAtleta.remove(idEditavel);
+                        listaAtleta.add(idEditavel, objeto3);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
@@ -196,7 +199,8 @@ public class Update
                         objeto4.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto4.editarTime(time = scan.nextLine());
-                        listaTime.add(objeto4.getId(), objeto4);
+                        listaTime.remove(idEditavel);
+                        listaTime.add(idEditavel, objeto4);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
@@ -221,7 +225,8 @@ public class Update
                         objeto5.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto5.editarTime(time = scan.nextLine());
-                        listaEntidade.add(objeto5.getId(), objeto5);
+                        listaEntidade.remove(idEditavel);
+                        listaEntidade.add(idEditavel, objeto5);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
@@ -246,7 +251,8 @@ public class Update
                         objeto6.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto6.editarTime(time = scan.nextLine());
-                        listaEmpresa.add(objeto6.getId(), objeto6);
+                        listaEmpresa.remove(idEditavel);
+                        listaEmpresa.add(idEditavel, objeto6);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
@@ -258,6 +264,4 @@ public class Update
         tecleEnter();
         menuUpdate();
     }
-    
-    
 }
