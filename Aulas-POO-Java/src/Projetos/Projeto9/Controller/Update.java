@@ -98,7 +98,7 @@ public class Update
     public static void encontrarObjetoEditavel(int opcaoSbMen)
     {
         String nome, sobrenome, cpf, pais, time;
-        int resultadoComparacao = 0;
+        int resultadoComparacao = 0, posicao = 0;
         System.out.print("Busca por ID: ");
         int idEditavel = Integer.parseInt(scan.nextLine());
         switch(opcaoSbMen)
@@ -121,12 +121,13 @@ public class Update
                         objeto1.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto1.editarTime(time = scan.nextLine());
-                        listaTorcedor.remove(idEditavel);
-                        listaTorcedor.add(idEditavel, objeto1);
+                        listaTorcedor.remove(posicao);
+                        listaTorcedor.add(posicao, objeto1);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
                     }
+                    posicao++;
                 }
                 break;
             case 2:
@@ -147,12 +148,13 @@ public class Update
                         objeto2.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto2.editarTime(time = scan.nextLine());
-                        listaColaborador.remove(idEditavel);
-                        listaColaborador.add(idEditavel, objeto2);
+                        listaColaborador.remove(posicao);
+                        listaColaborador.add(posicao, objeto2);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
                     }
+                    posicao++;
                 }
                 break;
             case 3:
@@ -173,12 +175,13 @@ public class Update
                         objeto3.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto3.editarTime(time = scan.nextLine());
-                        listaAtleta.remove(idEditavel);
-                        listaAtleta.add(idEditavel, objeto3);
+                        listaAtleta.remove(posicao);
+                        listaAtleta.add(posicao, objeto3);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
                     }
+                    posicao++;
                 }
                 break;
             case 4:
@@ -199,12 +202,13 @@ public class Update
                         objeto4.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto4.editarTime(time = scan.nextLine());
-                        listaTime.remove(idEditavel);
-                        listaTime.add(idEditavel, objeto4);
+                        listaTime.remove(posicao);
+                        listaTime.add(posicao, objeto4);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
                     }
+                    posicao++;
                 }
                 break;
             case 5:
@@ -225,12 +229,13 @@ public class Update
                         objeto5.editarPaisOrigem(pais = scan.nextLine());
                         System.out.print("Time de FA: ");
                         objeto5.editarTime(time = scan.nextLine());
-                        listaEntidade.remove(idEditavel);
-                        listaEntidade.add(idEditavel, objeto5);
+                        listaEntidade.remove(posicao);
+                        listaEntidade.add(posicao, objeto5);
                         objetoEditado();
                         tecleEnter();
                         menuUpdate();
                     }
+                    posicao++;
                 }
                 break;
             case 6:
@@ -257,6 +262,7 @@ public class Update
                         tecleEnter();
                         menuUpdate();
                     }
+                    posicao++;
                 }
                 break;
         }
