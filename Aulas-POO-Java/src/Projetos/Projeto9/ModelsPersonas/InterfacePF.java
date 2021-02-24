@@ -9,6 +9,7 @@ public interface InterfacePF
     public String verSobrenome();
     public String verDocumento();
     public String verTime();
+    @Override
     public String toString();
 
     public void gerarId();
