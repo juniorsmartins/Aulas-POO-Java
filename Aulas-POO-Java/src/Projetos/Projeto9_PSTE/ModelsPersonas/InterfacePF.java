@@ -1,6 +1,6 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
-public interface InterfacePJ 
+public interface InterfacePF 
 {
     public int verId();
     public String verPaisOrigem();
@@ -17,5 +17,5 @@ public interface InterfacePJ
     public void editarNome(String nome);
     public void editarSobrenome(String sobre);
     public void editarDocumento(String doc);
-    public void editarTime(String time);    
+    public void editarTime(String time);
 }

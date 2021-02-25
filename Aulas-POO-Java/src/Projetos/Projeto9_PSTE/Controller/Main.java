@@ -1,13 +1,18 @@
-package Projetos.Projeto9.Controller;
+package Projetos.Projeto9_PSTE.Controller;
 
 import java.util.Scanner;
 
-import static Projetos.Projeto9.Controller.Uteis.*;
-import static Projetos.Projeto9.Controller.Create.menuCreate;
-import static Projetos.Projeto9.Controller.Read.menuRead;
-import static Projetos.Projeto9.Controller.Update.menuUpdate;
-import static Projetos.Projeto9.Controller.Delete.menuDelete;
-import Projetos.Projeto9.ModelsPersonas.*;
+import static Projetos.Projeto9_PSTE.Controller.Uteis.*;
+import static Projetos.Projeto9_PSTE.Controller.Create.menuCreate;
+import static Projetos.Projeto9_PSTE.Controller.Read.menuRead;
+import static Projetos.Projeto9_PSTE.Controller.Update.menuUpdate;
+import static Projetos.Projeto9_PSTE.Controller.Delete.menuDelete;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Torcedor;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Colaborador;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Atleta;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Time;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Entidade;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Empresa;
 
 import java.util.ArrayList;
 import java.util.List;

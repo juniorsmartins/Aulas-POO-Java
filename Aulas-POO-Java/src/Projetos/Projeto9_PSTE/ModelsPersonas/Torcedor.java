@@ -1,4 +1,4 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
 public final class Torcedor extends Fisica implements InterfacePF, Comparable<Torcedor>
 {

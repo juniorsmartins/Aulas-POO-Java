@@ -1,42 +1,38 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
-public final class Empresa extends Juridica implements InterfacePJ
+public final class Colaborador extends Fisica implements InterfacePF
 {
     // Atributos de Classe
-    public static int totalCadastrosEmpresa;
+    public static int totalCadastrosColaborador;
     
     // Atributos de Instância
-    
+
     // Métodos Construtores
-    public Empresa()
+    public Colaborador()
     {
-        //TODO - sobrecarga de construtores
+        //TODO - sobrecarga de construtor
     }
-    public Empresa(String razao, String fantasia, String cnpj, String pais, String time)
+    public Colaborador(String nome, String sobrenome, String cpf, String pais, String time)
     {
         this.gerarId();
         this.setDataCadastro();
-        this.editarNome(razao);
-        this.editarSobrenome(fantasia);
-        this.editarDocumento(cnpj);
+        this.editarNome(nome);
+        this.editarSobrenome(sobrenome);
+        this.editarDocumento(cpf);
         this.editarPaisOrigem(pais);
         this.editarTime(time);
     }
     
     // Métodos Getters e Setters de Classe
-    public static int getTotalCadastrosEmpresa()
+    public static int getTotalCadastrosColaborador()
     {
-        return Empresa.totalCadastrosEmpresa;
+        return Colaborador.totalCadastrosColaborador;
     }
-    protected static void setTotalCadastrosEmpresa()
+    protected static void setTotalCadastrosColaborador()
     {
-        Empresa.totalCadastrosEmpresa += 1; 
+        Colaborador.totalCadastrosColaborador += 1;
     }
     
-    // Métodos Getters de Instância
-    
-    // Métodos Setters de Instância
-
     // Implementações da Interface Pessoa
     @Override
     public int verId()
@@ -56,17 +52,17 @@ public final class Empresa extends Juridica implements InterfacePJ
     @Override
     public String verNome()
     {
-        return this.getRazaoSocial();
+        return this.getNome();
     }
     @Override
     public String verSobrenome()
     {
-        return this.getNomeFantasia();
+        return this.getSobrenome();
     }
     @Override
     public String verDocumento()
     {
-        return this.getCnpj();
+        return this.getCpf();
     }
     @Override
     public String verTime()
@@ -77,21 +73,21 @@ public final class Empresa extends Juridica implements InterfacePJ
     public String toString()
     {
         System.out.println("\nID: " + this.verId());
-        System.out.println("Razão Social: " + this.verNome());
-        System.out.println("Nome Fantasia: " + this.verSobrenome());
-        System.out.println("CNPJ: " + this.verDocumento());
+        System.out.println("Nome: " + this.verNome());
+        System.out.println("Sobrenome: " + this.verSobrenome());
+        System.out.println("CPF: " + this.verDocumento());
         System.out.println("País: " + this.verPaisOrigem());
         System.out.println("Time: " + this.verTime());
         return "";
     }
-    
+
     @Override
     public void gerarId()
     {
         this.setId();
         Pessoa.setTotalCadastrosPessoa();
-        Juridica.setTotalCadastrosJuridica();
-        Empresa.setTotalCadastrosEmpresa();
+        Fisica.setTotalCadastrosFisica();
+        Colaborador.setTotalCadastrosColaborador();
     }
     @Override
     public void editarPaisOrigem(String pais)
@@ -99,19 +95,19 @@ public final class Empresa extends Juridica implements InterfacePJ
         this.setPaisOrigem(pais);
     }
     @Override
-    public void editarNome(String razao)
+    public void editarNome(String nome)
     {
-        this.setRazaoSocial(razao);
+        this.setNome(nome);
     }
     @Override
-    public void editarSobrenome(String fantasia)
+    public void editarSobrenome(String sobre)
     {
-        this.setNomeFantasia(fantasia);
+        this.setSobrenome(sobre);
     }
     @Override
     public void editarDocumento(String doc)
     {
-        this.setCnpj(doc);
+        this.setCpf(doc);
     }
     @Override
     public void editarTime(String time)

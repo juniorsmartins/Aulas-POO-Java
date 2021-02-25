@@ -1,19 +1,19 @@
-package Projetos.Projeto9.Controller;
+package Projetos.Projeto9_PSTE.Controller;
 
-import static Projetos.Projeto9.Controller.Uteis.*;
-import static Projetos.Projeto9.Controller.Main.listaTorcedor;
-import static Projetos.Projeto9.Controller.Main.listaColaborador;
-import static Projetos.Projeto9.Controller.Main.listaAtleta;
-import static Projetos.Projeto9.Controller.Main.listaTime;
-import static Projetos.Projeto9.Controller.Main.listaEntidade;
-import static Projetos.Projeto9.Controller.Main.listaEmpresa;
-import static Projetos.Projeto9.Controller.Main.*;
-import Projetos.Projeto9.ModelsPersonas.Torcedor;
-import Projetos.Projeto9.ModelsPersonas.Colaborador;
-import Projetos.Projeto9.ModelsPersonas.Atleta;
-import Projetos.Projeto9.ModelsPersonas.Time;
-import Projetos.Projeto9.ModelsPersonas.Entidade;
-import Projetos.Projeto9.ModelsPersonas.Empresa;
+import static Projetos.Projeto9_PSTE.Controller.Uteis.*;
+import static Projetos.Projeto9_PSTE.Controller.Main.listaTorcedor;
+import static Projetos.Projeto9_PSTE.Controller.Main.listaColaborador;
+import static Projetos.Projeto9_PSTE.Controller.Main.listaAtleta;
+import static Projetos.Projeto9_PSTE.Controller.Main.listaTime;
+import static Projetos.Projeto9_PSTE.Controller.Main.listaEntidade;
+import static Projetos.Projeto9_PSTE.Controller.Main.listaEmpresa;
+import static Projetos.Projeto9_PSTE.Controller.Main.*;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Torcedor;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Colaborador;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Atleta;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Time;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Entidade;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Empresa;
 
 import java.util.Iterator;
 import java.util.List;

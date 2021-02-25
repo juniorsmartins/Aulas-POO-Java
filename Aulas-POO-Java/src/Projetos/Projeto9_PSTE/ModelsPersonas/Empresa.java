@@ -1,37 +1,41 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
-public final class Atleta extends Fisica implements InterfacePF
+public final class Empresa extends Juridica implements InterfacePJ
 {
     // Atributos de Classe
-    public static int totalCadastrosAtleta;
+    public static int totalCadastrosEmpresa;
     
     // Atributos de Instância
     
     // Métodos Construtores
-    public Atleta()
+    public Empresa()
     {
-        //TODO - sobrecarga de construtor
+        //TODO - sobrecarga de construtores
     }
-    public Atleta(String nome, String sobrenome, String cpf, String pais, String time)
+    public Empresa(String razao, String fantasia, String cnpj, String pais, String time)
     {
         this.gerarId();
         this.setDataCadastro();
-        this.editarNome(nome);
-        this.editarSobrenome(sobrenome);
-        this.editarDocumento(cpf);
+        this.editarNome(razao);
+        this.editarSobrenome(fantasia);
+        this.editarDocumento(cnpj);
         this.editarPaisOrigem(pais);
         this.editarTime(time);
     }
     
     // Métodos Getters e Setters de Classe
-    public static int getTotalCadastrosAtleta()
+    public static int getTotalCadastrosEmpresa()
     {
-        return Atleta.totalCadastrosAtleta;
+        return Empresa.totalCadastrosEmpresa;
     }
-    protected static void setTotalCadastrosAtleta()
+    protected static void setTotalCadastrosEmpresa()
     {
-        Atleta.totalCadastrosAtleta += 1;
+        Empresa.totalCadastrosEmpresa += 1; 
     }
+    
+    // Métodos Getters de Instância
+    
+    // Métodos Setters de Instância
 
     // Implementações da Interface Pessoa
     @Override
@@ -52,17 +56,17 @@ public final class Atleta extends Fisica implements InterfacePF
     @Override
     public String verNome()
     {
-        return this.getNome();
+        return this.getRazaoSocial();
     }
     @Override
     public String verSobrenome()
     {
-        return this.getSobrenome();
+        return this.getNomeFantasia();
     }
     @Override
     public String verDocumento()
     {
-        return this.getCpf();
+        return this.getCnpj();
     }
     @Override
     public String verTime()
@@ -73,21 +77,21 @@ public final class Atleta extends Fisica implements InterfacePF
     public String toString()
     {
         System.out.println("\nID: " + this.verId());
-        System.out.println("Nome: " + this.verNome());
-        System.out.println("Sobrenome: " + this.verSobrenome());
-        System.out.println("CPF: " + this.verDocumento());
+        System.out.println("Razão Social: " + this.verNome());
+        System.out.println("Nome Fantasia: " + this.verSobrenome());
+        System.out.println("CNPJ: " + this.verDocumento());
         System.out.println("País: " + this.verPaisOrigem());
         System.out.println("Time: " + this.verTime());
         return "";
     }
-
+    
     @Override
     public void gerarId()
     {
         this.setId();
         Pessoa.setTotalCadastrosPessoa();
-        Fisica.setTotalCadastrosFisica();
-        Atleta.setTotalCadastrosAtleta();
+        Juridica.setTotalCadastrosJuridica();
+        Empresa.setTotalCadastrosEmpresa();
     }
     @Override
     public void editarPaisOrigem(String pais)
@@ -95,19 +99,19 @@ public final class Atleta extends Fisica implements InterfacePF
         this.setPaisOrigem(pais);
     }
     @Override
-    public void editarNome(String nome)
+    public void editarNome(String razao)
     {
-        this.setNome(nome);
+        this.setRazaoSocial(razao);
     }
     @Override
-    public void editarSobrenome(String sobre)
+    public void editarSobrenome(String fantasia)
     {
-        this.setSobrenome(sobre);
+        this.setNomeFantasia(fantasia);
     }
     @Override
     public void editarDocumento(String doc)
     {
-        this.setCpf(doc);
+        this.setCnpj(doc);
     }
     @Override
     public void editarTime(String time)

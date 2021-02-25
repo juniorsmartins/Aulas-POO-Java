@@ -1,8 +1,13 @@
-package Projetos.Projeto9.Controller;
+package Projetos.Projeto9_PSTE.Controller;
 
-import static Projetos.Projeto9.Controller.Main.*;
-import static Projetos.Projeto9.Controller.Uteis.*;
-import Projetos.Projeto9.ModelsPersonas.*;
+import static Projetos.Projeto9_PSTE.Controller.Main.*;
+import static Projetos.Projeto9_PSTE.Controller.Uteis.*;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Torcedor;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Colaborador;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Atleta;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Time;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Entidade;
+import Projetos.Projeto9_PSTE.ModelsPersonas.Empresa;
 
 public class Create 
 {

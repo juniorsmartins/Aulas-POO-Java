@@ -1,18 +1,18 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
-public final class Time extends Juridica implements InterfacePJ
+public final class Entidade extends Juridica implements InterfacePJ
 {
     // Atributos de Classe
-    public static int totalCadastrosTime;
+    public static int totalCadastrosEntidade;
     
     // Atributos de Instância
     
     // Métodos Construtores
-    public Time()
+    public Entidade()
     {
-        //TODO - sobrecarga de time
+        //TODO - sobrecarga de construtores
     }
-    public Time(String razao, String fantasia, String cnpj, String pais, String equipe)
+    public Entidade(String razao, String fantasia, String cnpj, String pais, String time)
     {
         this.gerarId();
         this.setDataCadastro();
@@ -20,19 +20,19 @@ public final class Time extends Juridica implements InterfacePJ
         this.editarSobrenome(fantasia);
         this.editarDocumento(cnpj);
         this.editarPaisOrigem(pais);
-        this.editarTime(equipe);
+        this.editarTime(time);
     }
     
     // Métodos Getters e Setters de Classe
-    public static int getTotalCadastrosTime()
+    public static int getTotalCadastrosEntidade()
     {
-        return Time.totalCadastrosTime;
+        return Entidade.totalCadastrosEntidade;
     }
-    public static void setTotalCadastrosTime()
+    protected static void setTotalCadastrosEntidade()
     {
-        Time.totalCadastrosTime += 1;
+        Entidade.totalCadastrosEntidade += 1;
     }
-
+    
     // Implementações da Interface Pessoa
     @Override
     public int verId()
@@ -87,7 +87,7 @@ public final class Time extends Juridica implements InterfacePJ
         this.setId();
         Pessoa.setTotalCadastrosPessoa();
         Juridica.setTotalCadastrosJuridica();
-        Time.setTotalCadastrosTime();
+        Entidade.setTotalCadastrosEntidade();
     }
     @Override
     public void editarPaisOrigem(String pais)
@@ -110,8 +110,8 @@ public final class Time extends Juridica implements InterfacePJ
         this.setCnpj(doc);
     }
     @Override
-    public void editarTime(String equipe)
+    public void editarTime(String time)
     {
-        this.setTime(equipe);
+        this.setTime(time);
     }
 }

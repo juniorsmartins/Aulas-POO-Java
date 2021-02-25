@@ -1,4 +1,4 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;

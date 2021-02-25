@@ -1,7 +1,7 @@
-package Projetos.Projeto9.Controller;
+package Projetos.Projeto9_PSTE.Controller;
 
-import static Projetos.Projeto9.Controller.Main.*;
-import static Projetos.Projeto9.Controller.Uteis.*;
+import static Projetos.Projeto9_PSTE.Controller.Main.*;
+import static Projetos.Projeto9_PSTE.Controller.Uteis.*;
 import java.util.List;
 
 public class Read 

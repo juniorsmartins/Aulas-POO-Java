@@ -1,4 +1,4 @@
-package Projetos.Projeto9.ModelsPersonas;
+package Projetos.Projeto9_PSTE.ModelsPersonas;
 
 public abstract class Fisica extends Pessoa
 {
