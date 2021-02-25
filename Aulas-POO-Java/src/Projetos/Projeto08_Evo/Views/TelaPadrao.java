@@ -9,12 +9,12 @@ package Projetos.Projeto08_Evo.Views;
  *
  * @author junio
  */
-public class MenuPrincipal extends javax.swing.JFrame {
+public class TelaPadrao extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuPrincipal
      */
-    public MenuPrincipal() {
+    public TelaPadrao() {
         initComponents();
     }
 
@@ -31,12 +31,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuCadastro = new javax.swing.JMenu();
-        jMenuItemAtleta = new javax.swing.JMenuItem();
-        jMenuItemColaborador = new javax.swing.JMenuItem();
-        jMenuItemTorcedor = new javax.swing.JMenuItem();
-        jMenuOperacao = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -71,27 +65,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/EVO - Fundo Geral.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
 
-        jMenuCadastro.setText("Cadastro");
-
-        jMenuItemAtleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeJogador.png"))); // NOI18N
-        jMenuItemAtleta.setText("Atleta");
-        jMenuCadastro.add(jMenuItemAtleta);
-
-        jMenuItemColaborador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeArbitro.png"))); // NOI18N
-        jMenuItemColaborador.setText("Colaborador");
-        jMenuCadastro.add(jMenuItemColaborador);
-
-        jMenuItemTorcedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeBola.png"))); // NOI18N
-        jMenuItemTorcedor.setText("Torcedor");
-        jMenuCadastro.add(jMenuItemTorcedor);
-
-        jMenuBar1.add(jMenuCadastro);
-
-        jMenuOperacao.setText("Operação");
-        jMenuBar1.add(jMenuOperacao);
-
-        setJMenuBar(jMenuBar1);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -112,13 +85,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPadrao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -136,59 +109,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
-        /* CrejMenuOperacaod display the form */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuPrincipal().setVisible(true);
+                new TelaPadrao().setVisible(true);
             }
         });
     }
@@ -198,11 +123,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuCadastro;
-    private javax.swing.JMenuItem jMenuItemAtleta;
-    private javax.swing.JMenuItem jMenuItemColaborador;
-    private javax.swing.JMenuItem jMenuItemTorcedor;
-    private javax.swing.JMenu jMenuOperacao;
     // End of variables declaration//GEN-END:variables
 }

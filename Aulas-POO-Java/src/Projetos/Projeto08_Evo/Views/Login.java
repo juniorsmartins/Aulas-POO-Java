@@ -12,7 +12,7 @@ package Projetos.Projeto08_Evo.Views;
 public class Login extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
+     * Creates new form MenuPrincipal
      */
     public Login() {
         initComponents();
@@ -31,43 +31,71 @@ public class Login extends javax.swing.JFrame {
         jLabelSenha = new javax.swing.JLabel();
         campoUsuario = new javax.swing.JTextField();
         jLabelUsuario = new javax.swing.JLabel();
-        jLabelFundo = new javax.swing.JLabel();
-        jLabelImagem = new javax.swing.JLabel();
+        jLabelAreaLogin = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setMinimumSize(new java.awt.Dimension(963, 544));
+        setResizable(false);
+        setSize(new java.awt.Dimension(963, 544));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        campoSenha.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 290, -1));
+        campoSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        campoSenha.setText("jPasswordField1");
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 350, 280, -1));
 
-        jLabelSenha.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabelSenha.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSenha.setText("SENHA");
-        getContentPane().add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, -1, -1));
+        jLabelSenha.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, -1, -1));
 
         campoUsuario.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        campoUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        campoUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(campoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, 290, -1));
+        getContentPane().add(campoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 280, -1));
 
-        jLabelUsuario.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabelUsuario.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelUsuario.setText("USUÁRIO");
-        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, -1, -1));
+        jLabelUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
+        getContentPane().add(jLabelAreaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 310, 360));
 
-        jLabelFundo.setText("jLabel4");
-        getContentPane().add(jLabelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 370, 290));
+        jLabel4.setBackground(new java.awt.Color(255, 255, 0));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("www.cuiabaarsenal.com.br");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel4.setOpaque(true);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 960, 30));
 
-        jLabelImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/EVO - Login1.png"))); // NOI18N
-        jLabelImagem.setMaximumSize(new java.awt.Dimension(600, 800));
-        jLabelImagem.setMinimumSize(new java.awt.Dimension(600, 800));
-        jLabelImagem.setPreferredSize(new java.awt.Dimension(600, 800));
-        getContentPane().add(jLabelImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Programa Sócio Torcedor Evolution");
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 440, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 80)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("EVO");
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 440, 80));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/EVO - Fundo Geral.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -102,6 +130,9 @@ public class Login extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -114,8 +145,11 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField campoSenha;
     private javax.swing.JTextField campoUsuario;
-    private javax.swing.JLabel jLabelFundo;
-    private javax.swing.JLabel jLabelImagem;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabelAreaLogin;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
     // End of variables declaration//GEN-END:variables
