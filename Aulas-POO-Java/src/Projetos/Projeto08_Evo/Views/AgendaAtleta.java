@@ -247,7 +247,7 @@ public class AgendaAtleta extends javax.swing.JFrame {
 
         jLabelAreaCadastro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelAreaCadastro.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 740, 360));
+        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 920, 360));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N

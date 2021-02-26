@@ -28,6 +28,8 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButtonGravarTorcedor = new javax.swing.JButton();
         campoEstado = new javax.swing.JTextField();
         jLabelEstado = new javax.swing.JLabel();
@@ -79,6 +81,36 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(963, 544));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "Sobrenome", "CPF", "E-mail", "Telefone", "Plano"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true, true, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 511, 900, 240));
 
         jButtonGravarTorcedor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonGravarTorcedor.setText("Gravar");
@@ -263,7 +295,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
 
         jLabelAreaCadastro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelAreaCadastro.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 740, 360));
+        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 920, 630));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -271,25 +303,25 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jLabel4.setText("www.cuiabaarsenal.com.br");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setOpaque(true);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 960, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 960, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Programa Sócio Torcedor Evolution");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 440, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 940, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 80)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("EVO");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 440, 80));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 940, 80));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/EVO - Fundo Preto.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 770));
 
         jMenuCadastrar.setText("Cadastrar");
 
@@ -967,5 +999,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonHard;
     private javax.swing.JRadioButton jRadioButtonInsane;
     private javax.swing.JRadioButton jRadioButtonNormal;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
