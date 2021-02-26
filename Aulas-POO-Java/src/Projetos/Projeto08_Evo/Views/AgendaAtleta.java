@@ -9,12 +9,12 @@ package Projetos.Projeto08_Evo.Views;
  *
  * @author junio
  */
-public class AgendaTorcedor extends javax.swing.JFrame {
+public class AgendaAtleta extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuPrincipal
      */
-    public AgendaTorcedor() {
+    public AgendaAtleta() {
         initComponents();
     }
 
@@ -43,11 +43,15 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jLabelNum = new javax.swing.JLabel();
         jLabelRua = new javax.swing.JLabel();
         campoRua = new javax.swing.JTextField();
-        jRadioButtonInsane = new javax.swing.JRadioButton();
-        jRadioButtonHard = new javax.swing.JRadioButton();
-        jRadioButtonNormal = new javax.swing.JRadioButton();
-        jRadioButtonEasy = new javax.swing.JRadioButton();
-        jLabelPlano = new javax.swing.JLabel();
+        jRadioButtonPosicaoS = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoCB = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoDL = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoLB = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoWR = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoOL = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoRB = new javax.swing.JRadioButton();
+        jRadioButtonPosicaoQB = new javax.swing.JRadioButton();
+        jLabelPosicao = new javax.swing.JLabel();
         campoTelefone = new javax.swing.JTextField();
         jLabelTelefone = new javax.swing.JLabel();
         campoEmail = new javax.swing.JTextField();
@@ -172,26 +176,52 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         });
         getContentPane().add(campoRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 170, 300, -1));
 
-        buttonGroup1.add(jRadioButtonInsane);
-        jRadioButtonInsane.setText("Play Insane");
-        getContentPane().add(jRadioButtonInsane, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, -1));
+        buttonGroup1.add(jRadioButtonPosicaoS);
+        jRadioButtonPosicaoS.setText("S");
+        jRadioButtonPosicaoS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonPosicaoSActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButtonPosicaoS, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, -1, -1));
 
-        buttonGroup1.add(jRadioButtonHard);
-        jRadioButtonHard.setText("Play Hard");
-        getContentPane().add(jRadioButtonHard, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        buttonGroup1.add(jRadioButtonPosicaoCB);
+        jRadioButtonPosicaoCB.setText("CB");
+        jRadioButtonPosicaoCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonPosicaoCBActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButtonPosicaoCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, -1, -1));
 
-        buttonGroup1.add(jRadioButtonNormal);
-        jRadioButtonNormal.setText("Play Normal");
-        getContentPane().add(jRadioButtonNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
+        buttonGroup1.add(jRadioButtonPosicaoDL);
+        jRadioButtonPosicaoDL.setText("DL");
+        getContentPane().add(jRadioButtonPosicaoDL, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, -1, -1));
 
-        buttonGroup1.add(jRadioButtonEasy);
-        jRadioButtonEasy.setText("Play Easy");
-        getContentPane().add(jRadioButtonEasy, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+        buttonGroup1.add(jRadioButtonPosicaoLB);
+        jRadioButtonPosicaoLB.setText("LB");
+        getContentPane().add(jRadioButtonPosicaoLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, -1, -1));
 
-        jLabelPlano.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabelPlano.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPlano.setText("Tipo de Plano:");
-        getContentPane().add(jLabelPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        buttonGroup1.add(jRadioButtonPosicaoWR);
+        jRadioButtonPosicaoWR.setText("WR");
+        getContentPane().add(jRadioButtonPosicaoWR, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, -1, -1));
+
+        buttonGroup1.add(jRadioButtonPosicaoOL);
+        jRadioButtonPosicaoOL.setText("OL");
+        getContentPane().add(jRadioButtonPosicaoOL, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+
+        buttonGroup1.add(jRadioButtonPosicaoRB);
+        jRadioButtonPosicaoRB.setText("RB");
+        getContentPane().add(jRadioButtonPosicaoRB, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
+
+        buttonGroup1.add(jRadioButtonPosicaoQB);
+        jRadioButtonPosicaoQB.setText("QB");
+        getContentPane().add(jRadioButtonPosicaoQB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+
+        jLabelPosicao.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelPosicao.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPosicao.setText("Posição:");
+        getContentPane().add(jLabelPosicao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
 
         campoTelefone.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -360,6 +390,14 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoComplementoActionPerformed
 
+    private void jRadioButtonPosicaoCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPosicaoCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonPosicaoCBActionPerformed
+
+    private void jRadioButtonPosicaoSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPosicaoSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonPosicaoSActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -377,14 +415,526 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaAtleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -901,7 +1451,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         /* CrejMenuOperacaod display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AgendaTorcedor().setVisible(true);
+                new AgendaAtleta().setVisible(true);
             }
         });
     }
@@ -935,7 +1485,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEstado;
     private javax.swing.JLabel jLabelNome;
     private javax.swing.JLabel jLabelNum;
-    private javax.swing.JLabel jLabelPlano;
+    private javax.swing.JLabel jLabelPosicao;
     private javax.swing.JLabel jLabelRua;
     private javax.swing.JLabel jLabelSobrenome;
     private javax.swing.JLabel jLabelTelefone;
@@ -945,9 +1495,13 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemColaborador;
     private javax.swing.JMenuItem jMenuItemTorcedor;
     private javax.swing.JMenu jMenuOperacao;
-    private javax.swing.JRadioButton jRadioButtonEasy;
-    private javax.swing.JRadioButton jRadioButtonHard;
-    private javax.swing.JRadioButton jRadioButtonInsane;
-    private javax.swing.JRadioButton jRadioButtonNormal;
+    private javax.swing.JRadioButton jRadioButtonPosicaoCB;
+    private javax.swing.JRadioButton jRadioButtonPosicaoDL;
+    private javax.swing.JRadioButton jRadioButtonPosicaoLB;
+    private javax.swing.JRadioButton jRadioButtonPosicaoOL;
+    private javax.swing.JRadioButton jRadioButtonPosicaoQB;
+    private javax.swing.JRadioButton jRadioButtonPosicaoRB;
+    private javax.swing.JRadioButton jRadioButtonPosicaoS;
+    private javax.swing.JRadioButton jRadioButtonPosicaoWR;
     // End of variables declaration//GEN-END:variables
 }
