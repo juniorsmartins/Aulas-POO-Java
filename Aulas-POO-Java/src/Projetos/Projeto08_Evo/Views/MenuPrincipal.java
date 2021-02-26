@@ -32,11 +32,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuCadastro = new javax.swing.JMenu();
+        jMenuCadastrar = new javax.swing.JMenu();
         jMenuItemAtleta = new javax.swing.JMenuItem();
         jMenuItemColaborador = new javax.swing.JMenuItem();
         jMenuItemTorcedor = new javax.swing.JMenuItem();
         jMenuOperacao = new javax.swing.JMenu();
+        jMenuItemConsultar = new javax.swing.JMenuItem();
+        jMenuItemAtualizar = new javax.swing.JMenuItem();
+        jMenuItemDeletar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -71,23 +74,36 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/EVO - Fundo Geral.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
 
-        jMenuCadastro.setText("Cadastro");
+        jMenuCadastrar.setText("Cadastrar");
+        jMenuCadastrar.setActionCommand("Cadastrar");
 
         jMenuItemAtleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeJogador.png"))); // NOI18N
         jMenuItemAtleta.setText("Atleta");
-        jMenuCadastro.add(jMenuItemAtleta);
+        jMenuCadastrar.add(jMenuItemAtleta);
 
         jMenuItemColaborador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeArbitro.png"))); // NOI18N
         jMenuItemColaborador.setText("Colaborador");
-        jMenuCadastro.add(jMenuItemColaborador);
+        jMenuCadastrar.add(jMenuItemColaborador);
 
         jMenuItemTorcedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeBola.png"))); // NOI18N
         jMenuItemTorcedor.setText("Torcedor");
-        jMenuCadastro.add(jMenuItemTorcedor);
+        jMenuCadastrar.add(jMenuItemTorcedor);
 
-        jMenuBar1.add(jMenuCadastro);
+        jMenuBar1.add(jMenuCadastrar);
 
-        jMenuOperacao.setText("Operação");
+        jMenuOperacao.setText("Operações");
+
+        jMenuItemConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeConsultar.png"))); // NOI18N
+        jMenuItemConsultar.setText("Consultar");
+        jMenuOperacao.add(jMenuItemConsultar);
+
+        jMenuItemAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeAtualizar.png"))); // NOI18N
+        jMenuItemAtualizar.setText("Atualizar");
+        jMenuOperacao.add(jMenuItemAtualizar);
+
+        jMenuItemDeletar.setText("Deletar");
+        jMenuOperacao.add(jMenuItemDeletar);
+
         jMenuBar1.add(jMenuOperacao);
 
         setJMenuBar(jMenuBar1);
@@ -199,9 +215,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenu jMenuCadastrar;
     private javax.swing.JMenuItem jMenuItemAtleta;
+    private javax.swing.JMenuItem jMenuItemAtualizar;
     private javax.swing.JMenuItem jMenuItemColaborador;
+    private javax.swing.JMenuItem jMenuItemConsultar;
+    private javax.swing.JMenuItem jMenuItemDeletar;
     private javax.swing.JMenuItem jMenuItemTorcedor;
     private javax.swing.JMenu jMenuOperacao;
     // End of variables declaration//GEN-END:variables

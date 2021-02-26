@@ -29,6 +29,7 @@ public class AgendaAtleta extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jButtonGravarTorcedor = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         campoEstado = new javax.swing.JTextField();
         jLabelEstado = new javax.swing.JLabel();
         campoCidade = new javax.swing.JTextField();
@@ -43,14 +44,6 @@ public class AgendaAtleta extends javax.swing.JFrame {
         jLabelNum = new javax.swing.JLabel();
         jLabelRua = new javax.swing.JLabel();
         campoRua = new javax.swing.JTextField();
-        jRadioButtonPosicaoS = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoCB = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoDL = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoLB = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoWR = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoOL = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoRB = new javax.swing.JRadioButton();
-        jRadioButtonPosicaoQB = new javax.swing.JRadioButton();
         jLabelPosicao = new javax.swing.JLabel();
         campoTelefone = new javax.swing.JTextField();
         jLabelTelefone = new javax.swing.JLabel();
@@ -68,11 +61,14 @@ public class AgendaAtleta extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuCadastro = new javax.swing.JMenu();
+        jMenuCadastrar = new javax.swing.JMenu();
         jMenuItemAtleta = new javax.swing.JMenuItem();
         jMenuItemColaborador = new javax.swing.JMenuItem();
         jMenuItemTorcedor = new javax.swing.JMenuItem();
         jMenuOperacao = new javax.swing.JMenu();
+        jMenuItemConsultar = new javax.swing.JMenuItem();
+        jMenuItemAtualizar = new javax.swing.JMenuItem();
+        jMenuItemDeletar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -84,6 +80,9 @@ public class AgendaAtleta extends javax.swing.JFrame {
         jButtonGravarTorcedor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonGravarTorcedor.setText("Gravar");
         getContentPane().add(jButtonGravarTorcedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 440, 100, 40));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quarterback", "Center", "Offensive Guard", "Offensive Tackle", "Tight End", "Halfback", "Fullback", "Widereceiver", "Defensive Tackle", "Defensive End", "Middle Linebacker", "Inside Linebacker", "Outside Linebackers", "Cornerbacks", "Free Safety", "Strong Safety", "Kicker/Punter" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 150, -1));
 
         campoEstado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoEstado.addActionListener(new java.awt.event.ActionListener() {
@@ -176,52 +175,10 @@ public class AgendaAtleta extends javax.swing.JFrame {
         });
         getContentPane().add(campoRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 170, 300, -1));
 
-        buttonGroup1.add(jRadioButtonPosicaoS);
-        jRadioButtonPosicaoS.setText("S");
-        jRadioButtonPosicaoS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonPosicaoSActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRadioButtonPosicaoS, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoCB);
-        jRadioButtonPosicaoCB.setText("CB");
-        jRadioButtonPosicaoCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonPosicaoCBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRadioButtonPosicaoCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoDL);
-        jRadioButtonPosicaoDL.setText("DL");
-        getContentPane().add(jRadioButtonPosicaoDL, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoLB);
-        jRadioButtonPosicaoLB.setText("LB");
-        getContentPane().add(jRadioButtonPosicaoLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoWR);
-        jRadioButtonPosicaoWR.setText("WR");
-        getContentPane().add(jRadioButtonPosicaoWR, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoOL);
-        jRadioButtonPosicaoOL.setText("OL");
-        getContentPane().add(jRadioButtonPosicaoOL, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoRB);
-        jRadioButtonPosicaoRB.setText("RB");
-        getContentPane().add(jRadioButtonPosicaoRB, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
-
-        buttonGroup1.add(jRadioButtonPosicaoQB);
-        jRadioButtonPosicaoQB.setText("QB");
-        getContentPane().add(jRadioButtonPosicaoQB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
-
         jLabelPosicao.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelPosicao.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPosicao.setText("Posição:");
-        getContentPane().add(jLabelPosicao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        getContentPane().add(jLabelPosicao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
         campoTelefone.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -318,23 +275,35 @@ public class AgendaAtleta extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/EVO - Fundo Preto.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 540));
 
-        jMenuCadastro.setText("Cadastro");
+        jMenuCadastrar.setText("Cadastrar");
 
         jMenuItemAtleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeJogador.png"))); // NOI18N
         jMenuItemAtleta.setText("Atleta");
-        jMenuCadastro.add(jMenuItemAtleta);
+        jMenuCadastrar.add(jMenuItemAtleta);
 
         jMenuItemColaborador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeArbitro.png"))); // NOI18N
         jMenuItemColaborador.setText("Colaborador");
-        jMenuCadastro.add(jMenuItemColaborador);
+        jMenuCadastrar.add(jMenuItemColaborador);
 
         jMenuItemTorcedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeBola.png"))); // NOI18N
         jMenuItemTorcedor.setText("Torcedor");
-        jMenuCadastro.add(jMenuItemTorcedor);
+        jMenuCadastrar.add(jMenuItemTorcedor);
 
-        jMenuBar1.add(jMenuCadastro);
+        jMenuBar1.add(jMenuCadastrar);
 
-        jMenuOperacao.setText("Operação");
+        jMenuOperacao.setText("Operações");
+
+        jMenuItemConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeConsultar.png"))); // NOI18N
+        jMenuItemConsultar.setText("Consultar");
+        jMenuOperacao.add(jMenuItemConsultar);
+
+        jMenuItemAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeAtualizar.png"))); // NOI18N
+        jMenuItemAtualizar.setText("Atualizar");
+        jMenuOperacao.add(jMenuItemAtualizar);
+
+        jMenuItemDeletar.setText("Deletar");
+        jMenuOperacao.add(jMenuItemDeletar);
+
         jMenuBar1.add(jMenuOperacao);
 
         setJMenuBar(jMenuBar1);
@@ -389,14 +358,6 @@ public class AgendaAtleta extends javax.swing.JFrame {
     private void campoComplementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoComplementoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoComplementoActionPerformed
-
-    private void jRadioButtonPosicaoCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPosicaoCBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonPosicaoCBActionPerformed
-
-    private void jRadioButtonPosicaoSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPosicaoSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonPosicaoSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1471,6 +1432,7 @@ public class AgendaAtleta extends javax.swing.JFrame {
     private javax.swing.JTextField campoSobrenome;
     private javax.swing.JTextField campoTelefone;
     private javax.swing.JButton jButtonGravarTorcedor;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1490,18 +1452,13 @@ public class AgendaAtleta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSobrenome;
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenu jMenuCadastrar;
     private javax.swing.JMenuItem jMenuItemAtleta;
+    private javax.swing.JMenuItem jMenuItemAtualizar;
     private javax.swing.JMenuItem jMenuItemColaborador;
+    private javax.swing.JMenuItem jMenuItemConsultar;
+    private javax.swing.JMenuItem jMenuItemDeletar;
     private javax.swing.JMenuItem jMenuItemTorcedor;
     private javax.swing.JMenu jMenuOperacao;
-    private javax.swing.JRadioButton jRadioButtonPosicaoCB;
-    private javax.swing.JRadioButton jRadioButtonPosicaoDL;
-    private javax.swing.JRadioButton jRadioButtonPosicaoLB;
-    private javax.swing.JRadioButton jRadioButtonPosicaoOL;
-    private javax.swing.JRadioButton jRadioButtonPosicaoQB;
-    private javax.swing.JRadioButton jRadioButtonPosicaoRB;
-    private javax.swing.JRadioButton jRadioButtonPosicaoS;
-    private javax.swing.JRadioButton jRadioButtonPosicaoWR;
     // End of variables declaration//GEN-END:variables
 }
