@@ -9,12 +9,12 @@ package Projetos.Projeto08_Evo.Views;
  *
  * @author junio
  */
-public class Agenda extends javax.swing.JFrame {
+public class AgendaTorcedor extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuPrincipal
      */
-    public Agenda() {
+    public AgendaTorcedor() {
         initComponents();
     }
 
@@ -27,8 +27,24 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        campoEstado = new javax.swing.JTextField();
+        jLabelEstado = new javax.swing.JLabel();
+        campoCidade = new javax.swing.JTextField();
+        jLabelCidade = new javax.swing.JLabel();
+        campoCep = new javax.swing.JTextField();
+        jLabelCep = new javax.swing.JLabel();
+        campoBairro = new javax.swing.JTextField();
+        jLabelBairro = new javax.swing.JLabel();
+        campoNum = new javax.swing.JTextField();
+        jLabelNum = new javax.swing.JLabel();
+        jLabelRua = new javax.swing.JLabel();
+        campoRua = new javax.swing.JTextField();
+        jRadioButtonInsane = new javax.swing.JRadioButton();
+        jRadioButtonHard = new javax.swing.JRadioButton();
+        jRadioButtonNormal = new javax.swing.JRadioButton();
+        jRadioButtonEasy = new javax.swing.JRadioButton();
+        jLabelPlano = new javax.swing.JLabel();
         campoTelefone = new javax.swing.JTextField();
         jLabelTelefone = new javax.swing.JLabel();
         campoEmail = new javax.swing.JTextField();
@@ -58,11 +74,104 @@ public class Agenda extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(963, 544));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jRadioButton1.setText("jRadioButton1");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, -1, -1));
+        campoEstado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoEstadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 70, -1));
 
-        jCheckBox1.setText("jCheckBox1");
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
+        jLabelEstado.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelEstado.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEstado.setText("Estado:");
+        getContentPane().add(jLabelEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, -1, -1));
+
+        campoCidade.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoCidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCidadeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 320, 300, -1));
+
+        jLabelCidade.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelCidade.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCidade.setText("Cidade:");
+        getContentPane().add(jLabelCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, -1, -1));
+
+        campoCep.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoCep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCepActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 130, -1));
+
+        jLabelCep.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelCep.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCep.setText("Cep:");
+        getContentPane().add(jLabelCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 220, -1, -1));
+
+        campoBairro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoBairro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoBairroActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 270, 300, -1));
+
+        jLabelBairro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelBairro.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBairro.setText("Bairro:");
+        getContentPane().add(jLabelBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, -1, -1));
+
+        campoNum.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNumActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 70, -1));
+
+        jLabelNum.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelNum.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNum.setText("Número:");
+        getContentPane().add(jLabelNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, -1, -1));
+
+        jLabelRua.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelRua.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelRua.setText("Rua/Av.:");
+        getContentPane().add(jLabelRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, -1, -1));
+
+        campoRua.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoRua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoRuaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 170, 300, -1));
+
+        buttonGroup1.add(jRadioButtonInsane);
+        jRadioButtonInsane.setText("Play Insane");
+        getContentPane().add(jRadioButtonInsane, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, -1));
+
+        buttonGroup1.add(jRadioButtonHard);
+        jRadioButtonHard.setText("Play Hard");
+        getContentPane().add(jRadioButtonHard, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+
+        buttonGroup1.add(jRadioButtonNormal);
+        jRadioButtonNormal.setText("Play Normal");
+        getContentPane().add(jRadioButtonNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
+
+        buttonGroup1.add(jRadioButtonEasy);
+        jRadioButtonEasy.setText("Play Easy");
+        getContentPane().add(jRadioButtonEasy, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+
+        jLabelPlano.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelPlano.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPlano.setText("Tipo de Plano:");
+        getContentPane().add(jLabelPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
 
         campoTelefone.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -70,12 +179,12 @@ public class Agenda extends javax.swing.JFrame {
                 campoTelefoneActionPerformed(evt);
             }
         });
-        getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 270, -1));
+        getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 270, -1));
 
         jLabelTelefone.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelTelefone.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTelefone.setText("Telefone:");
-        getContentPane().add(jLabelTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
+        getContentPane().add(jLabelTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
         campoEmail.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -83,12 +192,12 @@ public class Agenda extends javax.swing.JFrame {
                 campoEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 270, -1));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 270, -1));
 
         jLabelEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelEmail.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmail.setText("E-mail:");
-        getContentPane().add(jLabelEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, -1, -1));
+        getContentPane().add(jLabelEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         campoCpf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoCpf.addActionListener(new java.awt.event.ActionListener() {
@@ -96,12 +205,12 @@ public class Agenda extends javax.swing.JFrame {
                 campoCpfActionPerformed(evt);
             }
         });
-        getContentPane().add(campoCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 270, -1));
+        getContentPane().add(campoCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 270, -1));
 
         jLabelCpf.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelCpf.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCpf.setText("CPF:");
-        getContentPane().add(jLabelCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
+        getContentPane().add(jLabelCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         campoSobrenome.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoSobrenome.addActionListener(new java.awt.event.ActionListener() {
@@ -109,12 +218,12 @@ public class Agenda extends javax.swing.JFrame {
                 campoSobrenomeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoSobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 270, -1));
+        getContentPane().add(campoSobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 270, -1));
 
         jLabelSobrenome.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelSobrenome.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSobrenome.setText("Sobrenome:");
-        getContentPane().add(jLabelSobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
+        getContentPane().add(jLabelSobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         campoNome.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoNome.addActionListener(new java.awt.event.ActionListener() {
@@ -122,12 +231,12 @@ public class Agenda extends javax.swing.JFrame {
                 campoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 270, -1));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 270, -1));
 
         jLabelNome.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelNome.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNome.setText("Nome:");
-        getContentPane().add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, -1, -1));
+        getContentPane().add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         jLabelAreaCadastro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelAreaCadastro.setForeground(new java.awt.Color(255, 255, 255));
@@ -203,6 +312,30 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoTelefoneActionPerformed
 
+    private void campoRuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRuaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoRuaActionPerformed
+
+    private void campoNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNumActionPerformed
+
+    private void campoBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoBairroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoBairroActionPerformed
+
+    private void campoCepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCepActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCepActionPerformed
+
+    private void campoCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCidadeActionPerformed
+
+    private void campoEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEstadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoEstadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -220,14 +353,270 @@ public class Agenda extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Agenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgendaTorcedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -488,26 +877,39 @@ public class Agenda extends javax.swing.JFrame {
         /* CrejMenuOperacaod display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Agenda().setVisible(true);
+                new AgendaTorcedor().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField campoBairro;
+    private javax.swing.JTextField campoCep;
+    private javax.swing.JTextField campoCidade;
     private javax.swing.JTextField campoCpf;
     private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoEstado;
     private javax.swing.JTextField campoNome;
+    private javax.swing.JTextField campoNum;
+    private javax.swing.JTextField campoRua;
     private javax.swing.JTextField campoSobrenome;
     private javax.swing.JTextField campoTelefone;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelAreaCadastro;
+    private javax.swing.JLabel jLabelBairro;
+    private javax.swing.JLabel jLabelCep;
+    private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelCpf;
     private javax.swing.JLabel jLabelEmail;
+    private javax.swing.JLabel jLabelEstado;
     private javax.swing.JLabel jLabelNome;
+    private javax.swing.JLabel jLabelNum;
+    private javax.swing.JLabel jLabelPlano;
+    private javax.swing.JLabel jLabelRua;
     private javax.swing.JLabel jLabelSobrenome;
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JMenuBar jMenuBar1;
@@ -516,6 +918,9 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemColaborador;
     private javax.swing.JMenuItem jMenuItemTorcedor;
     private javax.swing.JMenu jMenuOperacao;
-    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButtonEasy;
+    private javax.swing.JRadioButton jRadioButtonHard;
+    private javax.swing.JRadioButton jRadioButtonInsane;
+    private javax.swing.JRadioButton jRadioButtonNormal;
     // End of variables declaration//GEN-END:variables
 }
