@@ -11,20 +11,21 @@ public class Torcedor extends PessoaFisica
     private String time;
     
     // ***** ÁREA DE CONSTRUTORES *****
-    public Torcedor()
+    public Torcedor(String nome, String sobre, String doc, String origem, Endereco endereco, Contato contato, String sexo, String time)
     {
         Cliente.setTotalCliente();
         PessoaFisica.setTotalPessoaFisica();
         Torcedor.setTotalTorcedor();
-        this.setIdTorcedor();
-
-//    private String dataCadastro;
-//    private String nomenclatura1;
-//    private String nomenclatura2;
-//    private String documento;
-//    private String dataOrigem;
-//    private Endereco endereco;
-//    private Contato contato;
+        this.setIdTorcedor(); // Fundamentado no total de clientes
+        this.setDataCadastro();
+        this.setNomenclatura1(nome);
+        this.setNomenclatura2(sobre);
+        this.setDocumento(doc);
+        this.setDataOrigem(origem);
+        this.setEndereco(endereco);
+        this.setContato(contato);
+        this.setSexo(sexo);
+        this.setTime(time);
     }
     
     // ***** ÁREA DE MÉTODOS *****
@@ -51,7 +52,7 @@ public class Torcedor extends PessoaFisica
     // Métodos Setters de Instância
     public void setIdTorcedor()
     {
-        this.idTorcedor = Torcedor.getTotalTorcedor();
+        this.idTorcedor = Cliente.getTotalCliente();
     }
     public void setTime(String time)
     {

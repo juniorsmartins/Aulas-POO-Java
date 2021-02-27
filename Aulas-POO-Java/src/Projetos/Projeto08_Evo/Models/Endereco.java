@@ -4,7 +4,6 @@ public class Endereco
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe
-    public static long totalEndereco;
     
     // Atributos de Instância
     private long idEndereco;
@@ -20,7 +19,6 @@ public class Endereco
     // ***** ÁREA DE CONSTRUTORES *****
     public Endereco(String rua, int numero, String bairro, String cidade, String estado, String pais, int cep)
     {
-        Endereco.setTotalEndereco();
         this.setIdEndereco();
         this.setRua(rua);
         this.setNumero(numero);
@@ -30,17 +28,21 @@ public class Endereco
         this.setPais(pais);
         this.setCep(cep);
     }
+    public Endereco(String rua, int numero, String complemento, String bairro, String cidade, String estado, String pais, int cep)
+    {
+        this.setIdEndereco();
+        this.setRua(rua);
+        this.setNumero(numero);
+        this.setComplemento(complemento);
+        this.setBairro(bairro);
+        this.setCidade(cidade);
+        this.setEstado(estado);
+        this.setPais(pais);
+        this.setCep(cep);
+    }
     
     // ***** ÁREA DE MÉTODOS *****
     // Métodos de Classe
-    public static long getTotalEndereco()
-    {
-        return Endereco.totalEndereco;
-    }
-    public static void setTotalEndereco()
-    {
-        Endereco.totalEndereco += 1;
-    }
 
     // Métodos Getters de Instância
     public long getIdEndereco()
@@ -83,7 +85,7 @@ public class Endereco
     // Métodos Setters de Instância
     public void setIdEndereco()
     {
-        this.idEndereco = Endereco.getTotalEndereco();
+        this.idEndereco = Cliente.getTotalCliente();
     }
     public void setRua(String rua)
     {
