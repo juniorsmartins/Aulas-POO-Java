@@ -19,14 +19,7 @@ public abstract class Cliente
     private int telefone;
     private String dataOrigem;
     private String email;
-    private String rua;
-    private int numero;
-    private int cep;
-    private String bairro;
-    private String complemento;
-    private String cidade;
-    private String estado;
-    private String pais;
+    private Endereco endereco;
     
     // ***** ÁREA DE CONSTRUTORES *****
     
@@ -82,37 +75,9 @@ public abstract class Cliente
     {
         return this.email;
     }
-    public String getRua()
+    public Endereco getEndereco()
     {
-        return this.rua;
-    }
-    public int getNumero()
-    {
-        return this.numero;
-    }
-    public int getCep()
-    {
-        return this.cep;
-    }
-    public String getBairro()
-    {
-        return this.bairro;
-    }
-    public String getComplemento()
-    {
-        return this.complemento;
-    }
-    public String getCidade()
-    {
-        return this.cidade;
-    }
-    public String getEstado()
-    {
-        return this.estado;
-    }
-    public String getPais()
-    {
-        return this.pais;
+        return this.endereco;
     }
 
     // Métodos Setters de Instância
@@ -150,36 +115,8 @@ public abstract class Cliente
     {
         this.email = mail;
     }
-    public void setRua(String rua)
+    public void setEndereco(Endereco endereco)
     {
-        this.rua = rua;
-    }
-    public void setNumero(int numero)
-    {
-        this.numero = numero;
-    }
-    public void setCep(int cep)
-    {
-        this.cep = cep;
-    }
-    public void setBairro(String bairro)
-    {
-        this.bairro = bairro;
-    }
-    public void setComplemento(String complemento)
-    {
-        this.complemento = complemento;
-    }
-    public void setCidade(String cidade)
-    {
-        this.cidade = cidade;
-    }
-    public void setEstado(String estado)
-    {
-        this.estado = estado;
-    }
-    public void setPais(String pais)
-    {
-        this.pais = pais;
+        this.endereco = endereco;
     }
 }
