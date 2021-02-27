@@ -1,4 +1,4 @@
-package Projetos.Projeto08_Evo.ModelsPersonas;
+package Projetos.Projeto08_Evo.Models;
 
 public class Endereco 
 {

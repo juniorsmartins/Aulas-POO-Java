@@ -1,4 +1,4 @@
-package Projetos.Projeto08_Evo.ModelsPersonas;
+package Projetos.Projeto08_Evo.Models;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,15 +11,13 @@ public abstract class Cliente
     public static long totalClienteDeletado;
     
     // Atributos de Instância
-    private long id = 0;
     private String dataCadastro;
     private String nomenclatura1;
     private String nomenclatura2;
     private String documento;
-    private int telefone;
     private String dataOrigem;
-    private String email;
     private Endereco endereco;
+    private Contato contato;
     
     // ***** ÁREA DE CONSTRUTORES *****
     
@@ -43,10 +41,6 @@ public abstract class Cliente
     }
     
     // Métodos Getters de Instância
-    public long getId()
-    {
-        return this.id;
-    }
     public String getDataCadastro()
     {
         return this.dataCadastro;
@@ -63,28 +57,20 @@ public abstract class Cliente
     {
         return this.documento;
     }
-    public int getTelefone()
-    {
-        return this.telefone;
-    }
     public String getDataOrigem()
     {
         return this.dataOrigem;
-    }
-    public String getEmail()
-    {
-        return this.email;
     }
     public Endereco getEndereco()
     {
         return this.endereco;
     }
+    public Contato getContato()
+    {
+        return this.contato;
+    }
 
     // Métodos Setters de Instância
-    public void setId()
-    {
-        this.id = Cliente.totalCliente;
-    }
     public void setDataCadastro()
     {
         Date data = new Date();
@@ -103,20 +89,16 @@ public abstract class Cliente
     {
         this.documento = doc;
     }
-    public void setTelefone(int tel)
-    {
-        this.telefone = tel;
-    }
     public void setDataOrigem(String datOrigem)
     {
         this.dataOrigem = datOrigem;
     }
-    public void setEmail(String mail)
-    {
-        this.email = mail;
-    }
     public void setEndereco(Endereco endereco)
     {
         this.endereco = endereco;
+    }
+    public void setContato(Contato contato)
+    {
+        this.contato = contato;
     }
 }
