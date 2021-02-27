@@ -1,4 +1,4 @@
-package Projetos.Projeto08_Evo.ModelsSistema;
+package Projetos.Projeto08_Evo.ModelsServico;
 
 public abstract class Servico
 {
@@ -7,9 +7,8 @@ public abstract class Servico
     public static int totalServicos;
     
     // Atributos de Instância
-    private int id = 0;
-    private String descricao = " ";
-    private float valor = 0;
+    private int id;
+    
 
     // ***** ÁREA DE CONSTRUTORES *****
 
@@ -30,26 +29,10 @@ public abstract class Servico
     {
         return this.id;
     }
-    public String getDescricao()
-    {
-        return this.descricao;
-    }
-    public float getValor()
-    {
-        return this.valor;
-    }
     
     // Métodos Setters de Instância
     public void setId()
     {
         this.id = Servico.getTotalServicos();
-    }
-    public void setDescricao(String descricao)
-    {
-        this.descricao = descricao;
-    }
-    public void setValor(float valor)
-    {
-        this.valor = valor;
     }
 }
