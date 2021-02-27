@@ -11,7 +11,7 @@ public class Torcedor extends PessoaFisica
     private String time;
     
     // ***** ÁREA DE CONSTRUTORES *****
-    public Torcedor(String nome, String sobre, String doc, String origem, Endereco endereco, Contato contato, String sexo, String time)
+    public Torcedor(String nome, String sobre, String doc, String origem, String sexo, String time)
     {
         Cliente.setTotalCliente();
         PessoaFisica.setTotalPessoaFisica();
@@ -22,8 +22,6 @@ public class Torcedor extends PessoaFisica
         this.setNomenclatura2(sobre);
         this.setDocumento(doc);
         this.setDataOrigem(origem);
-        this.setEndereco(endereco);
-        this.setContato(contato);
         this.setSexo(sexo);
         this.setTime(time);
     }

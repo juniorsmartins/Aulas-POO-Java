@@ -11,7 +11,7 @@ public class Endereco
     private int numero;
     private int cep;
     private String bairro;
-    private String complemento;
+    private String complemento = "";
     private String cidade;
     private String estado;
     private String pais;
