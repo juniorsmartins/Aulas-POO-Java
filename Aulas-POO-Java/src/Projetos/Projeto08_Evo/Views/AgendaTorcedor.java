@@ -31,25 +31,26 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButtonGravarTorcedor = new javax.swing.JButton();
+        campoPais = new javax.swing.JTextField();
+        jLabelPais = new javax.swing.JLabel();
         campoEstado = new javax.swing.JTextField();
         jLabelEstado = new javax.swing.JLabel();
         campoCidade = new javax.swing.JTextField();
         jLabelCidade = new javax.swing.JLabel();
+        campoComplemento = new javax.swing.JTextField();
+        jLabelComplemento = new javax.swing.JLabel();
         campoCep = new javax.swing.JTextField();
         jLabelCep = new javax.swing.JLabel();
         campoBairro = new javax.swing.JTextField();
         jLabelBairro = new javax.swing.JLabel();
-        campoComplemento = new javax.swing.JTextField();
-        jLabelComplemento = new javax.swing.JLabel();
         campoNum = new javax.swing.JTextField();
         jLabelNum = new javax.swing.JLabel();
-        jLabelRua = new javax.swing.JLabel();
         campoRua = new javax.swing.JTextField();
-        jRadioButtonInsane = new javax.swing.JRadioButton();
-        jRadioButtonHard = new javax.swing.JRadioButton();
-        jRadioButtonNormal = new javax.swing.JRadioButton();
-        jRadioButtonEasy = new javax.swing.JRadioButton();
-        jLabelPlano = new javax.swing.JLabel();
+        jLabelRua = new javax.swing.JLabel();
+        jComboBoxSexo = new javax.swing.JComboBox<>();
+        jLabelSexo = new javax.swing.JLabel();
+        campoDataNascimento = new javax.swing.JTextField();
+        jLabelDataNascimento = new javax.swing.JLabel();
         campoTelefone = new javax.swing.JTextField();
         jLabelTelefone = new javax.swing.JLabel();
         campoEmail = new javax.swing.JTextField();
@@ -70,10 +71,11 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jMenuItemAtleta = new javax.swing.JMenuItem();
         jMenuItemColaborador = new javax.swing.JMenuItem();
         jMenuItemTorcedor = new javax.swing.JMenuItem();
-        jMenuOperacao = new javax.swing.JMenu();
+        jMenuOperar = new javax.swing.JMenu();
         jMenuItemConsultar = new javax.swing.JMenuItem();
         jMenuItemAtualizar = new javax.swing.JMenuItem();
         jMenuItemDeletar = new javax.swing.JMenuItem();
+        jMenuServir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -82,22 +84,23 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(963, 544));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nome", "Sobrenome", "CPF", "E-mail", "Telefone", "Plano"
+                "ID", "Nome", "Sobrenome", "CPF", "E-mail", "Telefone", "Data Nasc", "Sexo", "Rua", "Número", "Bairro", "Cidade", "Estado", "Cep"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true
+                false, true, true, true, true, true, true, true, true, true, true, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -110,11 +113,24 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 511, 900, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 511, 1220, 200));
 
         jButtonGravarTorcedor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonGravarTorcedor.setText("Gravar");
-        getContentPane().add(jButtonGravarTorcedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 440, 100, 40));
+        getContentPane().add(jButtonGravarTorcedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 410, 100, 40));
+
+        campoPais.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoPais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoPaisActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, 140, -1));
+
+        jLabelPais.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelPais.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPais.setText("Pais:");
+        getContentPane().add(jLabelPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 420, -1, -1));
 
         campoEstado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoEstado.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +138,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoEstadoActionPerformed(evt);
             }
         });
-        getContentPane().add(campoEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 420, 70, -1));
+        getContentPane().add(campoEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, 80, -1));
 
         jLabelEstado.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelEstado.setForeground(new java.awt.Color(255, 255, 255));
@@ -135,12 +151,25 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoCidadeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 300, -1));
+        getContentPane().add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 370, 310, -1));
 
         jLabelCidade.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelCidade.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCidade.setText("Cidade:");
         getContentPane().add(jLabelCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, -1, -1));
+
+        campoComplemento.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoComplemento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoComplementoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, 240, -1));
+
+        jLabelComplemento.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelComplemento.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelComplemento.setText("Complemento:");
+        getContentPane().add(jLabelComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, -1, -1));
 
         campoCep.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoCep.addActionListener(new java.awt.event.ActionListener() {
@@ -161,25 +190,12 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoBairroActionPerformed(evt);
             }
         });
-        getContentPane().add(campoBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 270, 300, -1));
+        getContentPane().add(campoBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 310, -1));
 
         jLabelBairro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelBairro.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBairro.setText("Bairro:");
         getContentPane().add(jLabelBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, -1, -1));
-
-        campoComplemento.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        campoComplemento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoComplementoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(campoComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 320, 230, -1));
-
-        jLabelComplemento.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabelComplemento.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelComplemento.setText("Complemento:");
-        getContentPane().add(jLabelComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, -1, -1));
 
         campoNum.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoNum.addActionListener(new java.awt.event.ActionListener() {
@@ -187,17 +203,12 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoNumActionPerformed(evt);
             }
         });
-        getContentPane().add(campoNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 70, -1));
+        getContentPane().add(campoNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 80, -1));
 
         jLabelNum.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelNum.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNum.setText("Número:");
         getContentPane().add(jLabelNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, -1, -1));
-
-        jLabelRua.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabelRua.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRua.setText("Rua/Av.:");
-        getContentPane().add(jLabelRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, -1, -1));
 
         campoRua.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoRua.addActionListener(new java.awt.event.ActionListener() {
@@ -205,40 +216,34 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoRuaActionPerformed(evt);
             }
         });
-        getContentPane().add(campoRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 170, 300, -1));
+        getContentPane().add(campoRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 310, -1));
 
-        jRadioButtonInsane.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup1.add(jRadioButtonInsane);
-        jRadioButtonInsane.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jRadioButtonInsane.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonInsane.setText("Play Insane");
-        getContentPane().add(jRadioButtonInsane, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, -1));
+        jLabelRua.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelRua.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelRua.setText("Rua/Av.:");
+        getContentPane().add(jLabelRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, -1, -1));
 
-        jRadioButtonHard.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup1.add(jRadioButtonHard);
-        jRadioButtonHard.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jRadioButtonHard.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonHard.setText("Play Hard");
-        getContentPane().add(jRadioButtonHard, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        jComboBoxSexo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jComboBoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
+        getContentPane().add(jComboBoxSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, -1, -1));
 
-        jRadioButtonNormal.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup1.add(jRadioButtonNormal);
-        jRadioButtonNormal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jRadioButtonNormal.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonNormal.setText("Play Normal");
-        getContentPane().add(jRadioButtonNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
+        jLabelSexo.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelSexo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSexo.setText("Sexo:");
+        getContentPane().add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, -1, -1));
 
-        jRadioButtonEasy.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup1.add(jRadioButtonEasy);
-        jRadioButtonEasy.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jRadioButtonEasy.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonEasy.setText("Play Easy");
-        getContentPane().add(jRadioButtonEasy, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+        campoDataNascimento.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        campoDataNascimento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoDataNascimentoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoDataNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, 100, -1));
 
-        jLabelPlano.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabelPlano.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPlano.setText("Tipo de Plano:");
-        getContentPane().add(jLabelPlano, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        jLabelDataNascimento.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabelDataNascimento.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDataNascimento.setText("Data Nasc.:");
+        getContentPane().add(jLabelDataNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
         campoTelefone.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         campoTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +251,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoTelefoneActionPerformed(evt);
             }
         });
-        getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 270, -1));
+        getContentPane().add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 300, -1));
 
         jLabelTelefone.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelTelefone.setForeground(new java.awt.Color(255, 255, 255));
@@ -259,7 +264,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 270, -1));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 300, -1));
 
         jLabelEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelEmail.setForeground(new java.awt.Color(255, 255, 255));
@@ -272,7 +277,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoCpfActionPerformed(evt);
             }
         });
-        getContentPane().add(campoCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 270, -1));
+        getContentPane().add(campoCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 300, -1));
 
         jLabelCpf.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelCpf.setForeground(new java.awt.Color(255, 255, 255));
@@ -298,7 +303,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
                 campoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 270, -1));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 300, -1));
 
         jLabelNome.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelNome.setForeground(new java.awt.Color(255, 255, 255));
@@ -307,7 +312,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
 
         jLabelAreaCadastro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelAreaCadastro.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 920, 590));
+        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 1240, 580));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -315,25 +320,25 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jLabel4.setText("www.cuiabaarsenal.com.br");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setOpaque(true);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 730, 960, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 730, 1260, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Programa Sócio Torcedor Evolution");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 940, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1260, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 80)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("EVO");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 940, 80));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1260, 80));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 730));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 730));
 
         jMenuCadastrar.setText("Cadastrar");
 
@@ -351,20 +356,23 @@ public class AgendaTorcedor extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuCadastrar);
 
-        jMenuOperacao.setText("Operações");
+        jMenuOperar.setText("Operações");
 
         jMenuItemConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeConsultar.png"))); // NOI18N
         jMenuItemConsultar.setText("Consultar");
-        jMenuOperacao.add(jMenuItemConsultar);
+        jMenuOperar.add(jMenuItemConsultar);
 
         jMenuItemAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeAtualizar.png"))); // NOI18N
         jMenuItemAtualizar.setText("Atualizar");
-        jMenuOperacao.add(jMenuItemAtualizar);
+        jMenuOperar.add(jMenuItemAtualizar);
 
         jMenuItemDeletar.setText("Deletar");
-        jMenuOperacao.add(jMenuItemDeletar);
+        jMenuOperar.add(jMenuItemDeletar);
 
-        jMenuBar1.add(jMenuOperacao);
+        jMenuBar1.add(jMenuOperar);
+
+        jMenuServir.setText("Serviços");
+        jMenuBar1.add(jMenuServir);
 
         setJMenuBar(jMenuBar1);
 
@@ -391,10 +399,6 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoTelefoneActionPerformed
 
-    private void campoRuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRuaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoRuaActionPerformed
-
     private void campoNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNumActionPerformed
@@ -418,6 +422,18 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private void campoComplementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoComplementoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoComplementoActionPerformed
+
+    private void campoPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoPaisActionPerformed
+
+    private void campoRuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRuaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoRuaActionPerformed
+
+    private void campoDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDataNascimentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDataNascimentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -972,14 +988,17 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JTextField campoCidade;
     private javax.swing.JTextField campoComplemento;
     private javax.swing.JTextField campoCpf;
+    private javax.swing.JTextField campoDataNascimento;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoEstado;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoNum;
+    private javax.swing.JTextField campoPais;
     private javax.swing.JTextField campoRua;
     private javax.swing.JTextField campoSobrenome;
     private javax.swing.JTextField campoTelefone;
     private javax.swing.JButton jButtonGravarTorcedor;
+    private javax.swing.JComboBox<String> jComboBoxSexo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -990,12 +1009,14 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelComplemento;
     private javax.swing.JLabel jLabelCpf;
+    private javax.swing.JLabel jLabelDataNascimento;
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelEstado;
     private javax.swing.JLabel jLabelNome;
     private javax.swing.JLabel jLabelNum;
-    private javax.swing.JLabel jLabelPlano;
+    private javax.swing.JLabel jLabelPais;
     private javax.swing.JLabel jLabelRua;
+    private javax.swing.JLabel jLabelSexo;
     private javax.swing.JLabel jLabelSobrenome;
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JMenuBar jMenuBar1;
@@ -1006,11 +1027,8 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemConsultar;
     private javax.swing.JMenuItem jMenuItemDeletar;
     private javax.swing.JMenuItem jMenuItemTorcedor;
-    private javax.swing.JMenu jMenuOperacao;
-    private javax.swing.JRadioButton jRadioButtonEasy;
-    private javax.swing.JRadioButton jRadioButtonHard;
-    private javax.swing.JRadioButton jRadioButtonInsane;
-    private javax.swing.JRadioButton jRadioButtonNormal;
+    private javax.swing.JMenu jMenuOperar;
+    private javax.swing.JMenu jMenuServir;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

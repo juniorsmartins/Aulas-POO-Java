@@ -1,6 +1,6 @@
-package Projetos.Projeto08_Evo.Models;
+package Projetos.Projeto08_Evo.ModelsSistema;
 
-public class Servico 
+public class Servico
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe

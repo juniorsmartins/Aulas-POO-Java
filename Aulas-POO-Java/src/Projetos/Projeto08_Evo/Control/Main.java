@@ -1,6 +1,6 @@
 package Projetos.Projeto08_Evo.Control;
 
-import Projetos.Projeto08_Evo.Models.Servico;
+import Projetos.Projeto08_Evo.ModelsSistema.Servico;
 
 public class Main 
 {
