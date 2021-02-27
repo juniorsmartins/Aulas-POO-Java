@@ -110,7 +110,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 511, 900, 240));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 511, 900, 200));
 
         jButtonGravarTorcedor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonGravarTorcedor.setText("Gravar");
@@ -207,19 +207,31 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         });
         getContentPane().add(campoRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 170, 300, -1));
 
+        jRadioButtonInsane.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(jRadioButtonInsane);
+        jRadioButtonInsane.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jRadioButtonInsane.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonInsane.setText("Play Insane");
         getContentPane().add(jRadioButtonInsane, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, -1));
 
+        jRadioButtonHard.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(jRadioButtonHard);
+        jRadioButtonHard.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jRadioButtonHard.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonHard.setText("Play Hard");
         getContentPane().add(jRadioButtonHard, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
 
+        jRadioButtonNormal.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(jRadioButtonNormal);
+        jRadioButtonNormal.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jRadioButtonNormal.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonNormal.setText("Play Normal");
         getContentPane().add(jRadioButtonNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
 
+        jRadioButtonEasy.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(jRadioButtonEasy);
+        jRadioButtonEasy.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jRadioButtonEasy.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonEasy.setText("Play Easy");
         getContentPane().add(jRadioButtonEasy, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
 
@@ -295,7 +307,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
 
         jLabelAreaCadastro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabelAreaCadastro.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 920, 630));
+        getContentPane().add(jLabelAreaCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 920, 590));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -303,7 +315,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jLabel4.setText("www.cuiabaarsenal.com.br");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel4.setOpaque(true);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 960, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 730, 960, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -321,7 +333,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 770));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 730));
 
         jMenuCadastrar.setText("Cadastrar");
 
