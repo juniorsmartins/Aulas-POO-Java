@@ -76,6 +76,9 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jMenuItemAtualizar = new javax.swing.JMenuItem();
         jMenuItemDeletar = new javax.swing.JMenuItem();
         jMenuServir = new javax.swing.JMenu();
+        jMenuItemContratar = new javax.swing.JMenuItem();
+        jMenuItemDescontratar = new javax.swing.JMenuItem();
+        jMenuItemRenovar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -97,7 +100,7 @@ public class AgendaTorcedor extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Long.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
                 false, true, true, true, true, true, true, true, true, true, true, true, true, true
@@ -366,12 +369,26 @@ public class AgendaTorcedor extends javax.swing.JFrame {
         jMenuItemAtualizar.setText("Atualizar");
         jMenuOperar.add(jMenuItemAtualizar);
 
+        jMenuItemDeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeDeletar.png"))); // NOI18N
         jMenuItemDeletar.setText("Deletar");
         jMenuOperar.add(jMenuItemDeletar);
 
         jMenuBar1.add(jMenuOperar);
 
         jMenuServir.setText("Serviços");
+
+        jMenuItemContratar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeContratar2.png"))); // NOI18N
+        jMenuItemContratar.setText("Contratar");
+        jMenuServir.add(jMenuItemContratar);
+
+        jMenuItemDescontratar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeDescontratar2.png"))); // NOI18N
+        jMenuItemDescontratar.setText("Descontratar");
+        jMenuServir.add(jMenuItemDescontratar);
+
+        jMenuItemRenovar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Projetos/Projeto08_Evo/Views/Imagens/iconeRenovar2.png"))); // NOI18N
+        jMenuItemRenovar.setText("Renovar");
+        jMenuServir.add(jMenuItemRenovar);
+
         jMenuBar1.add(jMenuServir);
 
         setJMenuBar(jMenuBar1);
@@ -1025,7 +1042,10 @@ public class AgendaTorcedor extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemAtualizar;
     private javax.swing.JMenuItem jMenuItemColaborador;
     private javax.swing.JMenuItem jMenuItemConsultar;
+    private javax.swing.JMenuItem jMenuItemContratar;
     private javax.swing.JMenuItem jMenuItemDeletar;
+    private javax.swing.JMenuItem jMenuItemDescontratar;
+    private javax.swing.JMenuItem jMenuItemRenovar;
     private javax.swing.JMenuItem jMenuItemTorcedor;
     private javax.swing.JMenu jMenuOperar;
     private javax.swing.JMenu jMenuServir;

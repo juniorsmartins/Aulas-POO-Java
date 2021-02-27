@@ -60,6 +60,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDeletar">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Projetos/Projeto08_Evo/Views/Imagens/iconeDeletar.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Deletar"/>
               </Properties>
             </MenuItem>
@@ -69,6 +72,32 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Servi&#xe7;os"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemContratar">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Projetos/Projeto08_Evo/Views/Imagens/iconeContratar2.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Contratar"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDescontratar">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Projetos/Projeto08_Evo/Views/Imagens/iconeDescontratar2.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Descontratar"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemRenovar">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Projetos/Projeto08_Evo/Views/Imagens/iconeRenovar2.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Renovar"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
         </Menu>
       </SubComponents>
     </Menu>
@@ -136,11 +165,11 @@
                 <Column editable="true" title="Data Nasc" type="java.lang.String"/>
                 <Column editable="true" title="Sexo" type="java.lang.String"/>
                 <Column editable="true" title="Rua" type="java.lang.String"/>
-                <Column editable="true" title="N&#xfa;mero" type="java.lang.String"/>
+                <Column editable="true" title="N&#xfa;mero" type="java.lang.Integer"/>
                 <Column editable="true" title="Bairro" type="java.lang.String"/>
                 <Column editable="true" title="Cidade" type="java.lang.String"/>
                 <Column editable="true" title="Estado" type="java.lang.String"/>
-                <Column editable="true" title="Cep" type="java.lang.String"/>
+                <Column editable="true" title="Cep" type="java.lang.Integer"/>
               </Table>
             </Property>
           </Properties>

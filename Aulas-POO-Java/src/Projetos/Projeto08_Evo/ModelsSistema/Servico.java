@@ -1,10 +1,10 @@
 package Projetos.Projeto08_Evo.ModelsSistema;
 
-public class Servico
+public abstract class Servico
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe
-    public static int totalServicos = 0;
+    public static int totalServicos;
     
     // Atributos de Instância
     private int id = 0;
@@ -12,12 +12,7 @@ public class Servico
     private float valor = 0;
 
     // ***** ÁREA DE CONSTRUTORES *****
-    public Servico(int id, String descricao, float valor)
-    {
-        this.id = id;
-        this.descricao = descricao;
-        this.valor = valor;
-    }
+
     
     // ***** ÁREA DE MÉTODOS *****
     // Métodos de Classe
