@@ -1,32 +1,29 @@
 package Projetos.Projeto08_Evo.Models;
 
-import java.util.Date;
-
-public class Usuario 
+public final class Usuario extends PessoaFisica
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe
-    public static long totalUsuario;
+    protected static long totalUsuario;
     
     // Atributos de Instância
-    private long id;
-    private String nome;
-    private String sobrenome;
-    private String cpf;
-    private char sexo;
-    private Date dataNascimento;
-    private String login;
-    private String senha;
-    private String nivelAcesso;
+    protected long idUsuario;
+    protected String login;
+    protected String senha;
+    protected String nivelAcesso;
     
     // ***** ÁREA DE CONSTRUTORES *****
-    public Usuario(String nome, String sobre, String cpf)
+    public Usuario(String nome, String sobre, String login, String senha)
     {
+        Cliente.setTotalCliente();
+        PessoaFisica.setTotalCliente();
         Usuario.setTotalUsuario();
-        this.setId();
-        this.nome = nome;
-        this.sobrenome = sobre;
-        this.cpf = cpf;
+        this.setDataCadastro();
+        this.setIdUsuario();
+        this.setNomenclatura1(nome);
+        this.setNomenclatura2(sobre);
+        this.setLogin(login);
+        this.senha = senha;
     }
     
     // ***** ÁREA DE MÉTODOS *****
@@ -41,29 +38,9 @@ public class Usuario
     }
     
     // Métodos Getters de Instância
-    public long getId()
+    public long getIdUsuario()
     {
-        return this.id;
-    }
-    public String getNome()
-    {
-        return this.nome;
-    }
-    public String getSobrenome()
-    {
-        return this.sobrenome;
-    }
-    public String getCpf()
-    {
-        return this.cpf;
-    }
-    public char getSexo()
-    {
-        return this.sexo;
-    }
-    public Date getDataNascimento()
-    {
-        return this.dataNascimento;
+        return this.idUsuario;
     }
     public String getLogin()
     {
@@ -79,29 +56,9 @@ public class Usuario
     }
     
     // Métodos Setters de Instância  
-    public void setId()
+    public void setIdUsuario()
     {
-        this.id = Usuario.getTotalUsuario();
-    }
-    public void setNome(String nome)
-    {
-        this.nome = nome;
-    }
-    public void setSobrenome(String sobre)
-    {
-        this.sobrenome = sobre;
-    }
-    public void setCpf(String cpf)
-    {
-        this.cpf = cpf;
-    }
-    public void setSexo(char sexo)
-    {
-        this.sexo = sexo;
-    }
-    public void setDataNascimento(Date data)
-    {
-        this.dataNascimento = data;
+        this.idUsuario = Usuario.getTotalUsuario();
     }
     public void setLogin(String login)
     {

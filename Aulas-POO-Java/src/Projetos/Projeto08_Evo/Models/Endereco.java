@@ -1,6 +1,6 @@
 package Projetos.Projeto08_Evo.Models;
 
-public class Endereco 
+public final class Endereco 
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe

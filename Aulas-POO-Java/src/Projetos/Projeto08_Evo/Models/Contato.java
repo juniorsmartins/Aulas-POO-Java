@@ -1,6 +1,6 @@
 package Projetos.Projeto08_Evo.Models;
     
-public class Contato 
+public final class Contato 
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe

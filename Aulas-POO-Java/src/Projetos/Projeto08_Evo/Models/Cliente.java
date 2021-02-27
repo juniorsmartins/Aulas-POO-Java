@@ -7,17 +7,18 @@ public abstract class Cliente
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe
-    public static long totalCliente;
-    public static long totalClienteDeletado;
+    protected static long totalCliente;
+    protected static long totalClienteDel;
     
     // Atributos de Instância
-    private String dataCadastro;
-    private String nomenclatura1;
-    private String nomenclatura2;
-    private String documento;
-    private String dataOrigem;
-    private Endereco endereco;
-    private Contato contato;
+    protected long idCliente;
+    protected String dataCadastro;
+    protected String nomenclatura1;
+    protected String nomenclatura2;
+    protected String documento;
+    protected String dataOrigem;
+    protected Endereco endereco;
+    protected Contato contato;
     
     // ***** ÁREA DE CONSTRUTORES *****
     
@@ -25,7 +26,7 @@ public abstract class Cliente
     // Métodos de Classe
     public static long getTotalCliente()
     {
-        return Cliente.totalCliente = totalCliente - totalClienteDeletado;
+        return Cliente.totalCliente = totalCliente - totalClienteDel;
     }
     public static void setTotalCliente()
     {
@@ -33,14 +34,18 @@ public abstract class Cliente
     }
     public static long getTotalClienteDeletado()
     {
-        return Cliente.totalClienteDeletado;
+        return Cliente.totalClienteDel;
     }
     public static void setTotalClienteDeletado()
     {
-        Cliente.totalClienteDeletado += 1;
+        Cliente.totalClienteDel += 1;
     }
     
     // Métodos Getters de Instância
+    public long getIdCliente()
+    {
+        return this.idCliente;
+    }
     public String getDataCadastro()
     {
         return this.dataCadastro;
@@ -71,6 +76,10 @@ public abstract class Cliente
     }
 
     // Métodos Setters de Instância
+    public void setIdCliente()
+    {
+        this.idCliente = Cliente.getTotalCliente();
+    }
     public void setDataCadastro()
     {
         Date data = new Date();

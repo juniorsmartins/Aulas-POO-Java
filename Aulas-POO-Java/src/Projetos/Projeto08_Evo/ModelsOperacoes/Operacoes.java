@@ -1,6 +1,6 @@
 package Projetos.Projeto08_Evo.ModelsOperacoes;
 
-public class Operacoes 
+abstract public class Operacoes 
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe

@@ -1,14 +1,14 @@
 package Projetos.Projeto08_Evo.Models;
 
-public class Torcedor extends PessoaFisica
+public final class Torcedor extends PessoaFisica
 {
     // ***** ÁREA DE ATRIBUTOS *****
     // Atributos de Classe
-    public static long totalTorcedor;
+    protected static long totalTorcedor;
     
     // Atributos de Instância
-    private long idTorcedor;
-    private String time;
+    protected long idTorcedor;
+    protected String time;
     
     // ***** ÁREA DE CONSTRUTORES *****
     public Torcedor(String nome, String sobre, String doc, String origem, String sexo, String time)
