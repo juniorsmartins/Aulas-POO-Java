@@ -56,4 +56,35 @@ public class Torcedor extends PessoaFisica
     {
         this.time = time;
     }
+    
+    // Métodos de Polimorfismo
+    @Override
+    public String toString()
+    {
+        System.out.println("\n\n*****   INFORMAÇÕES PESSOAIS   *****");
+        System.out.println("ID: " + this.getIdTorcedor());
+        System.out.println("Data Cadastro: " + this.getDataCadastro());
+        System.out.println("Nome: " + this.getNomenclatura1());
+        System.out.println("Sobrenome: " + this.getNomenclatura2());
+        System.out.println("CPF: " + this.getDocumento());
+        System.out.println("Data de Nascimento: " + this.getDataOrigem());
+        System.out.println("Sexo: " + this.getSexo());
+        System.out.println("Torcedor do: " + this.getTime());
+
+        System.out.println("\n*****   INFORMAÇÕES DE ENDEREÇO   *****");
+        System.out.println("ID: " + this.getEndereco().getIdEndereco());
+        System.out.println("Rua: " + this.getEndereco().getRua());
+        System.out.println("Número: " + this.getEndereco().getNumero());
+        System.out.println("Bairro: " + this.getEndereco().getBairro());
+        System.out.println("Cidade: " + this.getEndereco().getCidade());
+        System.out.println("Estado: " + this.getEndereco().getEstado());
+        System.out.println("Pais: " + this.getEndereco().getPais());
+        System.out.println("CEP: " + this.getEndereco().getCep());
+
+        System.out.println("\n*****   INFORMAÇÕES DE CONTATO   *****");
+        System.out.println("ID: " + this.getContato().getIdContato());
+        System.out.println("Telefone: " + this.getContato().getTelefone());
+        System.out.println("Email: " + this.getContato().getEmail());
+        return "";
+    }
 }

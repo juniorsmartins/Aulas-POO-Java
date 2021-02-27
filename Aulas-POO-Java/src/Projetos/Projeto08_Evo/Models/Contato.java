@@ -7,11 +7,11 @@ public class Contato
     
     // Atributos de Instância
     private long idContato;
-    private int telefone;
+    private long telefone;
     private String email;
     
     // ***** ÁREA DE CONSTRUTORES *****
-    public Contato(int fone, String mail)
+    public Contato(long fone, String mail)
     {
         this.setIdContato();
         this.setTelefone(fone);
@@ -26,7 +26,7 @@ public class Contato
     {
         return this.idContato;
     }
-    public int getTelefone()
+    public long getTelefone()
     {
         return this.telefone;
     }
@@ -40,7 +40,7 @@ public class Contato
     {
         this.idContato = Cliente.getTotalCliente();
     }
-    public void setTelefone(int tel)
+    public void setTelefone(long tel)
     {
         this.telefone = tel;
     }

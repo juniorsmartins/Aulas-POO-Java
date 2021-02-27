@@ -1,8 +1,8 @@
 package Projetos.Projeto08_Evo.Control;
 
-import Projetos.Projeto07_PSTE.ModelsPersonas.Torcedor;
 import Projetos.Projeto08_Evo.Models.Contato;
 import Projetos.Projeto08_Evo.Models.Endereco;
+import Projetos.Projeto08_Evo.Models.Torcedor;
 import java.util.Scanner;
 
 public class Main 
@@ -14,46 +14,50 @@ public class Main
         // Informações para criar o torcedor
         System.out.print("\nNome: ");
         String nome = scan.nextLine();
-        System.out.print("\nSobrenome: ");
+        System.out.print("Sobrenome: ");
         String sobre = scan.nextLine();
-        System.out.print("\nDocumento: ");
+        System.out.print("Documento: ");
         String doc = scan.nextLine();
-        System.out.print("\nData de Nascimento (dd/mm/yyyy): ");
+        System.out.print("Data de Nascimento (dd/mm/yyyy): ");
         String origem = scan.nextLine();
-        System.out.print("\nSexo: ");
+        System.out.print("Sexo: ");
         String sexo = scan.nextLine();
-        System.out.print("\nTime: ");
+        System.out.print("Time: ");
         String time = scan.nextLine();
         
-        Torcedor torcedor = Torcedor(nome, sobre, doc, origem, sexo, time);
+        Torcedor torcedor = new Torcedor(nome, sobre, doc, origem, sexo, time);
 
         // Informações para criar o endereço
         System.out.print("\nRua/Av: ");
         String rua = scan.nextLine();
-        System.out.print("\nNúmero: ");
+        System.out.print("Número: ");
         int numero = Integer.parseInt(scan.nextLine());
-        System.out.print("\nBairro: ");
+        System.out.print("Bairro: ");
         String bairro = scan.nextLine();
-        System.out.print("\nComplemento: ");
+        System.out.print("Complemento: ");
         String complemento = scan.nextLine();
-        System.out.print("\nCidade: ");
+        System.out.print("Cidade: ");
         String cidade = scan.nextLine(); 
-        System.out.print("\nEstado: ");
+        System.out.print("Estado: ");
         String estado = scan.nextLine();        
-        System.out.print("\nPais: ");
+        System.out.print("Pais: ");
         String pais = scan.nextLine();
-        System.out.print("\nCep: ");
-        int cep = Integer.parseInt(scan.nextLine());
+        System.out.print("Cep: ");
+        long cep = Long.parseLong(scan.nextLine());
 
         Endereco endereco = new Endereco(rua, numero, bairro, cidade, estado, pais, cep);
         endereco.setComplemento(complemento);
+        torcedor.setEndereco(endereco);
 
         // Informações para criar contato
         System.out.print("\nTelefone: ");
-        int fone = Integer.parseInt(scan.nextLine());
-        System.out.print("\nE-mail: ");
+        long fone = Long.parseLong(scan.nextLine());
+        System.out.print("E-mail: ");
         String mail = scan.nextLine();
 
         Contato contato = new Contato(fone, mail);
+        torcedor.setContato(contato);
+        
+        System.out.println(torcedor);
     }
 }

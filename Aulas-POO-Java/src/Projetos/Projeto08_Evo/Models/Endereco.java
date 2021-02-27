@@ -9,7 +9,7 @@ public class Endereco
     private long idEndereco;
     private String rua;
     private int numero;
-    private int cep;
+    private long cep;
     private String bairro;
     private String complemento = "";
     private String cidade;
@@ -17,7 +17,7 @@ public class Endereco
     private String pais;
 
     // ***** ÁREA DE CONSTRUTORES *****
-    public Endereco(String rua, int numero, String bairro, String cidade, String estado, String pais, int cep)
+    public Endereco(String rua, int numero, String bairro, String cidade, String estado, String pais, long cep)
     {
         this.setIdEndereco();
         this.setRua(rua);
@@ -28,7 +28,7 @@ public class Endereco
         this.setPais(pais);
         this.setCep(cep);
     }
-    public Endereco(String rua, int numero, String complemento, String bairro, String cidade, String estado, String pais, int cep)
+    public Endereco(String rua, int numero, String complemento, String bairro, String cidade, String estado, String pais, long cep)
     {
         this.setIdEndereco();
         this.setRua(rua);
@@ -57,7 +57,7 @@ public class Endereco
     {
         return this.numero;
     }
-    public int getCep()
+    public long getCep()
     {
         return this.cep;
     }
@@ -95,7 +95,7 @@ public class Endereco
     {
         this.numero = numero;
     }
-    public void setCep(int cep)
+    public void setCep(long cep)
     {
         this.cep = cep;
     }
