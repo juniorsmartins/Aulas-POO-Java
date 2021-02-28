@@ -23,7 +23,6 @@ public final class Torcedor extends PessoaFisica
         this.setDocumento(doc);
         this.setDataOrigem(origem);
         this.setSexo(sexo);
-        this.setTime(time);
     }
     
     // ***** ÁREA DE MÉTODOS *****
