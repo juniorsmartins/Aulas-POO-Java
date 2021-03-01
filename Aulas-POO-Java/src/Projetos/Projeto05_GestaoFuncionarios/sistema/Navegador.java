@@ -1,5 +1,11 @@
 package Projetos.Projeto05_GestaoFuncionarios.sistema;
 
+import Projetos.Projeto05_GestaoFuncionarios.sistema_entidades.Cargo;
+import Projetos.Projeto05_GestaoFuncionarios.sistema_telas.CargosConsultar;
+import Projetos.Projeto05_GestaoFuncionarios.sistema_telas.CargosEditar;
+import Projetos.Projeto05_GestaoFuncionarios.sistema_telas.CargosInserir;
+import Projetos.Projeto05_GestaoFuncionarios.sistema_telas.Inicio;
+import Projetos.Projeto05_GestaoFuncionarios.sistema_telas.Login;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JMenu;
