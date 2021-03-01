@@ -66,6 +66,11 @@ public class ProdutoView extends javax.swing.JFrame {
                 btExcluirMouseClicked(evt);
             }
         });
+        btExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExcluirActionPerformed(evt);
+            }
+        });
 
         btLimpar.setText("Limpar");
         btLimpar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -187,6 +192,7 @@ public class ProdutoView extends javax.swing.JFrame {
         tfDescricao.setText("");
         tfPreco.setText("");
         tfPesquisarDescricao.setText("");
+        btExcluir.setEnabled(false);
     }//GEN-LAST:event_btSalvarActionPerformed
 
     private void tbProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbProdutoMouseClicked
@@ -202,9 +208,30 @@ public class ProdutoView extends javax.swing.JFrame {
         tfDescricao.setText("");
         tfPreco.setText("");
         tfPesquisarDescricao.setText("");
+        btExcluir.setEnabled(false);
     }//GEN-LAST:event_btLimparMouseClicked
 
     private void btExcluirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btExcluirMouseClicked
+        int escolha = JOptionPane.showConfirmDialog(null, "Quer escluir?", "Produto - Excluir", JOptionPane.YES_NO_OPTION);
+        if(escolha == 0)
+        { // Excluir esse evento
+            int codigo = Integer.parseInt(tfCodigo.getText());
+            prd.excluir(codigo);
+            tbProduto.setModel(new ProdutoTableModel(new ProdutoDAO().listarTodos()));
+            tfCodigo.setText("");
+            tfDescricao.setText("");
+            tfPreco.setText("");
+            tfPesquisarDescricao.setText("");      
+            btExcluir.setEnabled(false);
+        }
+    }//GEN-LAST:event_btExcluirMouseClicked
+
+    private void tfPesquisarDescricaoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfPesquisarDescricaoKeyPressed
+        String pesquisa = tfPesquisarDescricao.getText();
+        tbProduto.setModel(new ProdutoTableModel(new ProdutoDAO().listarTodosDescricao(pesquisa)));
+    }//GEN-LAST:event_tfPesquisarDescricaoKeyPressed
+
+    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
         int escolha = JOptionPane.showConfirmDialog(null, "Quer escluir?", "Produto - Excluir", JOptionPane.YES_NO_OPTION);
         if(escolha == 0)
         {
@@ -215,13 +242,9 @@ public class ProdutoView extends javax.swing.JFrame {
             tfDescricao.setText("");
             tfPreco.setText("");
             tfPesquisarDescricao.setText("");            
+            btExcluir.setEnabled(false);
         }
-    }//GEN-LAST:event_btExcluirMouseClicked
-
-    private void tfPesquisarDescricaoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfPesquisarDescricaoKeyPressed
-        String pesquisa = tfPesquisarDescricao.getText();
-        tbProduto.setModel(new ProdutoTableModel(new ProdutoDAO().listarTodosDescricao(pesquisa)));
-    }//GEN-LAST:event_tfPesquisarDescricaoKeyPressed
+    }//GEN-LAST:event_btExcluirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btExcluir;
