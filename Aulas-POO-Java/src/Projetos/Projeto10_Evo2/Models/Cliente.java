@@ -13,12 +13,13 @@ abstract public class Cliente
     private String nomenclatura1;
     private String nomenclatura2;
     private String documento;
-    private String dataDeOrigem;
-    private String sexo;
+    private Date dataDeOrigem;
+    private char sexo;
     
     // Atributos Objetificados de Instância
     private Endereco endereco;
     private Contato contato;
+    private Plano plano;
     
 
     //*********************************
@@ -50,11 +51,11 @@ abstract public class Cliente
     {
         return this.documento;
     }
-    public String getDataDeOrigem()
+    public Date getDataDeOrigem()
     {
         return this.dataDeOrigem;
     }
-    public String getSexo()
+    public char getSexo()
     {
         return this.sexo;
     }
@@ -80,11 +81,11 @@ abstract public class Cliente
     {
         this.documento = doc;
     }
-    public void setDataDeOrigem(String data)
+    public void setDataDeOrigem(Date data)
     {
         this.dataDeOrigem = data;
     }
-    public void setSexo(String sex)
+    public void setSexo(char sex)
     {
         this.sexo = sex;
     }
@@ -100,6 +101,10 @@ abstract public class Cliente
     {
         return this.contato;
     }
+    public Plano plano()
+    {
+        return this.plano;
+    }
     
     public void setEndereco(Endereco endereco)
     {
@@ -109,5 +114,8 @@ abstract public class Cliente
     {
         this.contato = contato;
     }
-
+    public void setPlano(Plano plano)
+    {
+        this.plano = plano;
+    }
 }

@@ -11,8 +11,9 @@ public final class Plano
     // Atributos Objetificados de Instância
     private int idPlano;
     private String tipo;
-    private String status;
-    private String indicacao;
+    private boolean status = false;
+    private String indicacao = "";
+    private float valorMensal = 0;
     private Date dataAssociacao;
     private Date dataRenovacao;
     private Date dataDesligamento;
@@ -24,6 +25,9 @@ public final class Plano
     public Plano(String tipo, Date dataAssociacao)
     {
         //TODO
+        this.setTipo(tipo);
+        this.setStatus();
+        this.setDataAssociacao(dataAssociacao);
         
     }
     // Construtor 2 - Sobrecarga
@@ -41,13 +45,17 @@ public final class Plano
     {
         return this.tipo;
     }
-    public String getStatus()
+    public boolean getStatus()
     {
         return this.status;
     }
     public String getIndicacao()
     {
         return this.indicacao;
+    }
+    public float getValorMensal()
+    {
+        return this.valorMensal;
     }
     public Date getDataAssociacao()
     {
@@ -69,15 +77,44 @@ public final class Plano
     }
     public void setTipo(String tipo)
     {
-        this.tipo = tipo;
+        switch(tipo)
+        {
+            case "Play Easy":
+                this.tipo = "Play Easy";
+                this.setValorMensal(14.00F);
+                break;
+            case "Play Normal":
+                this.tipo = "Play Normal";
+                this.setValorMensal(20.00F);
+                break;
+            case "Play Hard":
+                this.tipo = "Play Hard";
+                this.setValorMensal(30.00F);
+                break;
+            case "Play Insane":
+                this.tipo = "Play Insane";
+                this.setValorMensal(150.00F);
+                break;
+        }
     }
-    public void setStatus(String status)
+    public void setStatus() //Inversor de status - O método é chamado para inverter status
     {
-        this.status = status;
+        if(this.getStatus() == false)
+        {
+            this.status = true;
+        }
+        else if (this.getStatus() == true)
+        {
+            this.status = false;            
+        }
     }
     public void setIndicacao(String indicacao)
     {
         this.indicacao = indicacao;
+    }
+    public void setValorMensal(float valor)
+    {
+        this.valorMensal = valor;
     }
     public void setDataAssociacao(Date data)
     {

@@ -1,5 +1,7 @@
 package Projetos.Projeto10_Evo2.Models;
 
+import java.util.Date;
+
 public final class Torcedor extends Cliente
 {
     //*******************************
@@ -21,7 +23,7 @@ public final class Torcedor extends Cliente
         this.setDocumento(doc);
     }
     // Construtor 2 - Sobrecarga
-    public Torcedor(String nomen1, String nomen2, String doc, String dataOrigem, String sex)
+    public Torcedor(String nomen1, String nomen2, String doc, Date dataOrigem, char sex)
     {
         //TODO
         this.setNomenclatura1(nomen1);
@@ -31,7 +33,7 @@ public final class Torcedor extends Cliente
         this.setSexo(sex);
     }
     // Construtor 3 - Sobrecarga
-    public Torcedor(String nomen1, String nomen2, String doc, String dataOrigem, String sex, Endereco endereco, Contato contato, Plano plano)
+    public Torcedor(String nomen1, String nomen2, String doc, Date dataOrigem, char sex, Endereco endereco, Contato contato, Plano plano)
     {
         //TODO
         this.setNomenclatura1(nomen1);
