@@ -19,7 +19,6 @@ abstract public class Cliente
     // Atributos Objetificados de Instância
     private Endereco endereco;
     private Contato contato;
-    private Plano plano;
     
 
     //*********************************
@@ -33,31 +32,31 @@ abstract public class Cliente
     // Métodos Getters de Instância
     public int getIdCliente()
     {
-        return idCliente;
+        return this.idCliente;
     }
     public Date getDataCadastro()
     {
-        return dataCadastro;
+        return this.dataCadastro;
     }
     public String getNomenclatura1()
     {
-        return nomenclatura1;
+        return this.nomenclatura1;
     }
     public String getNomenclatura2()
     {
-        return nomenclatura2;
+        return this.nomenclatura2;
     }
     public String getDocumento()
     {
-        return documento;
+        return this.documento;
     }
     public String getDataDeOrigem()
     {
-        return dataDeOrigem;
+        return this.dataDeOrigem;
     }
     public String getSexo()
     {
-        return sexo;
+        return this.sexo;
     }
 
     // Métodos Setters de Instância
@@ -95,15 +94,11 @@ abstract public class Cliente
     // Métodos de Composição
     public Endereco getEndereco()
     {
-        return endereco;
+        return this.endereco;
     }
     public Contato getContato()
     {
-        return contato;
-    }
-    public Plano getPlano()
-    {
-        return plano;
+        return this.contato;
     }
     
     public void setEndereco(Endereco endereco)
@@ -113,10 +108,6 @@ abstract public class Cliente
     public void setContato(Contato contato)
     {
         this.contato = contato;
-    }
-    public void setPlano(Plano plano)
-    {
-        this.plano = plano;
     }
 
 }

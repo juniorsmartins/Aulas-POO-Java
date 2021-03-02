@@ -41,7 +41,6 @@ public final class Torcedor extends Cliente
         this.setSexo(sex);
         this.setEndereco(endereco);
         this.setContato(contato);
-        this.setPlano(plano);
     }
 
     

@@ -53,39 +53,39 @@ public final class Endereco
     // Métodos Getters de Instância
     public int getIdEndereco()
     {
-        return idEndereco;
+        return this.idEndereco;
     }
     public String getRua()
     {
-        return rua;
+        return this.rua;
     }
     public int getNumero()
     {
-        return numero;
+        return this.numero;
     }
     public String getComplemento()
     {
-        return complemento;
+        return this.complemento;
     }
     public String getBairro()
     {
-        return bairro;
+        return this.bairro;
     }
     public String getCidade()
     {
-        return cidade;
+        return this.cidade;
     }
     public String getEstado()
     {
-        return estado;
+        return this.estado;
     }
     public String getPais()
     {
-        return pais;
+        return this.pais;
     }
     public long getCep()
     {
-        return cep;
+        return this.cep;
     }
 
     // Métodos Setters de Instância

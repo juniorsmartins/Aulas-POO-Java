@@ -13,7 +13,6 @@ public final class Contato
     // Atributos Objetificados de Instância
 
 
-
     //*********************************
     //***** ÁREA DE CONSTRUTORES  *****
     // Construtor 1
@@ -25,22 +24,21 @@ public final class Contato
     }
 
 
-
     //****************************
     //***** ÁREA DE MÉTODOS  *****
     // Métodos de Classe
     // Métodos Getters de Instância
     public int getIdContato()
     {
-        return idContato;
+        return this.idContato;
     }
     public long getTelefone()
     {
-        return telefone;
+        return this.telefone;
     }
     public String getEmail()
     {
-        return email;
+        return this.email;
     }
 
     // Métodos Setters de Instância
