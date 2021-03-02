@@ -91,5 +91,32 @@ abstract public class Cliente
     }
     
     // Métodos Polimórficos
+    
+    // Métodos de Composição
+    public Endereco getEndereco()
+    {
+        return endereco;
+    }
+    public Contato getContato()
+    {
+        return contato;
+    }
+    public Plano getPlano()
+    {
+        return plano;
+    }
+    
+    public void setEndereco(Endereco endereco)
+    {
+        this.endereco = endereco;
+    }
+    public void setContato(Contato contato)
+    {
+        this.contato = contato;
+    }
+    public void setPlano(Plano plano)
+    {
+        this.plano = plano;
+    }
 
 }
